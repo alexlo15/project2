@@ -16,10 +16,10 @@
 
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="/styles/shared.css">
-    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/styles/flash-card.css">
 </head>
 
-<body id="index">
+<body id="flashcard">
 
     <!-- nav bar -->
     <nav class="navbar navbar-dark bg-dark">
@@ -28,32 +28,41 @@
         </a>
     </nav>
 
-    <!-- main area front area-->
-    <div class="container-fluid" id="main-top">
+    <!-- main div-->
+    <div class="container-fluid" id="main">
         <div class="row">
-            <div class="col-md-12" id="main-text">
-                <h1 class="main-text">Knode the Code</h1>
-                <h3 class="main-text">Learn the topics using Flash Cards or</h3>
-                <h3 class="main-text">Drag & Drop the right answer!</h3>
-                <br>
-                <!-- need the bookmark code for this button -->
-                <button type="button" class="btn btn-primary btn-lg start">Get Started.</button>
+            <!-- area for the flip & timer -->
+            <div class="col-md-2">
+                <button type="button" class="btn btn-primary btn-lg flip">Flip</button>
+                <button type="button" class="btn btn-primary btn-lg home">Home</button>
             </div>
-        </div>
-    </div>
 
-    <br>
-    <br>
+            <!-- area for left and right arrows and index card -->
+            <div class="col-md-6">
+                <div class = "row">
 
-    <!-- main area front area-->
-    <div class="container-fluid" id="main-bottom">
-        <div class="row">
-            <div class="col-md-6" id="flashCardPick">
-                <h2>Flash Cards!</h2>
+                    <!-- left arrow -->
+                    <div class="col-md-2">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+
+                    <!-- div for the index card -->
+                    <div class="col-md-6">
+                        <div class="indexCard"></div>
+                    </div>
+
+                    <!-- right arrow -->
+                    <div class="col-md-2">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6" id="dragDropPick">
-                <h2>Drag & Drop Trivia!</h2>
+
+            <!-- area for timer?? -->
+            <div class="col-md-6">
+                <h2 class="timer">Study Time: 54:50</h2>
             </div>
+
         </div>
     </div>
 
