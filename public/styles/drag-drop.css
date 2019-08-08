@@ -1,15 +1,3 @@
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SHARED~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-
-/* nav bar */
-nav{
-
-}
-
-#logoTitle{
-
-}
-
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
@@ -38,3 +26,15 @@ button.start{
 
 }
 
+/* bottom div with games */
+#main-bottom{
+  text-align: center;
+}
+
+#flashCardPick{
+  border: 1px solid black;
+}
+
+#dragDropPick{
+  border: 1px solid black;
+}

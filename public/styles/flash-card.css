@@ -1,0 +1,40 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* body */
+#index{
+
+}
+
+/* main initial divs */
+#main-top{
+
+}
+
+#main-text{
+  text-align: center;
+}
+
+h1.main-text{
+
+}
+
+h3.main-text{
+  
+}
+
+button.start{
+
+}
+
+/* bottom div with games */
+#main-bottom{
+  text-align: center;
+}
+
+#flashCardPick{
+  border: 1px solid black;
+}
+
+#dragDropPick{
+  border: 1px solid black;
+}
