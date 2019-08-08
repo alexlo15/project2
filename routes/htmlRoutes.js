@@ -12,10 +12,23 @@ module.exports = function (app) {
   //   });
   // });
 
-  // test
+  // ~~~~test area ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "index.html"));
   }) 
+
+  app.get("/flash-card-selection", function(req, res){
+    res.sendFile(path.join(__dirname, "flash-card-selection.html"));
+  }) 
+
+  app.get("/flash-card", function(req, res){
+    res.sendFile(path.join(__dirname, "flash-card.html"));
+  }) 
+
+  app.get("/drag-drop", function(req, res){
+    res.sendFile(path.join(__dirname, "drag-drop.html"));
+  }) 
+
 
 
   // Load example page and pass in an example by id

@@ -38,3 +38,9 @@ button.start{
 #dragDropPick{
   border: 1px solid black;
 }
+
+/* test div */
+.test{
+  margin: 5%;
+  border: 1px solid black;
+}

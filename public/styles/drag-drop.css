@@ -12,9 +12,12 @@
 
 #question-text{
   text-align: center;
+  border: 1px solid black;
 }
 
 #answer-input{
+  border: 1px solid black;
+  background: lightgrey;
 
 }
 
@@ -23,12 +26,14 @@
 }
 
 #choice1{
-
+border: 1px solid black;
 }
 
 #choice2{
+  border: 1px solid black;
 }
 
 #choice3{
+  border: 1px solid black;
 }
 
