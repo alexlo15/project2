@@ -1,40 +1,33 @@
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FLASH CARD SELECTION~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#index{
+#fc-selection{
 
 }
 
-/* main initial divs */
-#main-top{
+/* contains all movable divs */
+#movable-divs{
 
 }
 
-#main-text{
-  text-align: center;
-}
-
-h1.main-text{
-
-}
-
-h3.main-text{
-  
-}
-
-button.start{
-
-}
-
-/* bottom div with games */
-#main-bottom{
-  text-align: center;
-}
-
-#flashCardPick{
+#HTML-text{
   border: 1px solid black;
 }
 
-#dragDropPick{
+#CSS-text{
   border: 1px solid black;
+}
+
+#JS-text{
+  border: 1px solid black;
+}
+
+/* bottom div user can drag things into */
+#final-topics{
+  text-align: center;
+  border: 1px solid black;
+}
+
+button.continue{
+
 }

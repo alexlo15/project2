@@ -16,10 +16,10 @@
 
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="/styles/shared.css">
-    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/styles/flash-card-selection.css">
 </head>
 
-<body id="index">
+<body id="fc-selection">
 
     <!-- nav bar -->
     <nav class="navbar navbar-dark bg-dark">
@@ -28,16 +28,17 @@
         </a>
     </nav>
 
-    <!-- main area front area-->
-    <div class="container-fluid" id="main-top">
+    <!-- movable divs for the topics-->
+    <div class="container-fluid" id="movable-divs">
         <div class="row">
-            <div class="col-md-12" id="main-text">
-                <h1 class="main-text">Knode the Code</h1>
-                <h3 class="main-text">Learn the topics using Flash Cards or</h3>
-                <h3 class="main-text">Drag & Drop the right answer!</h3>
-                <br>
-                <!-- need the bookmark code for this button -->
-                <button type="button" class="btn btn-primary btn-lg start">Get Started.</button>
+            <div class="col-md-4" id="HTML-text">
+                HTML
+            </div>
+            <div class="col-md-4" id="CSS-text">
+                CSS
+            </div>
+            <div class="col-md-4" id="JS-text">
+                Javascript
             </div>
         </div>
     </div>
@@ -45,14 +46,20 @@
     <br>
     <br>
 
-    <!-- main area front area-->
-    <div class="container-fluid" id="main-bottom">
+    <!-- div that the user can drag each topic into & button to continue-->
+    <div class="container-fluid">
+        <!-- div where uses can drag things into -->
         <div class="row">
-            <div class="col-md-6" id="flashCardPick">
-                <h2>Flash Cards!</h2>
+            <div class="col-md-12" id="final-topics">
+                <!-- can erase the <br> later -->
+                <br>
+                <br>
             </div>
-            <div class="col-md-6" id="dragDropPick">
-                <h2>Drag & Drop Trivia!</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary btn-lg continue">Continue</button>
             </div>
         </div>
     </div>
