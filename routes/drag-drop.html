@@ -16,10 +16,10 @@
 
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="/styles/shared.css">
-    <link rel="stylesheet" type="text/css" href="/styles/index.css">
+    <link rel="stylesheet" type="text/css" href="/styles/drag-drop.css">
 </head>
 
-<body id="index">
+<body id="quiz">
 
     <!-- nav bar -->
     <nav class="navbar navbar-dark bg-dark">
@@ -28,31 +28,27 @@
         </a>
     </nav>
 
-    <!-- main area front area-->
-    <div class="container-fluid" id="main-top">
+    <!-- question area-->
+    <div class="container-fluid" id="question-top">
         <div class="row">
-            <div class="col-md-12" id="main-text">
-                <h1 class="main-text">Knode the Code</h1>
-                <h3 class="main-text">Learn the topics using Flash Cards or</h3>
-                <h3 class="main-text">Drag & Drop the right answer!</h3>
-                <br>
-                <!-- need the bookmark code for this button -->
-                <button type="button" class="btn btn-primary btn-lg start">Get Started.</button>
+            <div class="col-md-12" id="question-text">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" id="answer-input">
             </div>
         </div>
     </div>
 
-    <br>
-    <br>
-
-    <!-- main area front area-->
-    <div class="container-fluid" id="main-bottom">
+    <!-- answer area-->
+    <div class="container-fluid" id="choices">
         <div class="row">
-            <div class="col-md-6" id="flashCardPick">
-                <h2>Flash Cards!</h2>
+            <div class="col-md-4" id="choice1">
             </div>
-            <div class="col-md-6" id="dragDropPick">
-                <h2>Drag & Drop Trivia!</h2>
+            <div class="col-md-4" id="choice2">
+            </div>
+            <div class="col-md-4" id="choice3">
             </div>
         </div>
     </div>

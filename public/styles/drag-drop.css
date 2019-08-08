@@ -1,40 +1,34 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#index{
+#quiz{
 
 }
 
 /* main initial divs */
-#main-top{
+#question-top{
 
 }
 
-#main-text{
+#question-text{
   text-align: center;
 }
 
-h1.main-text{
+#answer-input{
 
 }
 
-h3.main-text{
+#choices{
   
 }
 
-button.start{
+#choice1{
 
 }
 
-/* bottom div with games */
-#main-bottom{
-  text-align: center;
+#choice2{
 }
 
-#flashCardPick{
-  border: 1px solid black;
+#choice3{
 }
 
-#dragDropPick{
-  border: 1px solid black;
-}
