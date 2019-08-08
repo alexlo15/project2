@@ -1,3 +1,40 @@
-.list-group-item {
-  line-height: 2.5;
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SHARED~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* nav bar */
+nav{
+
 }
+
+#logoTitle{
+
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* body */
+#index{
+
+}
+
+/* main initial divs */
+#main-top{
+
+}
+
+#main-text{
+  text-align: center;
+}
+
+h1.main-text{
+
+}
+
+h3.main-text{
+  
+}
+
+button.start{
+
+}
+
