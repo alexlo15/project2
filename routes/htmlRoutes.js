@@ -18,15 +18,15 @@ module.exports = function (app) {
   }) 
 
   app.get("/flash-card-selection", function(req, res){
-    res.sendFile(path.join(__dirname, "flash-card-selection.html"));
+    res.sendFile(path.join(__dirname, "../public/flash-card-selection.html"));
   }) 
 
   app.get("/flash-card", function(req, res){
-    res.sendFile(path.join(__dirname, "flash-card.html"));
+    res.sendFile(path.join(__dirname, "../public/flash-card.html"));
   }) 
 
   app.get("/drag-drop", function(req, res){
-    res.sendFile(path.join(__dirname, "drag-drop.html"));
+    res.sendFile(path.join(__dirname, "../public/drag-drop.html"));
   }) 
 
 
