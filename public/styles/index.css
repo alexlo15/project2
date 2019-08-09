@@ -1,10 +1,15 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#index{ 
-  background-image: url(/images/index_bg.jpg);
 
+#main-page{ 
+background: url(../images/opacity.jpg);
+
+  
+  
 }
+
+
 
 /* main initial divs */
 #main-top{
@@ -13,9 +18,14 @@
 
 #main-text{
   text-align: center;
+  padding-top: 100px;
+  font-family: 'Libre Baskerville', serif;
+  color: white
 }
 
-h1.main-text{
+#ptext{
+  font-size: 100px;
+  
 
 }
 
@@ -30,14 +40,15 @@ button.start{
 /* bottom div with games */
 #main-bottom{
   text-align: center;
+  margin-bottom: 500px 
 }
 
 #flashCardPick{
-  border: 1px solid black;
+  
 }
 
 #dragDropPick{
-  border: 1px solid black;
+  
 }
 
 /* test div */
@@ -46,5 +57,27 @@ button.start{
   border: 1px solid black;
 }
 #startBtn{
-  align-self: center
+  align-self: center;
+  margin-bottom: 500px;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+  
+ 
+}
+#ddBtn{
+  height: 50px;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+}
+#fcBtn{
+  height: 50px;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
 }
