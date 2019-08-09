@@ -48,3 +48,9 @@ button.start{
 #startBtn{
   align-self: center
 }
+
+div{
+
+background-image: url(https://library.kissclipart.com/20180902/aoe/kissclipart-note-card-clipart-clip-art-f2a073e04f2c7d9d.jpg);
+rotate: 180deg;
+}

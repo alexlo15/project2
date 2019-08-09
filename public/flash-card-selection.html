@@ -30,15 +30,15 @@
 
     <!-- movable divs for the topics-->
     <div class="container-fluid" id="movable-divs">
-        <div class="row">
-            <div class="col-md-4" id="HTML-text">
-               <img id="html" src="./images/html-2.png" alt="HTML"> 
+        <div class="row" id='launchPad'>
+            <div class="col-md-4 logoCard" id="HTML-text" data-name="HTML">
+                <img id="html" src="./images/html-2.png" alt="HTML">
             </div>
-            <div class="col-md-4" id="CSS-text">
-                <img id="css" src="./images/css.png" alt="CSS"> 
+            <div class="col-md-4 logoCard" id="CSS-text" data-name="CSS">
+                <img id="css" src="./images/css.png" alt="CSS">
             </div>
-            <div class="col-md-4" id="JS-text">
-               <img id="JS" src="./images/JS.png" alt="Javascript"> 
+            <div class="col-md-4 logoCard" id="JS-text" data-name="JS">
+                <img id="JS" src="./images/JS.png" alt="Javascript">
             </div>
         </div>
     </div>
@@ -50,19 +50,19 @@
     <div class="container-fluid">
         <!-- div where uses can drag things into -->
         <div class="row">
-            <div class="col-md-6" id="final-topics">
+            <div class="col-md-6 holder" id="final-topics">
                 <!-- can erase the <br> later -->
-                <br>
-                <br>
+               
                 <h2>Drag topics here</h2>
-                <br>
-                <br>
+               
             </div>
+            
         </div>
 
         <div class="row">
             <div class="col-md-12">
-                <a href="/flash-card"><button type="button" class="btn btn-primary btn-lg continue">Continue</button></a>
+                <a href="/flash-card"><button type="button"
+                        class="btn btn-primary btn-lg continue">Continue</button></a>
             </div>
         </div>
     </div>
@@ -80,10 +80,17 @@
     </script>
 
     <!-- JQuery Link -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"> </script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"> </script>
 
-    <!-- Front-end JS link-->
-    <script src="public/js/index.js"></script>
+
+    <!-- < !--Front - end JS link--> 
+        <script src="js/flash-card-selection.js">
+            </script>
 
 </body>
 

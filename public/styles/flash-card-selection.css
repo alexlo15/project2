@@ -37,7 +37,10 @@
 #JS-text{
   /* border: 1px solid black; */
 }
-
+.logoCard{
+  cursor: pointer;
+  display: inline-block;
+}
 /* bottom div user can drag things into */
 #final-topics{
   color: linen;
