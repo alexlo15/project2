@@ -57,6 +57,7 @@ button.start{
   border: 1px solid black;
 }
 #startBtn{
+
   align-self: center;
   margin-bottom: 500px;
   background-color: rgb(46, 19, 141);
@@ -81,3 +82,4 @@ button.start{
   border: 1px solid white;
   color: white;
 }
+
