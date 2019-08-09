@@ -1,7 +1,8 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#index{
+#index{ 
+  background-image: url(/images/index_bg.jpg);
 
 }
 
@@ -43,4 +44,7 @@ button.start{
 .test{
   margin: 5%;
   border: 1px solid black;
+}
+#startBtn{
+  align-self: center
 }
