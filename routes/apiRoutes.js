@@ -2,11 +2,12 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+  // app.get("/", function(req, res) {
+  //   db.Question.findAll({}).then(function(dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
+
 
 
   
@@ -17,6 +18,18 @@ module.exports = function(app) {
       res.json(dbExample);
     });
   });
+
+  // // Create a new example
+  // app.get("/api/:topics",[req.params.id] ,function(req, res) {
+  //   db.questions.findAll({
+  //     where:{
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
+
 
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
