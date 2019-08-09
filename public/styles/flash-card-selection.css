@@ -2,7 +2,8 @@
 
 /* body */
 #fc-selection{
-
+  background-attachment: fixed;
+  background: url(../images/page\ background.jpg);
 }
 
 /* contains all movable divs */
@@ -10,24 +11,44 @@
 
 }
 
+#html, #JS{
+  width: 120px;
+  height: 110px;
+  margin-left: 35%;
+  margin-right: 2%;
+  margin-top: 1.5%;
+}
+
+#css{
+  width: 150px;
+  height: 120px;
+  margin-left: 30%;
+  margin-right: 2%;
+}
+
 #HTML-text{
-  border: 1px solid black;
+  /* border: 1px solid grey; */
 }
 
 #CSS-text{
-  border: 1px solid black;
+  /* border: 1px solid white; */
 }
 
 #JS-text{
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 /* bottom div user can drag things into */
 #final-topics{
+  color: linen;
   text-align: center;
   border: 1px solid black;
-  background-color: grey;
-}
+  background-color: lightslategray;
+  opacity: .80;
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 240px;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.5)));}
 
 button.continue{
 
