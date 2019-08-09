@@ -13,33 +13,38 @@
 
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="./styles/shared.css">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
+
+    <!-- FontAwesome styling -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
 </head>
 
-<body id="index">
+<body id="main-page">
+
+
+
 
     <!-- test change -->
 
-    <!-- nav bar -->
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" id="logoTitle" href="/">
-            Knode the Code
-        </a>
-    </nav>
+
 
     <!-- main area front area-->
     <div class="container-fluid" id="main-top">
         <div class="row">
             <div class="col-md-12" id="main-text">
-                <h1 class="main-text">Knode the Code</h1>
+                <p class="main-text" id="ptext">Knode the Code</p>
                 <h3 class="main-text">Learn the topics using Flash Cards or</h3>
                 <h3 class="main-text">Drag & Drop the right answer!</h3>
                 <br>
                 <!-- need the bookmark code for this button -->
-                <button type="button" class="btn btn-primary btn-lg start" id="startBtn">Get Started.</button>
+                <a href="index.html#main-bottom"><button type="button" class="btn btn-aqua btn-lg start"
+                        id="startBtn">Get Started.</button></a>
             </div>
         </div>
     </div>
@@ -51,10 +56,18 @@
     <div class="container-fluid" id="main-bottom">
         <div class="row">
             <div class="col-md-6" id="flashCardPick">
-                <a href="/flash-card-selection"><h2>Flash Cards!</h2></a>
+                    <a href="flash-card.html">
+                        <button type="button" class="btn btn-aqua btn-lg" id="fcBtn">
+                    <h2>Flash Cards!</h2>
+                </button>
+                </a>
             </div>
             <div class="col-md-6" id="dragDropPick">
-                <a href="/drag-drop"><h2>Drag & Drop Trivia!</h2></a>
+                <a href="drag-drop.html">
+                    <button type="button" class="btn btn-aqua btn-lg" id="ddBtn">
+                        <h2>Drag & Drop Trivia!</h2>
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -63,13 +76,13 @@
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- JQuery Link -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
