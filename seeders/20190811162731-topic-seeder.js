@@ -5,31 +5,31 @@ module.exports = {
 
     return queryInterface.bulkInsert('Topic', [{
       name: "HTML",
-      skillLevel: "1"
+      skillLevel: "Easy"
     }, {
       name: "HTML",
-      skillLevel: "2"
+      skillLevel: "Moderate"
     }, {
       name: "HTML",
-      skillLevel: "3"
+      skillLevel: "Hard"
     }, {
       name: "CCS",
-      skillLevel: "1"
+      skillLevel: "Easy"
     }, {
       name: "CCS",
-      skillLevel: "2"
+      skillLevel: "Moderate"
     }, {
       name: "CCS",
-      skillLevel: "3"
+      skillLevel: "Hard"
     }, {
       name: "Javascript",
-      skillLevel: "1"
+      skillLevel: "Easy"
     }, {
       name: "Javascript",
-      skillLevel: "2"
+      skillLevel: "Moderate"
     }, {
       name: "Javascript",
-      skillLevel: "3"
+      skillLevel: "Hard"
     }], {});
 
   },
