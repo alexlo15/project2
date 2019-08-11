@@ -4,7 +4,9 @@
     "password": "password",
     "database": "KNOTCODE",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "seederStorage": "json",
+    "seederStoragePath": "sequelizeData.json"
   },
   "test": {
     "username": "root",
