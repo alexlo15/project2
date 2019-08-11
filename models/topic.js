@@ -2,12 +2,16 @@ module.exports = function (sequelize, DataTypes) {
 
   var Topic = sequelize.define("Topic", {
     // Giving the Topic model a name of type STRING
-    name: DataTypes.STRING
+    name: DataTypes.STRING,
+    skillLevel: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    }
 
-  },{
+  }, {
     timestamps: false,
     freezeTableName: true,
-});
+  });
 
   Topic.associate = function (models) {
     // Associating Topics with Questions

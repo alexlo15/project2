@@ -15,10 +15,6 @@ module.exports = function (sequelize, DataTypes) {
         choice3: {
             type: DataTypes.TEXT,
             allowNull: false,
-        },
-        skillLevel: {
-            type: DataTypes.TEXT,
-            allowNull: false
         }
     },{
         timestamps: false,
