@@ -9,12 +9,12 @@ module.exports = function (sequelize, DataTypes) {
     freezeTableName: true,
 });
 
-  Topic.associate = function (models) {
-    // Associating Topics with Questions
-    Topic.hasMany(models.Question, {
-      onDelete: "cascade"
-    });
-  };
+  // Topic.associate = function (models) {
+  //   // Associating Topics with Questions
+  //   Topic.hasMany(models.Question, {
+  //     onDelete: "cascade"
+  //   });
+  // };
 
   // Topic.create({
   //   name: "HTML"

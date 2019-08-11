@@ -18,7 +18,7 @@ module.exports = function (app) {
 
   // Checks to see if initial data is in the database
   app.get("/test", function (req, res) {
-    db.Topic.findAll({}).then(function (initialData) {
+    db.Question.findAll({}).then(function (initialData) {
     });
   });
 
