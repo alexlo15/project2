@@ -44,6 +44,7 @@ button.start{
 }
 
 #flashCardPick{
+ background:url(/public/images/light-opacity-programming-code-abstract-technology-background-software-1024x756.jpg);
   
 }
 
@@ -92,6 +93,23 @@ button.start{
   font-family: 'Libre Baskerville', serif;
   margin-top: 25px;
   color: white;
+  }
+#dropdownMenuButton{
+  font-family: 'Libre Baskerville', serif;
+  height: 50px;
+  width: 90%;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+  font-size: 25px;
+ 
+}
+.dropdown-item{
+  width: 615px;
+  text-align: center;
+  color: white
   
-
+}
+.dropdown-menu{
+  background:url(/public/images/dropdownbg.png)
 }
