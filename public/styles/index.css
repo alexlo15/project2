@@ -105,9 +105,9 @@ button.start{
  
 }
 .dropdown-item{
-  width: 615px;
+  width: 500px;
   text-align: center;
-  color: white
+  color: white;
   
 }
 .dropdown-menu{
