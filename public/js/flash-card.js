@@ -98,7 +98,7 @@ $(document).ready(function () {
 
 
 document.getElementById('timer').innerHTML =
-  60 + ":" + 00;
+  01 + ":" + 00;
 startTimer();
 
 function startTimer() {
