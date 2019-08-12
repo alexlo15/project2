@@ -1,7 +1,14 @@
+
+
+ 
 $(document).ready(function () {
 
+window.addEventListener("load", () => {
+  document.querySelector("body").classList.add("loaded"); 
+ });
 
 
+  
   $("#one").on("click", function () {
 
     localStorage.setItem("skillLvl", "1")
