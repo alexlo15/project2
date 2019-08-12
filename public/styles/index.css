@@ -108,11 +108,11 @@ button.start{
  
 }
 .dropdown-item{
-  display: inline;
-  text-align: center;
-  color: white;
-  background-color: rgb(46, 19, 141);
-  border: 1px solid white;
+width: 500px;
+ text-align: center;
+ color: white;
+ background-color: rgb(46, 19, 141);
+ border: 1px solid white;
  font-size: 25px;
   
 }
