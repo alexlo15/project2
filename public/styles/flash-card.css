@@ -6,9 +6,17 @@
 
 }
 
+h2,h3,p{
+  color:white;
+}
+
+.glyphicon{
+  color: hotpink;
+}
+
 /* main initial divs */
 #main{
-
+  margin-top: 5%;
 }
 
 button.flip{
@@ -16,7 +24,9 @@ button.flip{
 }
 
 button.home{
+margin-top: 10%;
 background-color:#5b6b78; 
+border: none;
 }
 
 .indexCard{
