@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     let topics = localStorage.getItem('vTopicSelected');
     var questions = [];
     var answers = [];

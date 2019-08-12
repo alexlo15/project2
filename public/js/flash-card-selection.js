@@ -3,6 +3,11 @@ $(document).ready(function () {
     let draggableId;
     var topicSelected = [];
 
+
+    var level = localStorage.getItem("skillLvl");
+
+   
+
     // Function for drag and drop
     // ==========================================
     function dragAndDrop() {
@@ -49,10 +54,36 @@ $(document).ready(function () {
     // ==============================================
     //Passing the value of topicSelected to another js file flash-card.js using local storage.
     $('.continue').on('click', function () {
-        // alert('topic selected: ' + topicSelected);
-        localStorage.setItem("vTopicSelected", topicSelected); 
+        alert('topic selected: ' + topicSelected);
+        localStorage.setItem("vTopicSelected", topicSelected);
+        switch (level) {
+            case "1":
+                {
+                    generateCssDiv("1");
+                    generateHtmlDiv("1");
+                    generateJsDiv("1");
+                }
+                break;
+    
+            case "2":
+                {
+                    generateCssDiv("2");
+                    generateHtmlDiv("2");
+                    generateJsDiv("2");
+                }
+                break;
+            case "3":
+                {
+                    generateCssDiv("3");
+                    generateHtmlDiv("3");
+                    generateJsDiv("3");
+                }
+                break;
+    
+        };
         // This data will be sent to next page
     });
+
 
     // Click of Clear button
     // ==================================================
@@ -79,12 +110,13 @@ $(document).ready(function () {
             }
         }
 
-        function generateHtmlDiv() {
+        function generateHtmlDiv(skill) {
             //    alert('inside function');
             let div = $('<div>');
             let img = $('<img>');
             div.attr('class', 'col-md-4 logoCard');
             div.attr('id', 'HTML-text');
+            div.attr("id", skill);
             div.attr('data-name', 'HTML');
             img.attr('id', 'html');
             img.attr('src', './images/html-2.png');
@@ -94,12 +126,13 @@ $(document).ready(function () {
             dragAndDrop();
         }
 
-        function generateCssDiv() {
+        function generateCssDiv(skill) {
             // alert('inside function');
             let div = $('<div>');
             let img = $('<img>');
             div.attr('class', 'col-md-4 logoCard');
             div.attr('id', 'Css-text');
+            div.attr("id", skill);
             div.attr('data-name', 'CSS');
             img.attr('id', 'html');
             img.attr('src', './images/css.png');
@@ -109,12 +142,13 @@ $(document).ready(function () {
             dragAndDrop();
         }
 
-        function generateJsDiv() {
+        function generateJsDiv(skill) {
             // alert('inside function');
             let div = $('<div>');
             let img = $('<img>');
             div.attr('class', 'col-md-4 logoCard');
             div.attr('id', 'JS-text');
+            div.attr("id", skill);
             div.attr('data-name', 'JS');
             img.attr('id', 'html');
             img.attr('src', './images/JS.png');
