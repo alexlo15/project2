@@ -16,7 +16,7 @@ button.flip{
 }
 
 button.home{
-
+background-color:#5b6b78; 
 }
 
 .indexCard{
@@ -25,6 +25,7 @@ button.home{
 
 .fas{
   /* these are the arrows from font awesome */
+  color: white;
 }
 
 button.start{
@@ -32,6 +33,8 @@ button.start{
 }
 
 h2.timer{
+  color: white;
+  margin-top: 30%;
 
 }
 
