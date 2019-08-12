@@ -83,3 +83,15 @@ button.start{
   color: white;
 }
 
+#flashCardText{
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 25px;
+  color: white;
+}
+#dragDropText{
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 25px;
+  color: white;
+  
+
+}
