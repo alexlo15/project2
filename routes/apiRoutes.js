@@ -22,6 +22,15 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/questions/:TopicId", function(req,res){
+    db.Question.findAll({
+      where:{
+        TopicId: req.params.TopicId
+      }
+    }).then(function(dbQuestion){
+      res.json(dbQuestion);
+    });
+  });
 
 
   // Create a new example
