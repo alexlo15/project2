@@ -44,7 +44,7 @@
                 <br>
                 <!-- need the bookmark code for this button -->
                 <a href="index.html#main-bottom"><button type="button" class="btn btn-aqua btn-lg start"
-                        id="startBtn">Get Started   <i class="fas fa-play"></i></button></a>
+                        id="startBtn">Get Started <i class="fas fa-play"></i></button></a>
             </div>
         </div>
     </div>
@@ -56,29 +56,42 @@
     <div class="container-fluid" id="main-bottom">
         <div class="row">
             <div class="col-md-6" id="flashCardPick">
-                    <a href="flash-card-selection.html">
-                        <button type="button" class="btn btn-aqua btn-lg" id="fcBtn">
-                    <h2>Flash Cards!</h2>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Flash Cards!
                 </button>
-                </a>
-                <div id= "flashCardText">
-                        <p>Use these flash cards to help study</p>
-                        <p>and master your coding skills!</p>
-                    </div>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/flash-card-selection.html">level 1</a>
+                    <a class="dropdown-item" href="/flash-card-selection.html">level 2</a>
+                    <a class="dropdown-item" href="/flash-card-selection.html">level 3</a>
+                </div>
             </div>
-            <div class="col-md-6" id="dragDropPick">
+            <div class="col-md-6" id="flashCardPick">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Drag & Drop Trivia!
+                </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="/drag-drop.html">level 1</a>
+                <a class="dropdown-item" href="/drag-drop.html">level 2</a>
+                <a class="dropdown-item" href="/drag-drop.html">level 3</a>
+            </div>
+            
+        </div>
+        <!--<div class="col-md-6" id="dragDropPick">
                 <a href="drag-drop.html">
                     <button type="button" class="btn btn-aqua btn-lg" id="ddBtn">
                         <h2>Drag & Drop Trivia!</h2>
                     </button>
                 </a>
-                <div id= "dragDropText">
-                    <p>Quiz yourself and work your way up to </p>
-                    <p>way up to an expert coder!</p>
-                </div>
-            </div>
+         <div id="dragDropText">
+            <p>Quiz yourself and work your way up to </p>
+            <p>way up to an expert coder!</p>
         </div>
+    -->
     </div>
+   
+  
 
 
     <!-- Bootstrap JS links: -->
