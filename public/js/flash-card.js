@@ -1,9 +1,11 @@
 $(document).ready(function () {
+
     let topics = [];
     topics.push(localStorage.getItem('vTopicSelected'));
     var level = localStorage.getItem('skillLvl');
     console.log(level);
     console.log('Topics : ' + topics);
+
     var questions = [];
     var answers = [];
     // alert("local Storage value: "+ topics);
@@ -145,7 +147,9 @@ $(document).ready(function () {
 
 
 document.getElementById('timer').innerHTML =
-    60 + ":" + 00;
+
+  60 + ":" + 00;
+
 startTimer();
 
 function startTimer() {

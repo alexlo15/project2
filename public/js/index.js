@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   $("#one").on("click", function () {
     localStorage.setItem("skillLvl", "1")
   });
@@ -7,5 +8,6 @@ $(document).ready(function () {
   });
   $("#three").on("click", function () {
     localStorage.setItem("skillLvl", "3")
+
   });
  });
