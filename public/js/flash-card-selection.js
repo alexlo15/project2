@@ -49,7 +49,7 @@ $(document).ready(function () {
     // ==============================================
     //Passing the value of topicSelected to another js file flash-card.js using local storage.
     $('.continue').on('click', function () {
-        alert('topic selected: ' + topicSelected);
+        // alert('topic selected: ' + topicSelected);
         localStorage.setItem("vTopicSelected", topicSelected); 
         // This data will be sent to next page
     });
