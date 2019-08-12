@@ -1,5 +1,6 @@
 $(document).ready(function () {
 <<<<<<< HEAD
+<<<<<<< HEAD
   // alert('flash-card attached');
   var topics = localStorage.getItem('vTopicSelected');
   var level = localStorage.getItem("SkillLvl");
@@ -68,6 +69,9 @@ $(document).ready(function () {
   }
   getQuestions(topics);
 =======
+=======
+
+>>>>>>> fb772d507bd95235bdda6b95b513f6e516e2e913
     let topics = localStorage.getItem('vTopicSelected');
     var questions = [];
     var answers = [];
@@ -103,7 +107,10 @@ $(document).ready(function () {
             // console.log(answers);
             generateHtml();
         });
+<<<<<<< HEAD
 >>>>>>> 7f65a6a36a5e82c052c8e04ab7e2ea3176a9d049
+=======
+>>>>>>> fb772d507bd95235bdda6b95b513f6e516e2e913
 
     }
     getQuestions(topics);
