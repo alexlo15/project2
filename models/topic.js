@@ -8,7 +8,10 @@ module.exports = function (sequelize, DataTypes) {
     // Giving the Author model a name of type STRING
     name: DataTypes.STRING
 
-  });
+  },{
+    timestamps: false,
+    freezeTableName: true,
+});
 
   Topic.associate = function (models) {
     // Associating Author with Posts
