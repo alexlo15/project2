@@ -9,8 +9,13 @@ $(document).ready(function () {
     console.log('Topics : ' + topics);
 
 
-    var questions = [];
-    var answers = [];
+    // var questions = [];
+    // var answers = [];
+
+    var flashcards = [];
+    // alert("local Storage value: "+ topics);
+
+
 
 
 
@@ -18,6 +23,7 @@ $(document).ready(function () {
     //storing the value of question and answer of data returned in array.
     function getQuestions() {
         let topicId = [];
+
         topicArray.forEach(function (item, index) {
             if (item === 'HTML') {
                 switch (level) {
@@ -32,6 +38,57 @@ $(document).ready(function () {
                         break;
                 }
                 console.log("After HTML Topic Id : " + topicId);
+
+        for (let i = 0; i < topics.length; i++) {
+            let currentTopic = topics[i];
+            console.log("Current Topic  " + currentTopic);
+            switch (currentTopic) {
+
+                case 'HTML':
+                    switch (level) {
+                        case '1':
+                            topicId.push('1');
+                            break;
+                        case '2':
+                            topicId.push('2');
+                            break;
+                        case '3':
+                            topicId.push('3');
+                            break;
+                    }
+
+                    // topicId.push('1');
+                    break;
+                case 'CSS':
+                    // topicId.push('4');
+                    // break;
+                    switch (level) {
+                        case '1':
+                            topicId.push('4');
+                            break
+                        case '2':
+                            topicId.push('5');
+                            break
+                        case '3':
+                            topicId.push('6');
+                            break
+                    }
+                    break;
+                case 'JS':
+                    // topicId.push('7');
+                    switch (level) {
+                        case '1':
+                            topicId.push('7');
+                            break
+                        case '2':
+                            topicId.push('8');
+                            break
+                        case '3':
+                            topicId.push('9');
+                            break
+                    }
+                    break;
+
             }
            
             if (item === 'CSS') {
@@ -70,11 +127,17 @@ $(document).ready(function () {
 
             for (var i = 0; i < data.length; i++) {
 
-                questions.push((data[i].question));
-                answers.push(data[i].choice1);
+                let flashcard = {
+                    question: data[i].question,
+                    answer: data[i].choice1
+                }
+
+                flashcards.push(flashcard);
+                // questions.push((data[i].question));
+                // answers.push(data[i].choice1);
 
             }
-            console.log(questions.length)
+            console.log(flashcards.length)
 
             generateHtml();
         });
@@ -84,11 +147,13 @@ $(document).ready(function () {
     getQuestions();
 
     function generateHtml() {
-
-        console.log(questions);
-        console.log(answers);
-        console.log(questions.length);
-        for (var i = 0; i < questions.length; i++) {
+        $(".carousel-inner").empty();
+        // console.log(questions);
+        // console.log(answers);
+        console.log(flashcards);
+        console.log(flashcards.length);
+        // console.log(questions.length);
+        for (var i = 0; i < flashcards.length; i++) {
             // console.log(questions[i]);
             let divOuter = $('<div>');
             let divColM8 = $('<div>');
@@ -110,10 +175,12 @@ $(document).ready(function () {
             divFlipBoxInner.addClass("flip-box-inner");
             divFlipBoxFront.addClass("flip-box-front");
             h2Question.text("Question");
-            pQuestion.text(questions[i]);
+            // pQuestion.text(questions[i]);
+            pQuestion.text(flashcards[i].question);
             divFlipBoxBack.addClass("flip-box-back");
             h2Answer.text("Answer");
-            pAnswers.text(answers[i]);
+            // pAnswers.text(answers[i]);
+            pAnswers.text(flashcards[i].answer);
 
             divFlipBoxFront.append(h2Question, pQuestion);
             divFlipBoxBack.append(h2Answer, pAnswers);
@@ -138,6 +205,18 @@ $(document).ready(function () {
         alert('Previous clicked');
     });
 
+
+    // shuffle functions!
+    $(".shuffle").on('click', function () {
+        for (let i = flashcards.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = flashcards[i];
+            flashcards[i] = flashcards[j];
+            flashcards[j] = temp;
+        }
+        console.log(flashcards);
+        generateHtml();
+    });
 
 });
 
