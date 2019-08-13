@@ -1,6 +1,8 @@
 var db = require("../models");
-
+var Sequelize = require("sequelize");
+const Op = Sequelize.Op;
 module.exports = function (app) {
+ 
   // See all topics
   app.get("/api/topics", function (req, res) {
     db.Topic.findAll({}).then(function (dbTopics) {
@@ -23,10 +25,19 @@ module.exports = function (app) {
   });
 
   app.get("/api/questions/:TopicId", function(req,res){
+    // console.log( JSON.stringify(req.params.TopicId));
+    let TopicIds = (req.params.TopicId).split(",");
+    // console.log(TopicIds);
     db.Question.findAll({
       where:{
-        TopicId: req.params.TopicId
-      }
+            TopicId:{
+              [Op.in] : TopicIds
+            }
+         }
+        
+       
+       
+    
     }).then(function(dbQuestion){
       res.json(dbQuestion);
     });
