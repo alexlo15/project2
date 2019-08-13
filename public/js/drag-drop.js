@@ -1,4 +1,4 @@
-import { randomBytes } from "crypto";
+// import { randomBytes } from "crypto";
 
 $(document).ready(function () {
 
@@ -43,41 +43,50 @@ $(document).ready(function () {
         $('#choice1Text').text(flashcards[questionCount].choices[0]);
         $('#choice2Text').text(flashcards[questionCount].choices[1]);
         $('#choice3Text').text(flashcards[questionCount].choices[2]);
+        DragChoices();
 
         questionCount++;
     });
 
-function randomize(){
-    for (let i = flashcards.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        let temp = flashcards[i];
-        flashcards[i] = flashcards[j];
-        flashcards[j] = temp;
-    }
+    function randomize() {
+        for (let i = flashcards.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = flashcards[i];
+            flashcards[i] = flashcards[j];
+            flashcards[j] = temp;
+        }
 
-}
+    }
 
 
     // ===============================================
     // Function for drag and drop
     // ==========================================
     let draggableChoice;
-    $(function () {
+
+    function DragChoices() {
         var pastDraggable = "";
         $("#draggable1").draggable({
             cursor: "move",
+            appendTo: "body",
+            // revert: handleRevert,
+            // revert:true,
             start: function () {
                 Positioning.initialize($(this));
             },
         });
         $("#draggable2").draggable({
             cursor: "move",
+            appendTo: "body",
+            // revert:true,
             start: function () {
                 Positioning.initialize($(this));
             },
         });
         $("#draggable3").draggable({
             cursor: "move",
+            appendTo: "body",
+            // revert:true,
             start: function () {
                 Positioning.initialize($(this));
             },
@@ -95,10 +104,10 @@ function randomize(){
                     //Place past object into its original coordinate
                     $("#" + pastDraggable).animate($("#" + pastDraggable).data().originalLocation, "slow");
                 }
-               
+
                 //Store the current draggable object
                 pastDraggable = currentDraggable;
-                draggableChoice =  $(ui.draggable).text();
+                draggableChoice = $(ui.draggable).text();
                 console.log("Dragged item : " + draggableChoice);
             },
             //Event to accept a draggable when dragged outside the droppable
@@ -107,32 +116,52 @@ function randomize(){
                 $(ui.draggable).animate($(ui.draggable).data().originalLocation, "slow");
             }
         });
-    });
-    var Positioning = (function () {
-        return {
-            //Initializes the starting coordinates of the object
-            initialize: function (object) {
-                object.data("originalLocation", $(this).originalPosition = { top: 0, left: 0 });
-            },
-            //Resets the object to its starting coordinates
-            reset: function (object) {
-                object.data("originalLocation").originalPosition = { top: 0, left: 0 };
-            },
-        };
-    })();
+
+        var Positioning = (function () {
+            return {
+                //Initializes the starting coordinates of the object
+                initialize: function (object) {
+                    object.data("originalLocation", $(this).originalPosition = {
+                        top: 0,
+                        left: 0
+                    });
+                },
+                //Resets the object to its starting coordinates
+                reset: function (object) {
+                    object.data("originalLocation").originalPosition = {
+                        top: 0,
+                        left: 0
+                    };
+                },
+            };
+        })();
+
+        // function handleRevert(object){
+        //     alert('Revert called');
+        //     object.data("originalLocation").originalPosition = {
+        //         top: 0,
+        //         left: 0
+        //     };
+        // }
+        // handleRevert();
+    
+    }
 
 
-    // calling the dragAndDrop function
-    // ============================================
-    // dragAndDrop();
 
     // ===========================================
 
     $('#submitBtn').on('click', function () {
+        DragChoices();
+        // handleRevert($(this));
+        // Positioning();
+        $("#draggable1").css({'left':'0','top':'0'});
+        $("#draggable2").css({'left':'0','top':'0'});
+        $("#draggable3").css({'left':'0','top':'0'});
+        $('#final-topics').html('');
+        if (questionCount < flashcards.length) {
 
-        if(questionCount < flashcards.length){
-
-            if(questionCount === flashcards.length-1){
+            if (questionCount === flashcards.length - 1) {
                 $("#submitBtn").text("Check Your Results!");
             }
             $('#questionH2').text(flashcards[questionCount].question);
@@ -140,8 +169,8 @@ function randomize(){
             $('#choice2Text').text(flashcards[questionCount].choices[1]);
             $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
-        questionCount++;
-        } else{
+            questionCount++;
+        } else {
             alert("You finished the test!");
 
         }
