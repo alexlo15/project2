@@ -13,7 +13,7 @@
 
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="/styles/shared.css">
     <link rel="stylesheet" type="text/css" href="/styles/drag-drop.css">
@@ -31,50 +31,76 @@
     <!-- question area-->
     <div class="container-fluid" id="question-top">
         <div class="row">
-            <div class="col-md-12" id="question-text">
-                <i>Question Here!</i>
+            <div class="col-md-10" id="question-text">
+                <div class="card">
+                        Question?
+                </div>
             </div>
         </div>
+        <div class="row final-topics-row">
+                <div class="col-md-6 holder" id="final-topics">
+                    <!-- can erase the <br> later -->
+                   
+                    <h2>Drop Answers here</h2>
+                   
+                </div>
+                
+            </div>
 
-        <div class="row">
-            <div class="col-md-12" id="answer-input">
-                <i>User drags answer here!</i>
-            </div>
-        </div>
+
     </div>
 
     <!-- answer area-->
     <div class="container-fluid" id="choices">
         <div class="row">
-            <div class="col-md-4" id="choice1">
-                <i>choice 1</i>
+            <div class="col-md-4">
+                <div class="card" id="choice1">
+                    <div class="card-body">
+                        choice 1
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4" id="choice2">
-                <i>choice 2</i>
-            </div>
-            <div class="col-md-4" id="choice3">
-                <i>choice 3</i>
-            </div>
+            <div class="col-md-4">
+                    <div class="card" id="choice2">
+                        <div class="card-body">
+                            choice 2
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                        <div class="card" id="choice3">
+                            <div class="card-body">
+                                choice 3
+                            </div>
+                        </div>
+                    </div>
         </div>
+        <div>
+                <a href="#">
+                <button type="button" class="btn btn-primary btn-lg" id="submitBtn">Submit</button>
+                </a>
+            
+        </div>
+        
     </div>
 
 
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- JQuery Link -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Front-end JS link-->
-    <script src="public/js/index.js"></script>
+    <script src="./js/drag-drop.js"></script>
 
 </body>
 

@@ -10,19 +10,30 @@
     <!-- Bootstrap css link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
 <!-- google font for glitch -->
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900" rel="stylesheet">
 
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="./styles/shared.css">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
     <link rel="stylesheet" type="text/css" href="./styles/glitch.css">
+
+    <!-- FontAwesome styling -->
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+
 </head>
 
-<body id="index">
+<body id="main-page">
+
+
+
 
     
   
@@ -46,6 +57,7 @@
             <div class="glitchit"></div>
             <div class="glitchit"></div>
             <div class="glitchit"></div>
+
         </div>
        
     </div>
@@ -57,17 +69,45 @@
     <div class="container-fluid" id="main-bottom">
         <div class="row">
             <div class="col-md-6" id="flashCardPick">
-                <a href="/flash-card-selection">
-                    <h2>Flash Cards!</h2>
-                </a>
+
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Flash Cards!
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" id="one" href="/flash-card-selection.html">level 1</a>
+                    <a class="dropdown-item" id="two" href="/flash-card-selection.html">level 2</a>
+                    <a class="dropdown-item" id="three" href="/flash-card-selection.html">level 3</a>
+                </div>
             </div>
-            <div class="col-md-6" id="dragDropPick">
-                <a href="/drag-drop">
-                    <h2>Drag & Drop Trivia!</h2>
-                </a>
+            
+            <div class="col-md-6" id="flashCardPick">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Drag & Drop Trivia!
+                </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" id="triviaOne" href="/drag-drop.html">level 1</a>
+                <a class="dropdown-item" id="triviaTwo" href="/drag-drop.html">level 2</a>
+                <a class="dropdown-item" id="triviaThree" href="/drag-drop.html">level 3</a>
             </div>
+            
         </div>
+        <!--<div class="col-md-6" id="dragDropPick">
+                <a href="drag-drop.html">
+                    <button type="button" class="btn btn-aqua btn-lg" id="ddBtn">
+                        <h2>Drag & Drop Trivia!</h2>
+                    </button>
+                </a>
+         <div id="dragDropText">
+            <p>Quiz yourself and work your way up to </p>
+            <p>way up to an expert coder!</p>
+        </div>
+        
+    -->
     </div>
+   
+  
 
 
     <!-- Bootstrap JS links: -->
@@ -95,6 +135,7 @@
         });
 
     </script>
+
 
 </body>
 

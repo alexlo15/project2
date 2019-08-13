@@ -4,24 +4,109 @@
 #index{ 
   background-image: url(../images/main.jpg);
 
+
 }
 
 #main-text{
   text-align: center;
+  padding-top: 100px;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+
 }
+
+
+#ptext{
+  font-size: 100px;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+h3.main-text{
+  text-shadow: 2px 2px 4px #000000;
+}
+
 
 
 /* bottom div with games */
 #main-bottom{
   text-align: center;
+  margin-bottom: 500px 
+  
 }
 
 #flashCardPick{
-  border: 1px solid black;
+ background:url(/public/images/light-opacity-programming-code-abstract-technology-background-software-1024x756.jpg);
+  
 }
 
 #dragDropPick{
-  border: 1px solid black;
+  
 }
 
 
+/* test div */
+.test{
+  margin: 5%;
+  border: 1px solid black;
+}
+#startBtn{
+
+  align-self: center;
+  margin-bottom: 500px;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+  
+ 
+}
+#ddBtn{
+  height: 50px;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+}
+#fcBtn{
+  height: 50px;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+}
+
+#flashCardText{
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 25px;
+  color: white;
+}
+#dragDropText{
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 25px;
+  color: white;
+  }
+#dropdownMenuButton{
+  font-family: 'Libre Baskerville', serif;
+  height: 50px;
+  width: 90%;
+  background-color: rgb(46, 19, 141);
+  border: 1px solid white;
+  color: white;
+  font-size: 25px;
+ 
+}
+.dropdown-item{
+width: 500px;
+ text-align: center;
+ color: white;
+ background-color: rgb(46, 19, 141);
+ border: 1px solid white;
+ font-size: 25px;
+  
+}
+.dropdown-menu{
+  background:url(/public/images/dropdownbg.png)
+}

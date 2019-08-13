@@ -1,72 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+​
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Knode the Code</title>
-
+    ​
     <!-- Bootstrap css link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-
+    ​
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="/styles/shared.css">
     <link rel="stylesheet" type="text/css" href="/styles/flash-card.css">
 </head>
+​
 
 <body id="flashcard">
-
+    ​
     <!-- nav bar -->
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" id="logoTitle" href="/">
             Knode the Code
         </a>
     </nav>
-
+    ​
     <!-- main div-->
     <div class="container-fluid" id="main">
         <div class="row">
             <!-- area for the flip & timer -->
             <div class="col-md-2">
-                <button type="button" class="btn btn-primary btn-lg flip">Flip</button>
-                <button type="button" class="btn btn-primary btn-lg home">Home</button>
+                <a href="/index.html">
+                    <button type="button" class="btn btn-primary btn-lg home">Home</button>
+                </a>
+                <!-- area for timer?? -->
+                <div> <h2 class="timer">Study Time <br><span id="timer"></span></h2></div>
+                <!-- shuffle! -->
+                <button type="button" class="btn btn-primary btn-lg shuffle"><i class="fas fa-random"></i> Shuffle!</button>
             </div>
+            <div class="col-md-10">
+                <div class="row">
 
-            <!-- area for left and right arrows and index card -->
-            <div class="col-md-6">
-                <div class = "row">
 
-                    <!-- left arrow -->
-                    <div class="col-md-2">
-                        <i class="fas fa-arrow-left"></i>
+                    <div id="myCarousel" class="carousel slide">
+                        <!-- Indicators -->
+                        <!-- <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol> -->
+                        ​
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <!-- <div class="item active">
+​
+                                <div class="flip-box col-md-8">
+                                    <div class="flip-box-inner">
+                                        <div class="flip-box-front">
+                                            this is the frontttttttttttttttttttttttttttttttttttttttt
+                                            <h2 id='question'>Question</h2>
+                                            <p>sdkmdasd</p>
+                                        </div>
+​
+                                        <div class="flip-box-back">
+                                            <h2 id='answers'>Answer</h2>
+                                            <p>sdkmdasd</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            ​
+                        </div>
+                        ​
+                        <!-- <div class="item">
+                                <div class="flip-box col-md-8">
+                                    <div class="flip-box-inner">
+                                        <div class="flip-box-front">
+                                            <!-- this is the frontttttttttttttttttttttttttttttttttttttttt -->
+
+                        <!-- <h2>Question</h2>
+                                            <p>sdkmdasd</p>
+                                        </div>
+​
+                                        <div class="flip-box-back">
+                                            <h2>Answer</h2>
+                                            <p>sdkmdasd</p>
+                                        </div>
+                                    </div>
+                                </div> -->
+                        <!-- </div> --> -->
+                        ​
+                        <!-- <div class="item">
+                                <div class="flip-box col-md-8">
+                                    <div class="flip-box-inner">
+                                        <div class="flip-box-front"> -->
+                        <!-- this is the frontttttttttttttttttttttttttttttttttttttttt -->
+                        <!-- <h2>Question</h2>
+                                            <p>sdkmdasd</p>
+                                        </div>
+​
+                                        <div class="flip-box-back">
+                                            <h2>Answer</h2>
+                                            <p>sdkmdasd</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div> -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
                     </div>
+                    ​
 
-                    <!-- div for the index card -->
-                    <div class="col-md-6">
-                        <div class="indexCard"><i>this is where the index card goes</i></div>
-                    </div>
-
-                    <!-- right arrow -->
-                    <div class="col-md-2">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
                 </div>
             </div>
-
-            <!-- area for timer?? -->
-            <div class="col-md-2">
-                <h2 class="timer">Study Time: 54:50</h2>
-            </div>
-
+            ​
         </div>
     </div>
-
-
+    ​
+    ​
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -77,13 +139,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <!-- JQuery Link -->
+    <!--JQuery Link-->
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <!-- Front-end JS link-->
-    <script src="public/js/index.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    ​
+    <script src="./js/flash-card.js"></script>
+    ​
 </body>
-
-</html>
+​
