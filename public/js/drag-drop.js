@@ -61,45 +61,70 @@ function randomize(){
     // ===============================================
     // Function for drag and drop
     // ==========================================
-    function dragAndDrop() {
-        $(".logoCard").draggable({
-            appendTo: "body",
+    let draggableChoice;
+    $(function () {
+        var pastDraggable = "";
+        $("#draggable1").draggable({
             cursor: "move",
-            helper: 'clone',
-            revert: "invalid",
-            //    revert:true
+            start: function () {
+                Positioning.initialize($(this));
+            },
         });
-
-        $("#launchPad").droppable({
-            tolerance: "intersect",
-            accept: ".logoCard",
-            activeClass: "ui-state-default",
-            hoverClass: "ui-state-hover",
+        $("#draggable2").draggable({
+            cursor: "move",
+            start: function () {
+                Positioning.initialize($(this));
+            },
+        });
+        $("#draggable3").draggable({
+            cursor: "move",
+            start: function () {
+                Positioning.initialize($(this));
+            },
+        });
+        $("#droppable").droppable({
+            //Event to accept a draggable when dropped on the droppable
             drop: function (event, ui) {
-                $("#launchPad").append($(ui.draggable));
-                $(".logoCard").height(20);
+                // $(this).addClass("ui-state-highlight").find("p").html("Dropped!");
+
+                //Get the current draggable object
+                var currentDraggable = $(ui.draggable).attr('id');
+
+                //If there is an object prior to the current one
+                if (pastDraggable != "") {
+                    //Place past object into its original coordinate
+                    $("#" + pastDraggable).animate($("#" + pastDraggable).data().originalLocation, "slow");
+                }
+               
+                //Store the current draggable object
+                pastDraggable = currentDraggable;
+                draggableChoice =  $(ui.draggable).text();
+                console.log("Dragged item : " + draggableChoice);
+            },
+            //Event to accept a draggable when dragged outside the droppable
+            out: function (event, ui) {
+                var currentDraggable = $(ui.draggable).attr('id');
+                $(ui.draggable).animate($(ui.draggable).data().originalLocation, "slow");
             }
         });
+    });
+    var Positioning = (function () {
+        return {
+            //Initializes the starting coordinates of the object
+            initialize: function (object) {
+                object.data("originalLocation", $(this).originalPosition = { top: 0, left: 0 });
+            },
+            //Resets the object to its starting coordinates
+            reset: function (object) {
+                object.data("originalLocation").originalPosition = { top: 0, left: 0 };
+            },
+        };
+    })();
 
-        $(".holder").droppable({
-            tolerance: "intersect",
-            accept: ".logoCard",
-            activeClass: "ui-state-default",
-            hoverClass: "ui-state-hover",
-            drop: function (event, ui) {
-                $('.holder h2').text('');
-                draggableId = ui.draggable.attr("data-name");
-                topicSelected.push(draggableId);
-                $(this).append($(ui.draggable));
-
-                // console.log(draggableId);
-            }
-        });
-    }
 
     // calling the dragAndDrop function
     // ============================================
-    dragAndDrop();
+    // dragAndDrop();
 
     // ===========================================
 
