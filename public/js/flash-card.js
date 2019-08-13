@@ -38,59 +38,7 @@ $(document).ready(function () {
                         break;
                 }
                 console.log("After HTML Topic Id : " + topicId);
-
-        for (let i = 0; i < topics.length; i++) {
-            let currentTopic = topics[i];
-            console.log("Current Topic  " + currentTopic);
-            switch (currentTopic) {
-
-                case 'HTML':
-                    switch (level) {
-                        case '1':
-                            topicId.push('1');
-                            break;
-                        case '2':
-                            topicId.push('2');
-                            break;
-                        case '3':
-                            topicId.push('3');
-                            break;
-                    }
-
-                    // topicId.push('1');
-                    break;
-                case 'CSS':
-                    // topicId.push('4');
-                    // break;
-                    switch (level) {
-                        case '1':
-                            topicId.push('4');
-                            break
-                        case '2':
-                            topicId.push('5');
-                            break
-                        case '3':
-                            topicId.push('6');
-                            break
-                    }
-                    break;
-                case 'JS':
-                    // topicId.push('7');
-                    switch (level) {
-                        case '1':
-                            topicId.push('7');
-                            break
-                        case '2':
-                            topicId.push('8');
-                            break
-                        case '3':
-                            topicId.push('9');
-                            break
-                    }
-                    break;
-
             }
-           
             if (item === 'CSS') {
                 switch (level) {
                     case '1':
