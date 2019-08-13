@@ -10,4 +10,15 @@ $(document).ready(function () {
     localStorage.setItem("skillLvl", "3")
 
   });
+
+  $("#triviaOne").on("click", function () {
+    localStorage.setItem("skillLvl", "1")
+  });
+  $("#triviaTwo").on("click", function () {
+    localStorage.setItem("skillLvl", "2")
+  });
+  $("#triviaThree").on("click", function () {
+    localStorage.setItem("skillLvl", "3")
+
+  });
  });

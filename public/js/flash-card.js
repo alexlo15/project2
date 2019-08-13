@@ -1,76 +1,72 @@
 $(document).ready(function () {
 
-    let topics = [];
-    topics.push(localStorage.getItem('vTopicSelected'));
+    let topics;
+    let topicArray = [];
+    topics = localStorage.getItem('vTopicSelected');
+    topicArray = topics.split(",");
+
     var level = localStorage.getItem('skillLvl');
-    console.log(level);
     console.log('Topics : ' + topics);
+
 
     var questions = [];
     var answers = [];
-    // alert("local Storage value: "+ topics);
-
 
 
 
     //This function will make ajax call to get data depends on which topic and level selected.
     //storing the value of question and answer of data returned in array.
-    function getQuestions(topics) {
-
+    function getQuestions() {
         let topicId = [];
-        for (let i = 0; i < topics.length; i++) {
-            let currentTopic = topics[i];
-            console.log("Current Topic  " + currentTopic);
-            switch (currentTopic) {
-
-                case 'HTML':
-                    switch (level) {
-                        case '1':
-                            topicId.push('1');
-                            break;
-                        case '2':
-                            topicId.push('2');
-                            break;
-                        case '3':
-                            topicId.push('3');
-                            break;
-                    }
-
-                    // topicId.push('1');
-                    break;
-                    case 'CSS':
-                        // topicId.push('4');
-                        // break;
-                        switch (level) {
-                            case '1':
-                              topicId.push('4');
-                              break
-                            case '2':
-                              topicId.push('5');
-                              break
-                            case '3':
-                              topicId.push('6');
-                              break
-                          }
+        topicArray.forEach(function (item, index) {
+            if (item === 'HTML') {
+                switch (level) {
+                    case '1':
+                        topicId.push('1');
                         break;
-                    case 'JS':
-                        // topicId.push('7');
-                        switch (level) {
-                            case '1':
-                              topicId.push('7');
-                              break
-                            case '2':
-                              topicId.push('8');
-                              break
-                            case '3':
-                              topicId.push('9');
-                              break
-                          }
+                    case '2':
+                        topicId.push('2');
                         break;
+                    case '3':
+                        topicId.push('3');
+                        break;
+                }
+                console.log("After HTML Topic Id : " + topicId);
             }
-        }
+           
+            if (item === 'CSS') {
+                switch (level) {
+                    case '1':
+                        topicId.push('4');
+                        break;
+                    case '2':
+                        topicId.push('5');
+                        break;
+                    case '3':
+                        topicId.push('6');
+                        break;
+                }
+                console.log("After CSS Topic Id : " + topicId);
+            }
+            if (item === 'JS') {
+                switch (level) {
+                    case '1':
+                        topicId.push('7');
+                        break;
+                    case '2':
+                        topicId.push('8');
+                        break;
+                    case '3':
+                        topicId.push('9');
+                        break;
+                }
+                console.log("After JS Topic Id : " + topicId);
+            }
+           
+        })
+       
         console.log("Topic id : " + topicId);
-        $.get("/api/questions/" + topicId, function (data) {
+        $.get("/api/questions/"+topicId , function (data) {
 
             for (var i = 0; i < data.length; i++) {
 
@@ -85,7 +81,7 @@ $(document).ready(function () {
 
     }
     //calling the function by passing the parameter stored in localstorage
-    getQuestions(topics);
+    getQuestions();
 
     function generateHtml() {
 
@@ -148,7 +144,7 @@ $(document).ready(function () {
 
 document.getElementById('timer').innerHTML =
 
-  60 + ":" + 00;
+    60 + ":" + 00;
 
 startTimer();
 
