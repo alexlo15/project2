@@ -6,23 +6,6 @@
 
 }
 
-h2,h3,p{
-  color:white;
-}
-
-.rightt{
-/* margin-right: 20000px; */
-padding-left: 50%;
-margin-left: 100%;
-}
-
-.col-md-1-left{
-padding-left: 10%;
-}
-
-.poop{
-text-align: left;
-}
 
 /* main initial divs */
 #main{
@@ -35,6 +18,7 @@ button.flip{
 
 button.home{
 margin-top: 10%;
+margin-left: 25%;
 background-color:#5b6b78; 
 border: none;
 }
@@ -58,11 +42,16 @@ h2.timer{
   text-align: center;
 }
 
+.carousel-control{
+background-color: transparent;
+}
+
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
-  width: 450px;
+  width: 960px;
   height: 250px;
+  margin-left: 10%;
   /* border: .4px dashed lightslategray; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -93,7 +82,7 @@ h2.timer{
 /* Style the front side */
 .flip-box-front {
   background-color: #bbb;
-  color: black;
+  color: white;
 }
 
 /* Style the back side */
@@ -102,3 +91,4 @@ h2.timer{
   color: white;
   transform: rotateY(180deg);
 }
+

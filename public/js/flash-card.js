@@ -170,8 +170,7 @@ $(document).ready(function () {
 
 
 document.getElementById('timer').innerHTML =
-
-    60 + ":" + 00;
+  10 + ":" + 01;
 
 startTimer();
 
@@ -191,11 +190,30 @@ function startTimer() {
 }
 
 function checkSecond(sec) {
-    if (sec < 10 && sec >= 0) {
-        sec = "0" + sec
-    }; // add zero in front of numbers < 10
-    if (sec < 0) {
-        sec = "59"
-    };
-    return sec;
+  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+  if (sec < 0) {sec = "59"};
+  return sec;
 }
+
+//  Variable that will hold the button alert's timeout when it is clicked.
+var delayButtonAlert;
+
+//  Timeouts in JavaScript
+//  Set our window alert to run one second after the function's called.
+var windowTimeout = setTimeout(function() {
+  alert("You will be given 10 minutes to study the topics you selected.");
+}, 00);
+
+//  Start on click.
+$(".right").on("click", function() {
+  //  Set the button alert's timeout to run three seconds after the function's called.
+  delayButtonAlert = setTimeout(function() {
+    alert("Your 10 minute study session has been completed let's head over to the Quiz section.");
+    // 600000 = 10mins
+  }, 3000);
+});
+
+
+
+
+
