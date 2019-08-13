@@ -5,18 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Knode the Code</title>
+    <title>Knode Your Code</title>
 
     <!-- Bootstrap css link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+<!-- google font for glitch -->
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900" rel="stylesheet">
 
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  
     <!-- CSS styling -->
     <link rel="stylesheet" type="text/css" href="./styles/shared.css">
     <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/glitch.css">
 
     <!-- FontAwesome styling -->
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
@@ -30,23 +35,31 @@
 
 
 
-    <!-- test change -->
-
-
-
+    
+  
+    <div id="loader" class="loading">
+      
+        <!-- <div class="loading-logo"><img src="../public/images/JS.png" class="logo"></div> -->
+    </div>
     <!-- main area front area-->
-    <div class="container-fluid" id="main-top">
-        <div class="row">
-            <div class="col-md-12" id="main-text">
-                <p class="main-text" id="ptext">Knode the Code</p>
-                <h3 class="main-text">Learn the topics using Flash Cards or</h3>
-                <h3 class="main-text">Drag & Drop the right answer!</h3>
-                <br>
-                <!-- need the bookmark code for this button -->
-                <a href="index.html#main-bottom"><button type="button" class="btn btn-aqua btn-lg start"
-                        id="startBtn">Get Started <i class="fas fa-play"></i></button></a>
-            </div>
+    <div class="content"> 
+        <div class="contentSection">
+            <span><p class="contentText">Free online coding resource featuring flash cards and drag & drop game.
+            </p></span>
+            
+            <h2 class="contentTitle">Knode<span>Your</span>Code</h2>
+            
+            <button type="button" class="btn btn-primary btn-lg start" id="startBtn">Get Started.</button>
         </div>
+        <div class="glitch">
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+            <div class="glitchit"></div>
+
+        </div>
+       
     </div>
 
     <br>
@@ -56,6 +69,7 @@
     <div class="container-fluid" id="main-bottom">
         <div class="row">
             <div class="col-md-6" id="flashCardPick">
+
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Flash Cards!
@@ -73,9 +87,9 @@
                 Drag & Drop Trivia!
                 </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" id="one" href="/drag-drop.html">level 1</a>
-                <a class="dropdown-item" id="two" href="/drag-drop.html">level 2</a>
-                <a class="dropdown-item" id="three" href="/drag-drop.html">level 3</a>
+                <a class="dropdown-item" id="triviaOne" href="/drag-drop.html">level 1</a>
+                <a class="dropdown-item" id="triviaTwo" href="/drag-drop.html">level 2</a>
+                <a class="dropdown-item" id="triviaThree" href="/drag-drop.html">level 3</a>
             </div>
             
         </div>
@@ -112,6 +126,16 @@
 
     <!-- Front-end JS link-->
     <script src="public/js/index.js"></script>
+    <script>
+        var loader = document.getElementById('loader');
+        window.addEventListener("load", function (event) {
+            loader.classList.remove('loading');
+            loader.classList.add('loaded');
+            document.body.classList.add('imgloaded');
+        });
+
+    </script>
+
 
 </body>
 
