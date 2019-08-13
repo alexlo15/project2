@@ -1,4 +1,6 @@
-import { randomBytes } from "crypto";
+// import {
+//     randomBytes
+// } from "crypto";
 
 $(document).ready(function () {
 
@@ -47,15 +49,22 @@ $(document).ready(function () {
         questionCount++;
     });
 
-function randomize(){
-    for (let i = flashcards.length - 1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i + 1));
-        let temp = flashcards[i];
-        flashcards[i] = flashcards[j];
-        flashcards[j] = temp;
-    }
+    function randomize() {
+        for (let i = flashcards.length - 1; i > 0; i--) {
+            for (let k = 2; k > 0; k--){
+                let l = Math.floor(Math.random() * (k + 1));
+                let temp2 = flashcards[i].choices[k];
+                flashcards[i].choices[k] = flashcards[i].choices[l];
+                flashcards[i].choices[l] = temp2;
+            }
 
-}
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = flashcards[i];
+            flashcards[i] = flashcards[j];
+            flashcards[j] = temp;
+        }
+
+    }
 
 
     // ===============================================
@@ -95,10 +104,10 @@ function randomize(){
                     //Place past object into its original coordinate
                     $("#" + pastDraggable).animate($("#" + pastDraggable).data().originalLocation, "slow");
                 }
-               
+
                 //Store the current draggable object
                 pastDraggable = currentDraggable;
-                draggableChoice =  $(ui.draggable).text();
+                draggableChoice = $(ui.draggable).text();
                 console.log("Dragged item : " + draggableChoice);
             },
             //Event to accept a draggable when dragged outside the droppable
@@ -112,11 +121,17 @@ function randomize(){
         return {
             //Initializes the starting coordinates of the object
             initialize: function (object) {
-                object.data("originalLocation", $(this).originalPosition = { top: 0, left: 0 });
+                object.data("originalLocation", $(this).originalPosition = {
+                    top: 0,
+                    left: 0
+                });
             },
             //Resets the object to its starting coordinates
             reset: function (object) {
-                object.data("originalLocation").originalPosition = { top: 0, left: 0 };
+                object.data("originalLocation").originalPosition = {
+                    top: 0,
+                    left: 0
+                };
             },
         };
     })();
@@ -130,9 +145,9 @@ function randomize(){
 
     $('#submitBtn').on('click', function () {
 
-        if(questionCount < flashcards.length){
+        if (questionCount < flashcards.length) {
 
-            if(questionCount === flashcards.length-1){
+            if (questionCount === flashcards.length - 1) {
                 $("#submitBtn").text("Check Your Results!");
             }
             $('#questionH2').text(flashcards[questionCount].question);
@@ -140,8 +155,8 @@ function randomize(){
             $('#choice2Text').text(flashcards[questionCount].choices[1]);
             $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
-        questionCount++;
-        } else{
+            questionCount++;
+        } else {
             alert("You finished the test!");
 
         }
