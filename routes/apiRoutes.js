@@ -2,7 +2,7 @@ var db = require("../models");
 var Sequelize = require("sequelize");
 const Op = Sequelize.Op;
 module.exports = function (app) {
- 
+
   // See all topics
   app.get("/api/topics", function (req, res) {
     db.Topic.findAll({}).then(function (dbTopics) {
@@ -20,25 +20,37 @@ module.exports = function (app) {
 
   // Checks to see if initial data is in the database
   app.get("/test", function (req, res) {
-    db.Question.findAll({}).then(function (initialData) {
-    });
+    db.Question.findAll({}).then(function (initialData) {});
   });
 
-  app.get("/api/questions/:TopicId", function(req,res){
+  app.get("/api/questions/:TopicId", function (req, res) {
     // console.log( JSON.stringify(req.params.TopicId));
     let TopicIds = (req.params.TopicId).split(",");
     // console.log(TopicIds);
     db.Question.findAll({
-      where:{
-            TopicId:{
-              [Op.in] : TopicIds
-            }
-         }
-        
-       
-       
-    
-    }).then(function(dbQuestion){
+      where: {
+        TopicId: {
+          [Op.in]: TopicIds
+        }
+      }
+
+    }).then(function (dbQuestion) {
+      res.json(dbQuestion);
+    });
+  });
+
+  app.get("/api/quiz/:skillLevel", function (req, res) {
+    // console.log( JSON.stringify(req.params.TopicId));
+    let skillLevel = req.params.skillLevel
+    // console.log(TopicIds);
+    db.Topic.findAll({
+      where: {
+        skillLevel: skillLevel
+      },
+      include: [db.Question]
+
+    }).then(function (dbQuestion) {
+      console.log(dbQuestion);
       res.json(dbQuestion);
     });
   });
