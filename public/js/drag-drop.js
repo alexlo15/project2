@@ -33,14 +33,63 @@ $(document).ready(function () {
         }
         console.log(flashcards.length)
         console.log(flashcards);
-
+        $('#questionH2').text(flashcards[0].question);
+        $('#choice1Text').text(flashcards[0].choices[0]);
+        $('#choice2Text').text(flashcards[0].choices[1]);
+        $('#choice3Text').text(flashcards[0].choices[2]);
     });
+
+
+    // ===============================================
+    // Function for drag and drop
+    // ==========================================
+    function dragAndDrop() {
+        $(".logoCard").draggable({
+            appendTo: "body",
+            cursor: "move",
+            helper: 'clone',
+            revert: "invalid",
+            //    revert:true
+        });
+
+        $("#launchPad").droppable({
+            tolerance: "intersect",
+            accept: ".logoCard",
+            activeClass: "ui-state-default",
+            hoverClass: "ui-state-hover",
+            drop: function (event, ui) {
+                $("#launchPad").append($(ui.draggable));
+                $(".logoCard").height(20);
+            }
+        });
+
+        $(".holder").droppable({
+            tolerance: "intersect",
+            accept: ".logoCard",
+            activeClass: "ui-state-default",
+            hoverClass: "ui-state-hover",
+            drop: function (event, ui) {
+                $('.holder h2').text('');
+                draggableId = ui.draggable.attr("data-name");
+                topicSelected.push(draggableId);
+                $(this).append($(ui.draggable));
+
+                // console.log(draggableId);
+            }
+        });
+    }
+
+    // calling the dragAndDrop function
+    // ============================================
+    dragAndDrop();
+
+    // ===========================================
 
     $('#submitBtn').on('click', function () {
 
 
 
-        $('#questionH2').text(flashcards[0].question)
+       
 
     })
 

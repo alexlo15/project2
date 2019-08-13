@@ -52,24 +52,24 @@
 
     <!-- answer area-->
     <div class="container-fluid" id="choices">
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row" id="launchPad">
+            <div class="col-md-4 logoCard">
                 <div class="card" id="choice1">
-                    <div class="card-body">
+                    <div class="card-body" id="choice1Text">
                         choice 1
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 logoCard">
                     <div class="card" id="choice2">
-                        <div class="card-body">
+                        <div class="card-body" id="choice2Text">
                             choice 2
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 logoCard">
                         <div class="card" id="choice3">
-                            <div class="card-body">
+                            <div class="card-body" id="choice3Text">
                                 choice 3
                             </div>
                         </div>
@@ -79,7 +79,7 @@
                 <a href="#">
                 <button type="button" class="btn btn-primary btn-lg" id="submitBtn">Submit</button>
                 </a>
-            
+             
         </div>
         
     </div>
@@ -96,8 +96,13 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
         </script>
 
-    <!-- JQuery Link -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!-- JQuery Link -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"> </script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"> </script>
 
     <!-- Front-end JS link-->
     <script src="./js/drag-drop.js"></script>
