@@ -40,35 +40,35 @@ $(document).ready(function () {
 
                     // topicId.push('1');
                     break;
-                    case 'CSS':
-                        // topicId.push('4');
-                        // break;
-                        switch (level) {
-                            case '1':
-                              topicId.push('4');
-                              break
-                            case '2':
-                              topicId.push('5');
-                              break
-                            case '3':
-                              topicId.push('6');
-                              break
-                          }
-                        break;
-                    case 'JS':
-                        // topicId.push('7');
-                        switch (level) {
-                            case '1':
-                              topicId.push('7');
-                              break
-                            case '2':
-                              topicId.push('8');
-                              break
-                            case '3':
-                              topicId.push('9');
-                              break
-                          }
-                        break;
+                case 'CSS':
+                    // topicId.push('4');
+                    // break;
+                    switch (level) {
+                        case '1':
+                            topicId.push('4');
+                            break
+                        case '2':
+                            topicId.push('5');
+                            break
+                        case '3':
+                            topicId.push('6');
+                            break
+                    }
+                    break;
+                case 'JS':
+                    // topicId.push('7');
+                    switch (level) {
+                        case '1':
+                            topicId.push('7');
+                            break
+                        case '2':
+                            topicId.push('8');
+                            break
+                        case '3':
+                            topicId.push('9');
+                            break
+                    }
+                    break;
             }
         }
         console.log("Topic id : " + topicId);
@@ -96,7 +96,7 @@ $(document).ready(function () {
     getQuestions(topics);
 
     function generateHtml() {
-
+        $(".carousel-inner").empty();
         // console.log(questions);
         // console.log(answers);
         console.log(flashcards);
@@ -155,12 +155,24 @@ $(document).ready(function () {
     });
 
 
+    // shuffle functions!
+    $(".shuffle").on('click', function () {
+        for (let i = flashcards.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            let temp = flashcards[i];
+            flashcards[i] = flashcards[j];
+            flashcards[j] = temp;
+        }
+        console.log(flashcards);
+        generateHtml();
+    });
+
 });
 
 
 document.getElementById('timer').innerHTML =
 
-  60 + ":" + 00;
+    60 + ":" + 00;
 
 startTimer();
 
