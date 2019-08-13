@@ -1,9 +1,12 @@
+import { randomBytes } from "crypto";
+
 $(document).ready(function () {
 
     // let topics;
     // let topicArray = [];
     // topics = localStorage.getItem('vTopicSelected');
     // topicArray = topics.split(",");
+    let questionCount = 0;
 
     var level = localStorage.getItem('skillLvl');
     var flashcards = [];
@@ -31,13 +34,28 @@ $(document).ready(function () {
 
 
         }
+
+        randomize();
+
         console.log(flashcards.length)
         console.log(flashcards);
-        $('#questionH2').text(flashcards[0].question);
-        $('#choice1Text').text(flashcards[0].choices[0]);
-        $('#choice2Text').text(flashcards[0].choices[1]);
-        $('#choice3Text').text(flashcards[0].choices[2]);
+        $('#questionH2').text(flashcards[questionCount].question);
+        $('#choice1Text').text(flashcards[questionCount].choices[0]);
+        $('#choice2Text').text(flashcards[questionCount].choices[1]);
+        $('#choice3Text').text(flashcards[questionCount].choices[2]);
+
+        questionCount++;
     });
+
+function randomize(){
+    for (let i = flashcards.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = flashcards[i];
+        flashcards[i] = flashcards[j];
+        flashcards[j] = temp;
+    }
+
+}
 
 
     // ===============================================
@@ -87,9 +105,21 @@ $(document).ready(function () {
 
     $('#submitBtn').on('click', function () {
 
+        if(questionCount < flashcards.length){
 
+            if(questionCount === flashcards.length-1){
+                $("#submitBtn").text("Check Your Results!");
+            }
+            $('#questionH2').text(flashcards[questionCount].question);
+            $('#choice1Text').text(flashcards[questionCount].choices[0]);
+            $('#choice2Text').text(flashcards[questionCount].choices[1]);
+            $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
-       
+        questionCount++;
+        } else{
+            alert("You finished the test!");
+
+        }
 
     })
 
