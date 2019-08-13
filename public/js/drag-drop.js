@@ -91,10 +91,16 @@ $(document).ready(function () {
     $('#submitBtn').on('click', function () {
 
         if(questionCount < flashcards.length){
-        $('#questionH2').text(flashcards[questionCount].question);
-        $('#choice1Text').text(flashcards[questionCount].choices[0]);
-        $('#choice2Text').text(flashcards[questionCount].choices[1]);
-        $('#choice3Text').text(flashcards[questionCount].choices[2]);
+
+            if(questionCount === flashcards.length-1){
+                // console.log("goes in here");
+                // $("#submitBtn").empty();
+                $("#submitBtn").text("Check Your Results!");
+            }
+            $('#questionH2').text(flashcards[questionCount].question);
+            $('#choice1Text').text(flashcards[questionCount].choices[0]);
+            $('#choice2Text').text(flashcards[questionCount].choices[1]);
+            $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
         questionCount++;
         } else{
