@@ -1,3 +1,5 @@
+import { randomBytes } from "crypto";
+
 $(document).ready(function () {
 
     // let topics;
@@ -32,6 +34,9 @@ $(document).ready(function () {
 
 
         }
+
+        randomize();
+
         console.log(flashcards.length)
         console.log(flashcards);
         $('#questionH2').text(flashcards[questionCount].question);
@@ -41,6 +46,16 @@ $(document).ready(function () {
 
         questionCount++;
     });
+
+function randomize(){
+    for (let i = flashcards.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        let temp = flashcards[i];
+        flashcards[i] = flashcards[j];
+        flashcards[j] = temp;
+    }
+
+}
 
 
     // ===============================================
@@ -93,8 +108,6 @@ $(document).ready(function () {
         if(questionCount < flashcards.length){
 
             if(questionCount === flashcards.length-1){
-                // console.log("goes in here");
-                // $("#submitBtn").empty();
                 $("#submitBtn").text("Check Your Results!");
             }
             $('#questionH2').text(flashcards[questionCount].question);
@@ -105,6 +118,7 @@ $(document).ready(function () {
         questionCount++;
         } else{
             alert("You finished the test!");
+
         }
 
     })
