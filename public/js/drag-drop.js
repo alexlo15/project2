@@ -168,6 +168,10 @@ $(document).ready(function () {
     // ===========================================
 
     $('#submitBtn').on('click', function () {
+<<<<<<< HEAD
+        
+        
+=======
 
         DragChoices();
         // handleRevert($(this));
@@ -179,6 +183,7 @@ $(document).ready(function () {
 
 
 
+>>>>>>> ec67668d097448f478a73c1f352cfd16dcf47336
         if (questionCount < flashcards.length) {
 
             if (questionCount === flashcards.length - 1) {
@@ -190,6 +195,9 @@ $(document).ready(function () {
             $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
             questionCount++;
+
+                window.location.reload(questionCount--)
+
         } else {
             alert("You finished the test!");
 
