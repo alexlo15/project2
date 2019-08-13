@@ -220,6 +220,9 @@ $(document).ready(function () {
             $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
             questionCount++;
+
+                window.location.reload(questionCount--)
+
         } else {
             alert("You finished the test!");
 
