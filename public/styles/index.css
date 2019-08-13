@@ -1,12 +1,32 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#index{ 
-  background-image: url(../images/main.jpg);
-
-
+#main-page{ 
+ 
+  width: 100%;
+ height: auto;
+    
 }
-
+img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+     
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+     
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+ }
+ @media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+ }
 #main-text{
   text-align: center;
   padding-top: 100px;
@@ -54,10 +74,14 @@ h3.main-text{
 #startBtn{
 
   align-self: center;
+  margin-top: 50px;
   margin-bottom: 500px;
-  background-color: rgb(46, 19, 141);
-  border: 1px solid white;
-  color: white;
+  background-color: aqua;
+  border: 1px solid black;
+  color:black;
+  margin-left: 37%;
+  width: 250px;
+
   
  
 }
@@ -65,45 +89,45 @@ h3.main-text{
   height: 50px;
   width: 90%;
   font-family: 'Libre Baskerville', serif;
-  background-color: rgb(46, 19, 141);
-  border: 1px solid white;
-  color: white;
+  background-color: aqua;
+  border: 1px solid black;;
+  color: black;
 }
 #fcBtn{
   height: 50px;
   width: 90%;
   font-family: 'Libre Baskerville', serif;
-  background-color: rgb(46, 19, 141);
-  border: 1px solid white;
-  color: white;
+  background-color: rgb(50, 156, 156);
+  border: 1px solid black;
+  color: black;
 }
 
 #flashCardText{
   font-family: 'Libre Baskerville', serif;
   margin-top: 25px;
-  color: white;
+  color: black;
 }
 #dragDropText{
   font-family: 'Libre Baskerville', serif;
   margin-top: 25px;
-  color: white;
+  color: black;
   }
 #dropdownMenuButton{
   font-family: 'Libre Baskerville', serif;
   height: 50px;
   width: 90%;
-  background-color: rgb(46, 19, 141);
-  border: 1px solid white;
-  color: white;
+  background-color: aqua;
+  border: 1px solid black;
+  color: black;
   font-size: 25px;
  
 }
 .dropdown-item{
 width: 500px;
  text-align: center;
- color: white;
- background-color: rgb(46, 19, 141);
- border: 1px solid white;
+ color: black;
+ background-color: aqua;
+ border: 1px solid black;
  font-size: 25px;
   
 }
