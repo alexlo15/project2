@@ -1,6 +1,6 @@
-// import {
-//     randomBytes
-// } from "crypto";
+
+// import { randomBytes } from "crypto";
+
 
 $(document).ready(function () {
 
@@ -45,12 +45,17 @@ $(document).ready(function () {
         $('#choice1Text').text(flashcards[questionCount].choices[0]);
         $('#choice2Text').text(flashcards[questionCount].choices[1]);
         $('#choice3Text').text(flashcards[questionCount].choices[2]);
+        DragChoices();
 
         questionCount++;
     });
 
     function randomize() {
         for (let i = flashcards.length - 1; i > 0; i--) {
+
+          
+
+
             for (let k = 2; k > 0; k--){
                 let l = Math.floor(Math.random() * (k + 1));
                 let temp2 = flashcards[i].choices[k];
@@ -64,6 +69,7 @@ $(document).ready(function () {
             flashcards[j] = temp;
         }
 
+
     }
 
 
@@ -71,22 +77,30 @@ $(document).ready(function () {
     // Function for drag and drop
     // ==========================================
     let draggableChoice;
-    $(function () {
+
+    function DragChoices() {
         var pastDraggable = "";
         $("#draggable1").draggable({
             cursor: "move",
+            appendTo: "body",
+            // revert: handleRevert,
+            // revert:true,
             start: function () {
                 Positioning.initialize($(this));
             },
         });
         $("#draggable2").draggable({
             cursor: "move",
+            appendTo: "body",
+            // revert:true,
             start: function () {
                 Positioning.initialize($(this));
             },
         });
         $("#draggable3").draggable({
             cursor: "move",
+            appendTo: "body",
+            // revert:true,
             start: function () {
                 Positioning.initialize($(this));
             },
@@ -116,34 +130,54 @@ $(document).ready(function () {
                 $(ui.draggable).animate($(ui.draggable).data().originalLocation, "slow");
             }
         });
-    });
-    var Positioning = (function () {
-        return {
-            //Initializes the starting coordinates of the object
-            initialize: function (object) {
-                object.data("originalLocation", $(this).originalPosition = {
-                    top: 0,
-                    left: 0
-                });
-            },
-            //Resets the object to its starting coordinates
-            reset: function (object) {
-                object.data("originalLocation").originalPosition = {
-                    top: 0,
-                    left: 0
-                };
-            },
-        };
-    })();
 
 
-    // calling the dragAndDrop function
-    // ============================================
-    // dragAndDrop();
+        var Positioning = (function () {
+            return {
+                //Initializes the starting coordinates of the object
+                initialize: function (object) {
+                    object.data("originalLocation", $(this).originalPosition = {
+                        top: 0,
+                        left: 0
+                    });
+                },
+                //Resets the object to its starting coordinates
+                reset: function (object) {
+                    object.data("originalLocation").originalPosition = {
+                        top: 0,
+                        left: 0
+                    };
+                },
+            };
+        })();
+
+        // function handleRevert(object){
+        //     alert('Revert called');
+        //     object.data("originalLocation").originalPosition = {
+        //         top: 0,
+        //         left: 0
+        //     };
+        // }
+        // handleRevert();
+    
+    }
+
+
+
 
     // ===========================================
 
     $('#submitBtn').on('click', function () {
+
+        DragChoices();
+        // handleRevert($(this));
+        // Positioning();
+        $("#draggable1").css({'left':'0','top':'0'});
+        $("#draggable2").css({'left':'0','top':'0'});
+        $("#draggable3").css({'left':'0','top':'0'});
+        $('#final-topics').html('');
+
+
 
         if (questionCount < flashcards.length) {
 

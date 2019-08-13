@@ -78,3 +78,7 @@ margin: 15px;
 #navbar{
   font-family: 'Libre Baskerville', serif;
 }
+
+.ui-widget-content{
+  width: 20%;
+}
