@@ -81,9 +81,14 @@ h3.main-text{
   color:black;
   margin-left: 37%;
   width: 250px;
+  z-index: 2;
 
   
  
+}
+
+.glitch{
+  overflow: hidden;
 }
 #ddBtn{
   height: 50px;
@@ -133,4 +138,10 @@ width: 500px;
 }
 .dropdown-menu{
   background:url(/public/images/dropdownbg.png)
+}
+#main-bottom{
+  margin-top: 10px;
+}
+.nav-wrapper{
+background-color: #000000
 }

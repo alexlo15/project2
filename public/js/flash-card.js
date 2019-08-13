@@ -210,18 +210,11 @@ $("#start").on("click", function() {
   delayButtonAlert = setTimeout(function() {
     alert("Your 10 minute study session has been completed let's head over to the Quiz section.");
     // 600000 = 10mins
-  }, 3000);
+  }, 600000);
 
   
 });
-// This will send whatever button it's link to the drag-drop.html page
-// $("#stop").on("click", function(){
-// document.body.addEventListener('click', myFunction);
-//   function myFunction() {
-//       window.open("drag-drop.html");
-//       document.body.removeEventListener('click', myFunction);
-//   }
-// });
+
 
 // This code will run as soon as the page loads
 window.onload = function() {
@@ -234,20 +227,10 @@ window.onload = function() {
   
   // prevents the clock from being sped up unnecessarily
   var clockRunning = false;
-  var time = 0;
+  var time = 900;
   var lap = 1;
   
-  function reset() {
-  
-    time = 0;
-    lap = 1;
-  
-    // DONE: Change the "display" div to "00:00."
-    $("#display").text("00:00");
-  
-    // DONE: Empty the "laps" div.
-    $("#laps").text("");
-  }
+
   function start() {
   
     // DONE: Use setInterval to start the count here and set the clock to running.
@@ -262,22 +245,11 @@ window.onload = function() {
     clearInterval(intervalId);
     clockRunning = false;
   }
-  function recordLap() {
-  
-    // DONE: Get the current time, pass that into the timeConverter function,
-    //       and save the result in a variable.
-    var converted = timeConverter(time);
-  
-    // DONE: Add the current lap and time to the "laps" div.
-    $("#laps").append("<p>Lap " + lap + " : " + converted + "</p>");
-  
-    // DONE: Increment lap by 1. Remember, we can't use "this" here.
-    lap++;
-  }
+
   function count() {
   
     // DONE: increment time by 1, remember we cant use "this" here.
-    time++;
+    time--;
   
     // DONE: Get the current time, pass that into the timeConverter function,
     //       and save the result in a variable.
@@ -299,11 +271,15 @@ window.onload = function() {
     if (minutes === 0) {
       minutes = "00";
     }
+    // if (time == 0) {
+    //     window.location.href = "drag-drop.html";
+    //   }
     else if (minutes < 10) {
       minutes = "0" + minutes;
     }
   
     return minutes + ":" + seconds;
+
   }
 
-
+    
