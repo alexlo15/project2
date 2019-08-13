@@ -1,4 +1,6 @@
+
 // import { randomBytes } from "crypto";
+
 
 $(document).ready(function () {
 
@@ -50,11 +52,23 @@ $(document).ready(function () {
 
     function randomize() {
         for (let i = flashcards.length - 1; i > 0; i--) {
+
+          
+
+
+            for (let k = 2; k > 0; k--){
+                let l = Math.floor(Math.random() * (k + 1));
+                let temp2 = flashcards[i].choices[k];
+                flashcards[i].choices[k] = flashcards[i].choices[l];
+                flashcards[i].choices[l] = temp2;
+            }
+
             let j = Math.floor(Math.random() * (i + 1));
             let temp = flashcards[i];
             flashcards[i] = flashcards[j];
             flashcards[j] = temp;
         }
+
 
     }
 
@@ -117,6 +131,7 @@ $(document).ready(function () {
             }
         });
 
+
         var Positioning = (function () {
             return {
                 //Initializes the starting coordinates of the object
@@ -149,9 +164,11 @@ $(document).ready(function () {
 
 
 
+
     // ===========================================
 
     $('#submitBtn').on('click', function () {
+
         DragChoices();
         // handleRevert($(this));
         // Positioning();
@@ -159,6 +176,9 @@ $(document).ready(function () {
         $("#draggable2").css({'left':'0','top':'0'});
         $("#draggable3").css({'left':'0','top':'0'});
         $('#final-topics').html('');
+
+
+
         if (questionCount < flashcards.length) {
 
             if (questionCount === flashcards.length - 1) {
