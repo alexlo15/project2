@@ -144,7 +144,8 @@ $(document).ready(function () {
     // ===========================================
 
     $('#submitBtn').on('click', function () {
-
+        
+        
         if (questionCount < flashcards.length) {
 
             if (questionCount === flashcards.length - 1) {
@@ -156,6 +157,9 @@ $(document).ready(function () {
             $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
             questionCount++;
+
+                window.location.reload(questionCount--)
+
         } else {
             alert("You finished the test!");
 

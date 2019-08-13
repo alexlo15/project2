@@ -211,8 +211,17 @@ $("#start").on("click", function() {
     alert("Your 10 minute study session has been completed let's head over to the Quiz section.");
     // 600000 = 10mins
   }, 3000);
+
   
 });
+// This will send whatever button it's link to the drag-drop.html page
+// $("#stop").on("click", function(){
+// document.body.addEventListener('click', myFunction);
+//   function myFunction() {
+//       window.open("drag-drop.html");
+//       document.body.removeEventListener('click', myFunction);
+//   }
+// });
 
 // This code will run as soon as the page loads
 window.onload = function() {
