@@ -2,12 +2,7 @@
 
 /* body */
 #index{ 
-  background-image: url(/images/index_bg.jpg);
-
-}
-
-/* main initial divs */
-#main-top{
+  background-image: url(../images/main.jpg);
 
 }
 
@@ -15,17 +10,6 @@
   text-align: center;
 }
 
-h1.main-text{
-
-}
-
-h3.main-text{
-  
-}
-
-button.start{
-
-}
 
 /* bottom div with games */
 #main-bottom{
@@ -40,11 +24,4 @@ button.start{
   border: 1px solid black;
 }
 
-/* test div */
-.test{
-  margin: 5%;
-  border: 1px solid black;
-}
-#startBtn{
-  align-self: center
-}
+
