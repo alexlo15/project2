@@ -4,6 +4,7 @@ $(document).ready(function () {
     // let topicArray = [];
     // topics = localStorage.getItem('vTopicSelected');
     // topicArray = topics.split(",");
+    let questionCount = 0;
 
     var level = localStorage.getItem('skillLvl');
     var flashcards = [];
@@ -33,10 +34,12 @@ $(document).ready(function () {
         }
         console.log(flashcards.length)
         console.log(flashcards);
-        $('#questionH2').text(flashcards[0].question);
-        $('#choice1Text').text(flashcards[0].choices[0]);
-        $('#choice2Text').text(flashcards[0].choices[1]);
-        $('#choice3Text').text(flashcards[0].choices[2]);
+        $('#questionH2').text(flashcards[questionCount].question);
+        $('#choice1Text').text(flashcards[questionCount].choices[0]);
+        $('#choice2Text').text(flashcards[questionCount].choices[1]);
+        $('#choice3Text').text(flashcards[questionCount].choices[2]);
+
+        questionCount++;
     });
 
 
@@ -87,9 +90,16 @@ $(document).ready(function () {
 
     $('#submitBtn').on('click', function () {
 
+        if(questionCount < flashcards.length){
+        $('#questionH2').text(flashcards[questionCount].question);
+        $('#choice1Text').text(flashcards[questionCount].choices[0]);
+        $('#choice2Text').text(flashcards[questionCount].choices[1]);
+        $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
-
-       
+        questionCount++;
+        } else{
+            alert("You finished the test!");
+        }
 
     })
 
