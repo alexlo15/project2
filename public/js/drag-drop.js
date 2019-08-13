@@ -168,10 +168,6 @@ $(document).ready(function () {
     // ===========================================
 
     $('#submitBtn').on('click', function () {
-<<<<<<< HEAD
-        
-        
-=======
 
         DragChoices();
         // handleRevert($(this));
@@ -181,9 +177,6 @@ $(document).ready(function () {
         $("#draggable3").css({'left':'0','top':'0'});
         $('#final-topics').html('');
 
-
-
->>>>>>> ec67668d097448f478a73c1f352cfd16dcf47336
         if (questionCount < flashcards.length) {
 
             if (questionCount === flashcards.length - 1) {
