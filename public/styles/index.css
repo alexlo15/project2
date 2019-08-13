@@ -1,18 +1,9 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
+#index{ 
+  background-image: url(../images/main.jpg);
 
-#main-page{ 
-background: url(../images/opacity.jpg);
-
-  
-  
-}
-
-
-
-/* main initial divs */
-#main-top{
 
 }
 
@@ -25,6 +16,7 @@ background: url(../images/opacity.jpg);
 
 }
 
+
 #ptext{
   font-size: 100px;
   text-shadow: 2px 2px 4px #000000;
@@ -35,9 +27,7 @@ h3.main-text{
   text-shadow: 2px 2px 4px #000000;
 }
 
-button.start{
 
-}
 
 /* bottom div with games */
 #main-bottom{
@@ -54,6 +44,7 @@ button.start{
 #dragDropPick{
   
 }
+
 
 /* test div */
 .test{
