@@ -6,8 +6,10 @@ $(document).ready(function () {
     console.log(level);
     console.log('Topics : ' + topics);
 
-    var questions = [];
-    var answers = [];
+    // var questions = [];
+    // var answers = [];
+
+    var flashcards = [];
     // alert("local Storage value: "+ topics);
 
 
@@ -74,11 +76,17 @@ $(document).ready(function () {
 
             for (var i = 0; i < data.length; i++) {
 
-                questions.push((data[i].question));
-                answers.push(data[i].choice1);
+                let flashcard = {
+                    question: data[i].question,
+                    answer: data[i].choice1
+                }
+
+                flashcards.push(flashcard);
+                // questions.push((data[i].question));
+                // answers.push(data[i].choice1);
 
             }
-            console.log(questions.length)
+            console.log(flashcards.length)
 
             generateHtml();
         });
@@ -89,10 +97,12 @@ $(document).ready(function () {
 
     function generateHtml() {
 
-        console.log(questions);
-        console.log(answers);
-        console.log(questions.length);
-        for (var i = 0; i < questions.length; i++) {
+        // console.log(questions);
+        // console.log(answers);
+        console.log(flashcards);
+        console.log(flashcards.length);
+        // console.log(questions.length);
+        for (var i = 0; i < flashcards.length; i++) {
             // console.log(questions[i]);
             let divOuter = $('<div>');
             let divColM8 = $('<div>');
@@ -114,10 +124,12 @@ $(document).ready(function () {
             divFlipBoxInner.addClass("flip-box-inner");
             divFlipBoxFront.addClass("flip-box-front");
             h2Question.text("Question");
-            pQuestion.text(questions[i]);
+            // pQuestion.text(questions[i]);
+            pQuestion.text(flashcards[i].question);
             divFlipBoxBack.addClass("flip-box-back");
             h2Answer.text("Answer");
-            pAnswers.text(answers[i]);
+            // pAnswers.text(answers[i]);
+            pAnswers.text(flashcards[i].answer);
 
             divFlipBoxFront.append(h2Question, pQuestion);
             divFlipBoxBack.append(h2Answer, pAnswers);
