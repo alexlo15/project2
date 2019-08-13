@@ -12,15 +12,31 @@
   margin-top: 30px;
 }
 
-button.flip{
-
-}
-
 button.home{
 margin-top: 10%;
 margin-left: 25%;
 background-color:#5b6b78; 
 border: none;
+}
+
+.shuffle{
+margin-top: 10%;
+margin-left: 15%;
+background-color:#5b6b78; 
+border: none;
+}
+
+#buttons{
+  text-align: center;
+}
+
+#display{
+  /* font-family: 'Libre Baskerville', serif; */
+  font-size: 28px;
+  color: white;
+
+  /* Typography */
+  text-align: center;
 }
 
 .indexCard{
@@ -32,9 +48,6 @@ border: none;
   color: white;
 }
 
-button.start{
-
-}
 
 h2.timer{
   color: white;
@@ -49,7 +62,7 @@ background-color: transparent;
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
-  width: 960px;
+  width: 760px;
   height: 250px;
   margin-left: 10%;
   /* border: .4px dashed lightslategray; */

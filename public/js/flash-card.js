@@ -169,31 +169,31 @@ $(document).ready(function () {
 });
 
 
-document.getElementById('timer').innerHTML =
-  10 + ":" + 01;
+// document.getElementById('timer').innerHTML =
+//   10 + ":" + 01;
 
-startTimer();
+// startTimer();
 
-function startTimer() {
-    var presentTime = document.getElementById('timer').innerHTML;
-    var timeArray = presentTime.split(/[:]+/);
-    var m = timeArray[0];
-    var s = checkSecond((timeArray[1] - 1));
-    if (s == 59) {
-        m = m - 1
-    }
-    //if(m<0){alert('timer completed')}
+// function startTimer() {
+//     var presentTime = document.getElementById('timer').innerHTML;
+//     var timeArray = presentTime.split(/[:]+/);
+//     var m = timeArray[0];
+//     var s = checkSecond((timeArray[1] - 1));
+//     if (s == 59) {
+//         m = m - 1
+//     }
+//     //if(m<0){alert('timer completed')}
 
-    document.getElementById('timer').innerHTML =
-        m + ":" + s;
-    setTimeout(startTimer, 1000);
-}
+//     document.getElementById('timer').innerHTML =
+//         m + ":" + s;
+//     setTimeout(startTimer, 1000);
+// }
 
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
+// function checkSecond(sec) {
+//   if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
+//   if (sec < 0) {sec = "59"};
+//   return sec;
+// }
 
 //  Variable that will hold the button alert's timeout when it is clicked.
 var delayButtonAlert;
@@ -205,15 +205,96 @@ var windowTimeout = setTimeout(function() {
 }, 00);
 
 //  Start on click.
-$(".right").on("click", function() {
+$("#start").on("click", function() {
   //  Set the button alert's timeout to run three seconds after the function's called.
   delayButtonAlert = setTimeout(function() {
     alert("Your 10 minute study session has been completed let's head over to the Quiz section.");
     // 600000 = 10mins
   }, 3000);
+  
 });
 
-
-
+// This code will run as soon as the page loads
+window.onload = function() {
+    $("#stop").on("click", stop);
+    $("#start").on("click", start);
+  };
+  
+  //  Variable that will hold our setInterval that runs the stopwatch
+  var intervalId;
+  
+  // prevents the clock from being sped up unnecessarily
+  var clockRunning = false;
+  var time = 0;
+  var lap = 1;
+  
+  function reset() {
+  
+    time = 0;
+    lap = 1;
+  
+    // DONE: Change the "display" div to "00:00."
+    $("#display").text("00:00");
+  
+    // DONE: Empty the "laps" div.
+    $("#laps").text("");
+  }
+  function start() {
+  
+    // DONE: Use setInterval to start the count here and set the clock to running.
+    if (!clockRunning) {
+      intervalId = setInterval(count, 1000);
+      clockRunning = true;
+    }
+  }
+  function stop() {
+  
+    // DONE: Use clearInterval to stop the count here and set the clock to not be running.
+    clearInterval(intervalId);
+    clockRunning = false;
+  }
+  function recordLap() {
+  
+    // DONE: Get the current time, pass that into the timeConverter function,
+    //       and save the result in a variable.
+    var converted = timeConverter(time);
+  
+    // DONE: Add the current lap and time to the "laps" div.
+    $("#laps").append("<p>Lap " + lap + " : " + converted + "</p>");
+  
+    // DONE: Increment lap by 1. Remember, we can't use "this" here.
+    lap++;
+  }
+  function count() {
+  
+    // DONE: increment time by 1, remember we cant use "this" here.
+    time++;
+  
+    // DONE: Get the current time, pass that into the timeConverter function,
+    //       and save the result in a variable.
+    var converted = timeConverter(time);
+    console.log(converted);
+  
+    // DONE: Use the variable we just created to show the converted time in the "display" div.
+    $("#display").text(converted);
+  }
+  function timeConverter(t) {
+  
+    var minutes = Math.floor(t / 60);
+    var seconds = t - (minutes * 60);
+  
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+  
+    if (minutes === 0) {
+      minutes = "00";
+    }
+    else if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+  
+    return minutes + ":" + seconds;
+  }
 
 
