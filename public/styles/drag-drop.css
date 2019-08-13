@@ -8,10 +8,13 @@
 
 /* main initial divs */
 #question-top{
+  font-family: 'Libre Baskerville', serif;
  
 }
 #questionCard{
   background-color: lightslategray;
+  height: 70px;
+  
 }
 #question-text{
   margin: 3%;
@@ -20,6 +23,7 @@
   font-family: 'Libre Baskerville', serif;
   font-size: 30px;
   padding-left: 10%;
+  height: 80px;
   
   
 }
@@ -35,6 +39,7 @@
   margin-right: 25%;
   height: 240px;
   margin-bottom: 5%;
+  font-family: 'Libre Baskerville', serif;
 }
 
 
@@ -46,6 +51,7 @@
 
 #choices{
   text-align: center;
+  font-family: 'Libre Baskerville', serif;
   
   
   
@@ -68,4 +74,7 @@ background-color: rgb(133, 182, 247);
 
 #submitBtn{
 margin: 15px;
+}
+#navbar{
+  font-family: 'Libre Baskerville', serif;
 }
