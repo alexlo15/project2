@@ -39,7 +39,7 @@
 }
 #questionCard{
   background-color: lightslategray;
-  height: 70px;
+  height: 100px;
   
 }
 #question-text{
@@ -113,6 +113,7 @@ margin: 15px;
 */
 
 #wrong, #correct{
+}
 display: inline;
 }
 
@@ -120,10 +121,13 @@ display: inline;
   padding-right: 13%;
 }
 
+
+}
 #score{
   background-color: lightblue;
   /* margin-right: 10px;
   width: 20%; */
+
   border: navy solid 5px;
 } 
 
