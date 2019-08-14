@@ -1,6 +1,8 @@
+// Dependencies
 var db = require("../models");
 var Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+
 module.exports = function (app) {
 
   // See all topics
@@ -17,32 +19,31 @@ module.exports = function (app) {
     });
   });
 
-
-  // Checks to see if initial data is in the database
-  app.get("/test", function (req, res) {
-    db.Question.findAll({}).then(function (initialData) {});
-  });
-
+  // Sees all questions depending on the user's topicId for the flashcard selection
   app.get("/api/questions/:TopicId", function (req, res) {
-    // console.log( JSON.stringify(req.params.TopicId));
+
+    // sets the topic id from the URL
     let TopicIds = (req.params.TopicId).split(",");
-    // console.log(TopicIds);
+
+    // sends the query to the database to select all questions where topicID is what the user requested
     db.Question.findAll({
       where: {
         TopicId: {
           [Op.in]: TopicIds
         }
       }
-
     }).then(function (dbQuestion) {
       res.json(dbQuestion);
     });
   });
 
+  // Sees all questions depending on the user's choice in skills level for the quiz selection
   app.get("/api/quiz/:skillLevel", function (req, res) {
-    // console.log( JSON.stringify(req.params.TopicId));
+
+    // sets the skill level from the URL
     let skillLevel = req.params.skillLevel
-    // console.log(TopicIds);
+
+    // sends the query to the database to join the tables and select all questions where skill level is what the user requested
     db.Topic.findAll({
       where: {
         skillLevel: skillLevel
@@ -50,11 +51,9 @@ module.exports = function (app) {
       include: [db.Question]
 
     }).then(function (dbQuestion) {
-      console.log(dbQuestion);
       res.json(dbQuestion);
     });
   });
-
 
   // Create a new example
   // app.post("/api/examples", function(req, res) {
@@ -62,27 +61,4 @@ module.exports = function (app) {
   //     res.json(dbExample);
   //   });
   // });
-
-  // // Create a new example
-  // app.get("/api/:topics",[req.params.id] ,function(req, res) {
-  //   db.questions.findAll({
-  //     where:{
-  //       id: req.params.id
-  //     }
-  //   }).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
-
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function (req, res) {
-    db.Example.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
-};
+}
