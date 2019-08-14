@@ -5,7 +5,9 @@
 $(document).ready(function () {
 
     let questionCount = 0;
-
+    var right = [];
+    var correct = 0;
+    var wrong = 0;
     var level = localStorage.getItem('skillLvl');
     var flashcards = [];
 
@@ -29,9 +31,10 @@ $(document).ready(function () {
         }
 
         randomize();
+        getRight();
 
-        console.log(flashcards.length)
         console.log(flashcards);
+        console.log(right);
         $('#questionH2').text(flashcards[questionCount].question);
         $('#choice1Text').text(flashcards[questionCount].choices[0]);
         $('#choice2Text').text(flashcards[questionCount].choices[1]);
@@ -41,10 +44,36 @@ $(document).ready(function () {
         questionCount++;
     });
 
+    // function tallyHo() {
+    //     for (var i = 0; i < right.length; i++) {
+
+    //         if (draggableChoice[i] === right[i]) {
+
+    //             correct++;
+    //             console.log("correct: " + correct);
+
+    //         } else {
+    //             wrong++;
+    //             console.log("wrong: " + wrong);
+
+    //         }
+    //     }
+    // };
+
+    function getRight() {
+
+        for (var i = 0; i < flashcards.length; i++) {
+
+            right.push(flashcards[i].ans1);
+
+        }
+    };
+
     function randomize() {
         for (let i = flashcards.length - 1; i > 0; i--) {
 
             for (let k = 2; k > 0; k--){
+
                 let l = Math.floor(Math.random() * (k + 1));
                 let temp2 = flashcards[i].choices[k];
                 flashcards[i].choices[k] = flashcards[i].choices[l];
@@ -55,6 +84,9 @@ $(document).ready(function () {
             let temp = flashcards[i];
             flashcards[i] = flashcards[j];
             flashcards[j] = temp;
+
+
+
         }
     }
 
@@ -116,6 +148,7 @@ $(document).ready(function () {
 
               
                 console.log("Dragged item : " + draggableChoice);
+
             },
             //Event to accept a draggable when dragged outside the droppable
             out: function (event, ui) {
@@ -152,7 +185,7 @@ $(document).ready(function () {
         //     };
         // }
         // handleRevert();
-    
+
     }
 
 
@@ -165,11 +198,12 @@ $(document).ready(function () {
         DragChoices();
         // handleRevert($(this));
         // Positioning();
-        $("#draggable1").css({'left':'0','top':'0'});
-        $("#draggable2").css({'left':'0','top':'0'});
-        $("#draggable3").css({'left':'0','top':'0'});
+        $("#draggable1").css({ 'left': '0', 'top': '0' });
+        $("#draggable2").css({ 'left': '0', 'top': '0' });
+        $("#draggable3").css({ 'left': '0', 'top': '0' });
         $('#final-topics').html('');
 
+        tallyHo();
 
 
         if (questionCount < flashcards.length) {
@@ -183,6 +217,9 @@ $(document).ready(function () {
             $('#choice3Text').text(flashcards[questionCount].choices[2]);
 
             questionCount++;
+
+                window.location.reload(questionCount--)
+
         } else {
             alert("You finished the test!");
 
