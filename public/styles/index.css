@@ -8,6 +8,18 @@
     
 }
 
+/*this is so that the landing is clickable but does not have ugly url lines on our beautiful page  */
+a:link{
+  text-decoration: none;
+}
+
+/* made h2 bigger */
+#secondline{
+  color: whitesmoke;
+  font-size: 30px;
+}
+
+/* styling for h1 */
 #node, #code{
   color: rgb(140, 179, 211);
   text-shadow: 1px 1px white;
@@ -18,6 +30,7 @@
   text-shadow: 1px 1px rgba(13, 62, 126, 0.856);
 }
 
+/* this is for our background image */
 img {
   /* Set rules to fill background */
   min-height: 100%;
@@ -38,117 +51,35 @@ img {
     margin-left: -512px;   /* 50% */
   }
  }
-#main-text{
-  text-align: center;
-  padding-top: 100px;
-  font-family: 'Libre Baskerville', serif;
-  color: white;
-  text-shadow: 2px 2px 4px #000000;
-
-}
-
-
-#ptext{
-  font-size: 100px;
-  text-shadow: 2px 2px 4px #000000;
-
-}
-
-h3.main-text{
-  text-shadow: 2px 2px 4px #000000;
-}
 
 
 
 /* bottom div with games */
 #main-bottom{
   text-align: center;
-  margin-bottom: 500px 
-  
-}
-
-#flashCardPick{
- background:url(/public/images/light-opacity-programming-code-abstract-technology-background-software-1024x756.jpg);
-  
-}
-
-#dragDropPick{
-  
-}
-
-
-/* test div */
-.test{
-  margin: 5%;
-  border: 1px solid black;
-}
-
-
-#startBtn{
-
-  align-self: center;
-  margin-top: 50px;
   margin-bottom: 500px;
-  background-color: aqua;
-  border: 1px solid black;
-  color:black;
-  margin-left: 37%;
-  width: 250px;
-  z-index: 2;
+  margin-top: 10px;
 
-  
- 
 }
 
+
+/* the glitch is real folks  */
 .glitch{
   overflow: hidden;
 }
-#ddBtn{
-  height: 50px;
-  width: 90%;
-  font-family: 'Libre Baskerville', serif;
-  background-color: aqua;
-  border: 1px solid black;;
-  color: black;
-}
-#fcBtn{
-  height: 50px;
-  width: 90%;
-  font-family: 'Libre Baskerville', serif;
-  background-color: rgb(50, 156, 156);
-  border: 1px solid black;
-  color: black;
-}
 
-#flashCardText{
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 25px;
-  color: black;
-}
-#dragDropText{
-  font-family: 'Libre Baskerville', serif;
-  margin-top: 25px;
-  color: black;
-  }
-#dropdownMenuButton{
+  /* dropdown menu */
+#dropdownMenuButton{ 
   font-family: 'Libre Baskerville', serif;
   height: 50px;
   width: 90%;
   background-color: rgb(196, 210, 218);
   border: 5px double rgb(13, 97, 152);
   color: black;
-
   font-size: 25px;
- 
-}
-#instructions{
-  color: rgba(0, 0, 0);
-  size: 10px;
-  pointer-events: none;
 }
 
 .dropdown-item{
-
 width: 500px;
 text-align: center;
 font-family: 'Libre Baskerville', serif;
@@ -161,9 +92,7 @@ font-family: 'Libre Baskerville', serif;
 .dropdown-menu{
   background:url(/public/images/dropdownbg.png)
 }
-#main-bottom{
-  margin-top: 10px;
-}
+
 .nav-wrapper{
 background-color: #000000
 }

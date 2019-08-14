@@ -12,69 +12,76 @@
     <!-- Bootstrap css link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <!-- google font for glitch -->
     <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|Playfair+Display:900" rel="stylesheet">
-
     <!--  Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-
-    <!-- CSS styling -->
-    <link rel="stylesheet" type="text/css" href="./styles/shared.css">
-    <link rel="stylesheet" type="text/css" href="./styles/index.css">
-    <link rel="stylesheet" type="text/css" href="./styles/glitch.css">
-
     <!-- FontAwesome styling -->
     <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
     <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
-
+    <!-- CSS styling -->
+    <link rel="stylesheet" type="text/css" href="./styles/index.css">
+    <link rel="stylesheet" type="text/css" href="./styles/glitch.css">
 </head>
 
+<!-- the beginning of the visible page -->
+
 <body id="main-page">
-    
-    <img src="https://media.giphy.com/media/klh557jG1YQFi/giphy.gif" alt="">
 
-    <div id="loader" class="loading">
-    </div>
+    <!-- this link makes it so that on-click at landing it will scroll down to the categories -->
+    <a href="#main-bottom">
 
-    <!-- main area front area-->
-    <div class="content">
-        <div class="contentSection">
+        <!-- our background image is set as an element in the html and CSS'ed to appear like a background -->
+        <img src="https://media.giphy.com/media/klh557jG1YQFi/giphy.gif" alt="">
 
-              
+        <!-- idk why but the glitch won't work without this div -->
+        <div id="loader" class="loading"></div>
 
-            <h2 class="contentTitle"><span id="node">Knode</span><span id="your">Your</span><span id="code">Code</span>
-            </h2>
+        <!-- main area front area-->
+        <div class="content">
+            <div class="contentSection">
 
-            <br><br><br><br><br><br><br>
-            <span>
-                <p class="contentText">Free online coding resource</p>
-            </span>
-            <br>
+                <!-- our visible header -->
+                <h2 class="contentTitle"><span id="node">Knode</span><span id="your">Your</span><span
+                        id="code">Code</span>
+                </h2>
+                <!-- lots of space, is necessary for positioning -->
+                <br><br><br><br><br><br><br>
+                <br><br><br><br>
+                <!-- our second header -->
+                <span>
+                    <p id="secondline" class="contentText">Free online coding resource</p>
+                </span>
+                <br>
+            </div>
+            <!-- these divs are the glitch effect -->
+            <div class="glitch">
+                <div class="glitchit"></div>
+                <div class="glitchit"></div>
+                <div class="glitchit"></div>
+                <div class="glitchit"></div>
+                <div class="glitchit"></div>
+            </div>
         </div>
-        <div class="glitch">
-            <div class="glitchit"></div>
-            <div class="glitchit"></div>
-            <div class="glitchit"></div>
-            <div class="glitchit"></div>
-            <div class="glitchit"></div>
-        </div>
-    </div>
-    <br>
+    </a>
 
+    <!-- don't get lost in the space -->
+    <br><br><br><br><br><br><br>
+
+    <!-- our bottom div called from the top onclick -->
     <div class="container-fluid" id="main-bottom">
         <div class="row">
             <div class="col-md-6" id="flashCardPick">
-
+                <!-- these dropdown menus let the user select difficulty -->
                 <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Flash Cards!
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-
+                    <!-- each option will store its id in localstorage, to be used later when pulling questions from DB -->
                     <a class="dropdown-item" id="instructions" href="">Please choose the level of difficulty: </a>
                     <a class="dropdown-item" id="one" href="/flash-card-selection.html">Level 1</a>
                     <a class="dropdown-item" id="two" href="/flash-card-selection.html">Level 2</a>
@@ -83,6 +90,7 @@
                 </div>
             </div>
 
+            <!-- second dropdown -->
             <div class="col-md-6" id="flashCardPick">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -94,26 +102,22 @@
                     <a class="dropdown-item" id="triviaTwo" href="/drag-drop.html">Level 2</a>
                     <a class="dropdown-item" id="triviaThree" href="/drag-drop.html">Level 3</a>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 
 
 
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- JQuery Link -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -129,8 +133,8 @@
         });
     </script>
 
-
-<footer>CopyRight* 2019 Alex, Darius, Dealan, Hetal, Will</footer>
+    <!-- i tried -->
+    <footer>CopyRight* 2019 Alex, Darius, Dealan, Hetal, Will</footer>
 </body>
 
 </html>
