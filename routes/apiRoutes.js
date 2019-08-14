@@ -58,22 +58,24 @@ module.exports = function (app) {
 
 
   // Create a new score on the list
-  app.post("/api/scores", function(req, res) {
+  app.post("/api/scores", function (req, res) {
     db.Score.create({
       userName: req.body.name,
       score: req.body.score
-    }).then(function(dbScores) {
+    }).then(function (dbScores) {
       res.json(dbScores);
     });
   });
 
-  app.get("/api/scores", function(req, res) {
+
+  // route to get top ten scores
+  app.get("/api/scores", function (req, res) {
     db.Score.findAll({
       limit: 10,
-      order:[
+      order: [
         ['score', 'DESC']
       ]
-    }).then(function(dbScores) {
+    }).then(function (dbScores) {
       res.json(dbScores);
     });
   });
