@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  // Stores the user's choice in level for the flashcard area
   $("#one").on("click", function () {
     localStorage.setItem("skillLvl", "1")
   });
@@ -11,6 +12,7 @@ $(document).ready(function () {
 
   });
 
+  // Stores the user's choice in level for the quiz area
   $("#triviaOne").on("click", function () {
     localStorage.setItem("skillLvl", "1")
   });
