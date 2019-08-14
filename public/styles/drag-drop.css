@@ -6,14 +6,17 @@
 
 }
 
-.instructions{
+.instructions, .scoreMessage, #scoreList{
   color: white;
+}
+
+#resultDiv, #question-top, #choices{
+  display: none;
 }
 
 /* main initial divs */
 #question-top{
   font-family: 'Libre Baskerville', serif;
-  display: none;
 
  
 }
@@ -58,7 +61,6 @@
 #choices{
   text-align: center;
   font-family: 'Libre Baskerville', serif;
-  display: none;
   
   
   

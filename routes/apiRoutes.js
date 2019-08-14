@@ -56,10 +56,19 @@ module.exports = function (app) {
   });
 
 
-  // Create a new example
-  app.post("/api/questions", function(req, res) {
-    db.Question.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Create a new score on the list
+  app.post("/api/scores", function(req, res) {
+    db.Score.create({
+      userName: req.body.name,
+      score: req.body.score
+    }).then(function(dbScores) {
+      res.json(dbScores);
+    });
+  });
+
+  app.get("/api/scores", function(req, res) {
+    db.Score.findAll({}).then(function(dbScores) {
+      res.json(dbScores);
     });
   });
 
@@ -76,13 +85,13 @@ module.exports = function (app) {
 
 
   // Delete an example by id
-  app.delete("/api/examples/:id", function (req, res) {
-    db.Example.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function (dbExample) {
-      res.json(dbExample);
-    });
-  });
+  // app.delete("/api/examples/:id", function (req, res) {
+  //   db.Example.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function (dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
 };

@@ -238,12 +238,12 @@ $(document).ready(function () {
                 window.location.reload(questionCount--)
 
         } else {
-            alert("You finished the test!");
-            $("#question-top").hide();
-            $("#choices").hide();
 
             postScore();
-            getAllScores();
+
+            $("#resultDiv").show();
+            $("#question-top").hide();
+            $("#choices").hide();
 
         }
 
@@ -251,10 +251,28 @@ $(document).ready(function () {
 
     function postScore(){
 
+        let newScore = {
+            name: userName,
+            score: 100 //this will change with a variable later
+        }
+
+        $.post("api/scores", newScore, function(data){
+            console.log(data);
+
+            getAllScores();
+        })
     }
 
     function getAllScores(){
-        
+        $.get("api/scores", function(data){
+            console.log(data);
+
+            for (let i = 0; i < data.length; i++){
+                let scoreRow = $("<div>");
+                scoreRow.text(`${data[i].userName} : ${data[i].score}`);
+                $("#scoreList").append(scoreRow);
+            }
+        })
     }
 
 });
