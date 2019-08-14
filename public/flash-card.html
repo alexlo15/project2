@@ -31,82 +31,60 @@
         <a class="navbar-brand" id="logoTitle" href="/">
             <img id="mainlogo" src="./images/_Logo.png">
         </a>
-        
-                <a class="nav-link active" href="#">
-                    <div id="display">10:00</div>
-                </a>
-                <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light shuffle"><i
-                            class="fas fa-random"></i>
-                        Shuffle!</button></a>
-            
-        
-        <!-- </div>
-        <span class="align-baseline">baseline</span>
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
 
+        <div id="buttons">
+            <!-- <button id="start">Start</button>
+            <button id="stop">Stop</button> -->
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-light active">
+                    <a type="radio" name="options" id="start" autocomplete="on" checked> Start</a>
+                </label>
+                <label class="btn btn-outline-light">
+                    <a type="radio" name="options" id="stop" autocomplete="on"> Stop</a>
+                </label>
 
-
-            </li>
-            <li class="nav-item">
-
-            </li>
-            
-        </ul>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#"><button type="button" class="btn btn-dark btn home">Home</button></a>
-            </li>
-
-        </ul> -->
-    </nav>
-    <div class="row">
-        <div class="col-md-9"></div>
-        <div class="col-md-3">
-            <div class="row">
-                <div id="buttons">
-                    <!-- <button id="start">Start</button>
-                    <button id="stop">Stop</button> -->
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-primary active">
-                            <a type="radio" name="options" id="start" autocomplete="on" checked> Start</a>
-                        </label>
-                        <label class="btn btn-primary">
-                            <a type="radio" name="options" id="stop" autocomplete="on"> Stop</a>
-                        </label>
-
-                    </div>
-                </div>
             </div>
         </div>
-    </div>
+
+        <a class="nav-link active" href="#">
+            <div id="display">10:00</div>
+        </a>
+        <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light shuffle"><i
+                    class="fas fa-random"></i>
+                Shuffle!</button></a>
+
+
+    </nav>
+
 
 
     <div class="col-md-2">
 
     </div>
-    <div class="col-md-8">
-        <div class="row">
+    <div class="notecard">
+        <div class="col-md-8">
+            <div class="row">
 
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <!-- <span class="sr-only">Previous</span> -->
-            </a>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <!-- <span class="sr-only">Previous</span> -->
+                </a>
 
-            <div id="myCarousel" class="carousel slide">
+                <div id="myCarousel" class="carousel slide">
 
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                    </div>
+
                 </div>
 
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <!-- <span class="sr-only">Next</span> -->
+                </a>
+
             </div>
-
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <!-- <span class="sr-only">Next</span> -->
-            </a>
-
         </div>
     </div>
 

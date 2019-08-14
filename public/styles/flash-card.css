@@ -28,7 +28,9 @@ body {
 
 }
 
-
+.flip-box-inner.h2{
+  padding-top: 30px;
+}
 
 #buttons {
   text-align: center;
@@ -52,6 +54,13 @@ body {
   color: rgba(10, 243, 10, 0.815);
 }
 
+.notecard{  top: 25%;
+}
+
+#myCarousel{
+font-size: 2em;
+
+}
 #logoTitle{
   padding-right: 70%;
 }
@@ -88,7 +97,7 @@ h2.timer {
   position: relative;
   width: 100%;
   height: 100%;
-  line-height: 150px;
+  line-height: 1.5;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
