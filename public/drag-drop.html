@@ -27,31 +27,44 @@
             Knode the Code
         </a>
 
-        <div>Correct:
-            <div id="correct">
+        <div id="score">
+            <div>Correct:
+                <div id="correct">
+                </div>
             </div>
-        </div>
-        <div>Wrong:
-            <div id="wrong">
+            <div>Wrong:
+                <div id="wrong">
+                </div>
             </div>
         </div>
 
     </nav>
 
+    <div class="container-fluid" id="nameDiv">
+        <p class="instructions">Please input your name and hit continue to start the quiz</p>
+        <input class="form-control" id="nameInput" placeholder="Name">
+        <button type="submit" class="btn btn-primary mb-2 nameSubmit">Submit</button>
+    </div>
+
     <!-- question area-->
     <div class="container-fluid" id="question-top">
-        <div class="row">
+        <div class="row text-center">
             <div class="col-md-10" id="question-text">
                 <div class="card" id="questionCard">
                     <h2 id="questionH2"> Question?</h2>
                 </div>
             </div>
         </div>
-        <div class="row final-topics-row" id="droppable">
-            <div class="col-md-6" id="final-topics">
-                <!-- can erase the <br> later -->
 
-                <h2>Drop Answers here</h2>
+        <div class="row final-topics-row text-center" >
+                <!-- id="droppable" -->
+                <div class="col-md-6 droppable" id="final-topics" >
+                    <!-- can erase the <br> later -->
+                   
+                    <h2>Drop Answers here</h2>
+                   
+                </div>
+                
 
             </div>
 
@@ -62,7 +75,7 @@
 
     <!-- answer area-->
     <div class="container-fluid" id="choices">
-        <div class="row">
+        <div class="row text-center" >
             <div class="col-md-4" id="draggable1">
                 <div class="card" id="choice1">
                     <div class="card-body" class="ui-widget-content" id="choice1Text">
@@ -70,14 +83,14 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" id="draggable2">
+            <div class="col-md-4 drag" id="draggable2">
                 <div class="card" id="choice2">
                     <div class="card-body" class="ui-widget-content" id="choice2Text">
                         choice 2
                     </div>
                 </div>
             </div>
-            <div class="col-md-4" id="draggable3">
+            <div class="col-md-4 drag" id="draggable3">
                 <div class="card" id="choice3">
                     <div class="card-body" class="ui-widget-content" id="choice3Text">
                         choice 3
@@ -95,24 +108,30 @@
     </div>
 
     <!-- results area -->
+    <div class="container-fluid" id="resultDiv">
+        <p class="scoreMessage">You finished the test! Here is how you did:</p>
+        <div id = "scoreList">
+            <!-- this will appened all the information from the database -->
+        </div>
+    </div>
 
 
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!-- JQuery Link -->
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"> </script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"> </script>
 
