@@ -1,0 +1,208 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FLASHCARD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* body */
+#flashcard{
+  background: url(../images/page\ background.jpg);
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+
+/* main initial divs */
+#main{
+  margin-top: 30px;
+}
+
+button.home{
+margin-top: 10%;
+margin-left: 25%;
+background-color:#5b6b78; 
+border: none;
+}
+
+.shuffle{
+margin-top: 10%;
+margin-left: 15%;
+background-color:#5b6b78; 
+border: none;
+}
+
+#buttons{
+  text-align: center;
+}
+
+#display{
+  /* font-family: 'Libre Baskerville', serif; */
+  font-size: 28px;
+  color: white;
+
+  /* Typography */
+  text-align: center;
+}
+
+.indexCard{
+  background-color: lightgrey;
+}
+
+.fas{
+  /* these are the arrows from font awesome */
+  color: white;
+}
+
+
+h2.timer{
+  color: white;
+  margin-top: 30%;
+  text-align: center;
+}
+
+.carousel-control{
+background-color: transparent;
+}
+
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 760px;
+  height: 250px;
+  margin-left: 10%;
+  /* border: .4px dashed lightslategray; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side */
+.flip-box-front {
+  background-color: #bbb;
+  color: white;
+}
+
+/* Style the back side */
+.flip-box-back {
+  background-color: #bbb;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+#logoTitle{
+  padding-right: 65%;
+}
+.nav-item{
+  color: white;
+}
+.item {
+  font-size: 2em;
+ 
+}
+#buttons{
+  margin-bottom: 50px;
+  margin-right: 200px;
+}
+.main-hr {
+  width: 30%;
+  border: none;
+  border-top: 1px solid #c3c3c3;
+}
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+  width: 120px;
+}
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: red;
+}
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: red;
+  overflow: hidden;
+}
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}

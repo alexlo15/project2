@@ -10,8 +10,7 @@ body {
 #flashcard {
   background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
   font-family: 'Libre Baskerville', serif;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
 
 }
 
@@ -74,9 +73,14 @@ h2.timer {
 .flip-box {
   background-color: transparent;
   width: 760px;
-  height: 250px;
+
+  height: 350px;
+  
+
+ 
   /* margin-left: 10%; */
-  margin: auto auto;
+  margin:auto auto;
+
   /* border: .4px dashed lightslategray; */
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
@@ -106,18 +110,21 @@ h2.timer {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  background: url(/images/71LOpZLRwoL._SX355_.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Style the front side */
 .flip-box-front {
   background-color: #bbb;
-  color: white;
+  color: black;
 }
 
 /* Style the back side */
 .flip-box-back {
   background-color: #bbb;
-  color: white;
+  color: black;
   transform: rotateY(180deg);
 }
 
@@ -133,12 +140,13 @@ h2.timer {
 .item {
   font-size: 2em;
 
+
 }
 
 .carousel-control {
   width: 0;
 }
-
-#myCarousel {
-  width: 100%;
+#myCarousel{
+  width:100%;
 }
+

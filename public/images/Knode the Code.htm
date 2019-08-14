@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://localhost:3000/flash-card -->
+<html lang="en" class="gr__localhost"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body id="flashcard" data-gr-c-s-loaded="true">​
+
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Knode the Code</title>
+    ​
+    <!-- Bootstrap css link -->
+    <link rel="stylesheet" href="./Knode the Code_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Knode the Code_files/bootstrap.min(1).css">
+    <!--  Font Awesome -->
+    <link rel="stylesheet" href="./Knode the Code_files/all.min.css">
+    ​
+    <!-- CSS styling -->
+    <link rel="stylesheet" type="text/css" href="./Knode the Code_files/shared.css">
+    <link rel="stylesheet" type="text/css" href="./Knode the Code_files/flash-card.css">
+
+​
+
+
+    ​
+    <!-- nav bar -->
+
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" id="logoTitle" href="http://localhost:3000/">
+            Knode the Code
+        </a>
+        <span class="align-baseline">baseline</span>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" href="http://localhost:3000/flash-card#">
+                    <div id="display">14:58</div>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/flash-card#"><button type="button" class="btn btn-dark btn shuffle"><i class="fas fa-random"></i>
+                        Shuffle!</button></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:3000/flash-card#"><button type="button" class="btn btn-dark btn home">Home</button></a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+            <div class="row">
+                <div id="buttons">
+                    <!-- <button id="start">Start</button>
+                    <button id="stop">Stop</button> -->
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-primary" aria-pressed="false">
+                              <a type="radio" name="options" id="start" autocomplete="on" checked=""> Start</a>
+                            </label>
+                            <label class="btn btn-primary" aria-pressed="false">
+                              <a type="radio" name="options" id="stop" autocomplete="on"> Stop</a>
+                            </label>
+                           
+                          </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    ​
+    <!-- main div
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <!-- area for the flip & timer
+            <div class="col-md-2">
+                <a href="/index.html">
+                    <button type="button" class="btn btn-primary btn-lg home">Home</button>
+                </a>
+                <!-- area for timer?? 
+                <div>
+                    <h2 class="timer">Study Time <br><span id="timer"></span></h2>
+                    <div id="display">15:00</div>
+                </div>
+                <div id="buttons">
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                </div>
+                <!-- shuffle! 
+                <button type="button" class="btn btn-primary btn-lg shuffle"><i class="fas fa-random"></i>
+                    Shuffle!</button>
+            </div>-->
+    <div class="col-md-2">
+
+    </div>
+    <div class="col-md-8">
+        <div class="row">
+
+            <a class="left carousel-control" href="http://localhost:3000/flash-card#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <!-- <span class="sr-only">Previous</span> -->
+            </a>
+
+            <div id="myCarousel" class="carousel slide">
+
+                ​
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner"><div class="item active"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What does HTML stands for?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Hyper Text Markup Language</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What is the correct HTML element for the largest heading</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;h1&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What is the correct HTML for adding a background color?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;body style='background-color:yellow;'&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What is the correct HTML for creating a hyperlink?,&lt;a href='xyz'&gt;XYZ&lt;/a&gt;</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;a href='xyz'&gt;XYZ&lt;/a&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>How can you open a link in a new tab/browser window?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;a href='url' target='_blank'&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Markup tags tell the web browser</p></div><div class="flip-box-back"><h2>Answer</h2><p>How to display the page</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>www is based on which model?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Client-server</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What are Empty elements and is it valid?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Empty elements are element with no data</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which of the following attributes of text box control allow to limit the maximum character?</p></div><div class="flip-box-back"><h2>Answer</h2><p>maxlength</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Web pages starts with which ofthe following tag?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;HTML&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>HTML is a subset of</p></div><div class="flip-box-back"><h2>Answer</h2><p>SGML</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>The attribute, which define the relationship between current document and HREF'ed URL is</p></div><div class="flip-box-back"><h2>Answer</h2><p>REL</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Correct HTML to left align the content inside a table cell is</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;td align = 'left'&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which of the tag is used to creates a number list?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;LI&gt; and &lt;OL&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Symbol used at the beginning of the HREF text is</p></div><div class="flip-box-back"><h2>Answer</h2><p>#</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What does CSS stand for?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Cascading Style Sheet</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What is the correct HTML for referring to an external style sheet?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;style src='mystyle.css'&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Where in an HTML document is the correct place to refer to an external style sheet?</p></div><div class="flip-box-back"><h2>Answer</h2><p>in the &lt;head&gt; section</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which HTML tag is used to define an internal style sheet?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;style&gt;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which HTML attribute is used to define inline styles?</p></div><div class="flip-box-back"><h2>Answer</h2><p>style</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which is the correct CSS syntax?</p></div><div class="flip-box-back"><h2>Answer</h2><p>body{color=black;}</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>How do you insert a comment in a CSS file?</p></div><div class="flip-box-back"><h2>Answer</h2><p>/*this is a comment*/</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which property is used to change the background color?</p></div><div class="flip-box-back"><h2>Answer</h2><p>background-color</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>How do you add a background color for all &lt;h1&gt; elements?</p></div><div class="flip-box-back"><h2>Answer</h2><p>h1 {backgroun-color:#ffffff;)</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which CSS property is used to change the text color of an element?</p></div><div class="flip-box-back"><h2>Answer</h2><p>text-color</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which CSS property controls the text size?</p></div><div class="flip-box-back"><h2>Answer</h2><p>text-size</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which property is used to change the font of an element?</p></div><div class="flip-box-back"><h2>Answer</h2><p>font-family</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>How do you make the text bold?</p></div><div class="flip-box-back"><h2>Answer</h2><p>font: bold;</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which property is used to change the left margin of an element?</p></div><div class="flip-box-back"><h2>Answer</h2><p>margin-left</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>How do you select elements with class name 'test'?</p></div><div class="flip-box-back"><h2>Answer</h2><p>.test</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Variables are the ______ of programming?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Pronouns</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which of the following are not a Variable?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Strings</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Booleans can only be ?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Strings</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What numbers will be returned?  Math.floor(Math.random()*10);</p></div><div class="flip-box-back"><h2>Answer</h2><p>1 - 10</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Var x = 3; Var y = 5; Var z = x * y; What i s Var z ?</p></div><div class="flip-box-back"><h2>Answer</h2><p>8</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Strings can be created in JS by using?</p></div><div class="flip-box-back"><h2>Answer</h2><p>''</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Var x = 'Dolphins' + 3 + 3</p></div><div class="flip-box-back"><h2>Answer</h2><p>Dolphins33</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>What are elements of an Array called?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Index</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Var characters = ['Micky', 'Goofy', 'Minnie']; Which Character is in the 1st index?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Micky</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p> What vegetables does the for loop read?   Var vegetables = [“Carrots”, “Peas”, “Lettuce”, “Tomatoes”] For(var i=0; i&lt;vegetables.length; i++) Console.log(“I love eating ” + vegetables[3];</p></div><div class="flip-box-back"><h2>Answer</h2><p>Tomatoes</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Javascript is the programming language </p></div><div class="flip-box-back"><h2>Answer</h2><p>HTML</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Which company developed JavaScript</p></div><div class="flip-box-back"><h2>Answer</h2><p>Apple</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>After your page loads, a box appears and ask for your age. What is this function called?</p></div><div class="flip-box-back"><h2>Answer</h2><p>Prompt</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>How many indexes can an Array have?</p></div><div class="flip-box-back"><h2>Answer</h2><p>5</p></div></div></div></div><div class="item"><div class="flip-box"><div class="flip-box-inner"><div class="flip-box-front"><h2>Question</h2><p>Inside which HTML element do we put the JavaScript?</p></div><div class="flip-box-back"><h2>Answer</h2><p>&lt;script&gt;</p></div></div></div></div></div>
+
+            </div> ​
+
+            <a class="right carousel-control" href="http://localhost:3000/flash-card#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <!-- <span class="sr-only">Next</span> -->
+            </a>
+
+        </div>
+    </div>
+
+    <div class="col-md-2">
+        <div class="row">
+            <!-- empty div for formatting purposes -->
+        </div>
+        ​
+
+    </div>
+
+    
+    
+    ​
+    ​
+    <!-- Bootstrap JS links: -->
+    <script src="./Knode the Code_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="./Knode the Code_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="./Knode the Code_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script src="./Knode the Code_files/jquery.min.js"></script>
+    <script src="./Knode the Code_files/bootstrap.min(2).js"></script>
+
+    <!--JQuery Link-->
+
+    <script type="text/javascript" src="./Knode the Code_files/jquery.min(1).js"></script>
+    <script src="./Knode the Code_files/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        </script>
+    ​
+    <script src="./Knode the Code_files/flash-card.js"></script>
+    ​
+
+​</body></html>

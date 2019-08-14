@@ -8,6 +8,10 @@
   background-size: cover;
 }
 
+#mainlogo{
+  height: 75px;
+  width: 75px;
+}
 /* contains all movable divs */
 #movable-divs {}
 
@@ -58,9 +62,8 @@
 .final-topics-row {
   /* position: relative; */
 }
-
-#final-topics {
-  color: linen;
+#final-topics{
+  color: rgba(250, 240, 230, 0.678);
   text-align: center;
   /* position: absolute; */
   /* top:30%; */
@@ -73,7 +76,9 @@
   -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.5)));
 }
 
-button.continue {}
+.holder{
+  
+}
 
 /* This class will be added dynamically when any topic is dragged */
 .ui-draggable-dragging {
