@@ -113,16 +113,13 @@ margin: 15px;
 */
 
 #wrong, #correct{
-}
-display: inline;
+  display: inline;
 }
 
 #correct{
   padding-right: 13%;
 }
 
-
-}
 #score{
   background-color: lightblue;
   /* margin-right: 10px;

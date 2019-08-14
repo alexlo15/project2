@@ -1,43 +1,47 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FLASHCARD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-html,body{
-  margin:0;
-  padding:0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
-#flashcard{
+
+#flashcard {
   background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
   font-family: 'Libre Baskerville', serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
 
 /* main initial divs */
-#main{
+#main {
   margin-top: 30px;
   font-family: 'Libre Baskerville', serif;
 
 }
 
-button.home{
-margin-top: 10%;
-margin-left: 25%;
-background-color:#5b6b78; 
-border: none;
+button.home {
+  margin-top: 10%;
+  margin-left: 25%;
+  background-color: #5b6b78;
+  border: none;
 }
 
-.shuffle{
-margin-top: 10%;
-margin-left: 15%;
-background-color:#5b6b78; 
-border: none;
+.shuffle {
+  margin-top: 10%;
+  margin-left: 15%;
+  background-color: #5b6b78;
+  border: none;
 }
 
-#buttons{
+#buttons {
   text-align: center;
 }
 
-#display{
+#display {
   font-family: 'Libre Baskerville', serif;
   font-size: 28px;
   color: white;
@@ -46,24 +50,24 @@ border: none;
   text-align: center;
 }
 
-.indexCard{
+.indexCard {
   background-color: lightgrey;
 }
 
-.fas{
+.fas {
   /* these are the arrows from font awesome */
   color: white;
 }
 
 
-h2.timer{
+h2.timer {
   color: white;
   margin-top: 30%;
   text-align: center;
 }
 
-.carousel-control{
-background-color: transparent;
+.carousel-control {
+  background-color: transparent;
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -72,9 +76,10 @@ background-color: transparent;
   width: 760px;
   height: 250px;
   /* margin-left: 10%; */
-  margin:auto auto;
+  margin: auto auto;
   /* border: .4px dashed lightslategray; */
-  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
 }
 
 /* This container is needed to position the front and back side */
@@ -94,9 +99,10 @@ background-color: transparent;
 }
 
 /* Position the front and back side */
-.flip-box-front, .flip-box-back {
+.flip-box-front,
+.flip-box-back {
   position: absolute;
-  padding:5px;
+  padding: 5px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -116,20 +122,23 @@ background-color: transparent;
 }
 
 
-#logoTitle{
+#logoTitle {
   padding-right: 65%;
 }
-.nav-item{
+
+.nav-item {
   color: white;
 }
+
 .item {
   font-size: 2em;
 
 }
 
-.carousel-control{
+.carousel-control {
   width: 0;
 }
-#myCarousel{
-  width:100%;
+
+#myCarousel {
+  width: 100%;
 }
