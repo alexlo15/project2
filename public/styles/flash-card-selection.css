@@ -19,30 +19,24 @@
 #JS {
   width: 120px;
   height: 110px;
-  /* margin-left: 35%;
-  margin-right: 2%; */
   margin-top: 15px;
-
 }
 
 #css {
   width: 130px;
-  /* height: 120px; */
   height: 130px;
-  /* margin-left: 30%;
-  margin-right: 2%; */
-}
+ }
 
 #HTML-text {
-  /* border: 1px solid grey; */
+  
 }
 
 #CSS-text {
-  /* border: 1px solid white; */
+ 
 }
 
 #JS-text {
-  /* border: 1px solid black; */
+  
 }
 
 #launchPad {
@@ -60,8 +54,7 @@
 
 /* bottom div user can drag things into */
 .final-topics-row {
-  /* position: relative; */
-  /* display: none; */
+  
 }
 #final-topics{
   color: rgba(250, 240, 230, 0.5);

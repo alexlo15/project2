@@ -79,15 +79,8 @@ h2.timer {
 .flip-box {
   background-color: transparent;
   width: 760px;
-
   height: 350px;
-  
-
- 
-  /* margin-left: 10%; */
   margin:auto auto;
-
-  /* border: .4px dashed lightslategray; */
   perspective: 1000px;
   /* Remove this if you don't want the 3D effect */
 }
@@ -134,13 +127,11 @@ h2.timer {
   transform: rotateY(180deg);
 }
 
-
-
-
 .carousel-control {
   width: 0;
   color: rgb(253, 211, 172);
 }
+
 #myCarousel{
   width:100%;
 }
