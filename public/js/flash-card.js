@@ -228,7 +228,7 @@ window.onload = function() {
   
   // prevents the clock from being sped up unnecessarily
   var clockRunning = false;
-  var time = 900;
+  var time = 600;
   var lap = 1;
   
 
@@ -272,9 +272,9 @@ window.onload = function() {
     if (minutes === 0) {
       minutes = "00";
     }
-    // if (time == 0) {
-    //     window.location.href = "drag-drop.html";
-    //   }
+    if (time == 0) {
+        window.location.href = "drag-drop.html";
+      }
     else if (minutes < 10) {
       minutes = "0" + minutes;
     }
