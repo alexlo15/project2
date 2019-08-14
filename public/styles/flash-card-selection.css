@@ -17,6 +17,7 @@
   /* margin-left: 35%;
   margin-right: 2%; */
   margin-top: 15px;
+  
 }
 
 #css{
@@ -40,6 +41,7 @@
 }
 #launchPad{
   min-height: 150px;
+  color: #fff;
 }
 .logoCard{
   cursor: pointer;
@@ -67,4 +69,11 @@
 
 button.continue{
 
+}
+
+/* This class will be added dynamically when any topic is dragged */
+.ui-draggable-dragging{
+  width: 80px;
+  height: 80px;
+  margin:10px;
 }
