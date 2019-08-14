@@ -39,7 +39,7 @@ $(document).ready(function () {
         }
 
         randomize();
-        getRight();
+
 
         console.log(flashcards);
         console.log(right);
@@ -52,21 +52,30 @@ $(document).ready(function () {
         questionCount++;
     });
 
-    // function tallyHo() {
-    //     for (var i = 0; i < right.length; i++) {
 
-    //         if (draggableChoice[i] === right[i]) {
+    // alex's shitty function to count right/wrong
+    function tallyHo() {
 
-    //             correct++;
-    //             console.log("correct: " + correct);
+        if (questionCount < flashcards.length) {
+            console.log(localStorage.getItem("theirChoice").trim());
+            console.log(right[questionCount - 1]);
+            console.log(localStorage.getItem("theirChoice").trim() == right[questionCount - 1]);
 
-    //         } else {
-    //             wrong++;
-    //             console.log("wrong: " + wrong);
+            if (localStorage.getItem("theirChoice").trim() == right[questionCount - 1]) {
 
-    //         }
-    //     }
-    // };
+                correct++;
+                console.log("correct: " + correct);
+
+            } else {
+                wrong++;
+                console.log("wrong: " + wrong);
+
+            }
+        }
+
+    };
+
+
 
     function getRight() {
 
@@ -96,7 +105,7 @@ $(document).ready(function () {
 
 
         }
-
+        getRight();
 
     }
 
@@ -150,14 +159,23 @@ $(document).ready(function () {
                 //Store the current draggable object
                 pastDraggable = currentDraggable;
                 draggableChoice = $(ui.draggable).text();
-                console.log("Dragged item : " + draggableChoice);
+                // console.log("Dragged item : " + draggableChoice);
+                localStorage.setItem("theirChoice", draggableChoice);
+                console.log(localStorage.getItem("theirChoice"));
+                tallyHo();
 
+
+            },
+            stop: function (event, ui) {
+                alert("this stop thing works");
             },
             //Event to accept a draggable when dragged outside the droppable
             out: function (event, ui) {
                 var currentDraggable = $(ui.draggable).attr('id');
                 $(ui.draggable).animate($(ui.draggable).data().originalLocation, "slow");
             }
+
+
         });
 
 
@@ -198,6 +216,11 @@ $(document).ready(function () {
 
     $('#submitBtn').on('click', function () {
 
+
+        // tallyHo();
+        $("#correct").push(correct);
+        $("#wrong").push(wrong);
+
         DragChoices();
         // handleRevert($(this));
         // Positioning();
@@ -205,8 +228,6 @@ $(document).ready(function () {
         $("#draggable2").css({ 'left': '0', 'top': '0' });
         $("#draggable3").css({ 'left': '0', 'top': '0' });
         $('#final-topics').html('');
-
-        tallyHo();
 
 
         if (questionCount < flashcards.length) {
@@ -221,7 +242,7 @@ $(document).ready(function () {
 
             questionCount++;
 
-                window.location.reload(questionCount--)
+            // window.location.reload(questionCount--)
 
         } else {
             alert("You finished the test!");

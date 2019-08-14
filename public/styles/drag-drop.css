@@ -82,3 +82,8 @@ margin: 15px;
 .ui-widget-content{
   width: 20%;
 }
+
+#score{
+  background-color: lightblue;
+
+}
