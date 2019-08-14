@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Knode the Code</title>
-    
+
     <!-- Bootstrap css link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" >
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" >
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <!--  Font Awesome -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
@@ -18,35 +18,51 @@
     <link rel="icon" href="./images/favicon.png" type="image/x-icon">
 
     <!-- CSS styling -->
-    <link rel="stylesheet" type="text/css" href="/styles/shared.css" >
-    <link rel="stylesheet" type="text/css" href="/styles/flash-card.css" >
+    <link rel="stylesheet" type="text/css" href="/styles/shared.css">
+    <link rel="stylesheet" type="text/css" href="/styles/flash-card.css">
 </head>
 
 
 <body id="flashcard">
 
-  
+
     <!-- nav bar -->
-    
+
 
     <nav class="navbar navbar-dark">
         <a class="navbar-brand" id="logoTitle" href="/">
-            Knode the Code
+            <img id="mainlogo" src="./images/_Logo.png">
         </a>
+        
+                <a class="nav-link active" href="#">
+                    <div id="display">10:00</div>
+                </a>
+                <a class="nav-link" href="#"><button type="button" class="btn btn-outline-light shuffle"><i
+                            class="fas fa-random"></i>
+                        Shuffle!</button></a>
+            
+        
+        <!-- </div>
         <span class="align-baseline">baseline</span>
         <ul class="nav justify-content-end">
             <li class="nav-item">
 
-              <a class="nav-link active" href="#"><div id="display">10:00</div></a>
+
 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><button type="button" class="btn btn-dark btn shuffle"><i
-                            class="fas fa-random"></i>
-                        Shuffle!</button></a>
+
             </li>
+<<<<<<< Updated upstream
             
         </ul>
+=======
+            <li class="nav-item">
+                <a class="nav-link" href="#"><button type="button" class="btn btn-dark btn home">Home</button></a>
+            </li>
+
+        </ul> -->
+>>>>>>> Stashed changes
     </nav>
     <div class="row">
         <div class="col-md-9"></div>
@@ -56,20 +72,44 @@
                     <!-- <button id="start">Start</button>
                     <button id="stop">Stop</button> -->
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-primary active">
-                              <a type="radio" name="options" id="start" autocomplete="on" checked> Start</a>
-                            </label>
-                            <label class="btn btn-primary">
-                              <a type="radio" name="options" id="stop" autocomplete="on"> Stop</a>
-                            </label>
-                           
-                          </div>
+                        <label class="btn btn-primary active">
+                            <a type="radio" name="options" id="start" autocomplete="on" checked> Start</a>
+                        </label>
+                        <label class="btn btn-primary">
+                            <a type="radio" name="options" id="stop" autocomplete="on"> Stop</a>
+                        </label>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
+<<<<<<< Updated upstream
+=======
+    <!-- main div
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <!-- area for the flip & timer
+            <div class="col-md-2">
+                <a href="/index.html">
+                    <button type="button" class="btn btn-primary btn-lg home">Home</button>
+                </a>
+                <!-- area for timer?? 
+                <div>
+                    <h2 class="timer">Study Time <br><span id="timer"></span></h2>
+                    <div id="display">10:00</div>
+                </div>
+                <div id="buttons">
+                    <button id="start">Start</button>
+                    <button id="stop">Stop</button>
+                </div>
+                <!-- shuffle! 
+                <button type="button" class="btn btn-primary btn-lg shuffle"><i class="fas fa-random"></i>
+                    Shuffle!</button>
+            </div>-->
+>>>>>>> Stashed changes
     <div class="col-md-2">
 
     </div>
@@ -83,12 +123,12 @@
 
             <div id="myCarousel" class="carousel slide">
 
-                
+
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
                 </div>
 
-            </div> 
+            </div>
 
             <a class="right carousel-control" href="#myCarousel" data-slide="next">
                 <span class="glyphicon glyphicon-chevron-right"></span>
@@ -102,13 +142,13 @@
         <div class="row">
             <!-- empty div for formatting purposes -->
         </div>
-        
+
 
     </div>
 
     </div>
     </div>
-    
+
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
@@ -128,7 +168,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"> -->
 
-    
+
     <script src="./js/flash-card.js"></script>
-    
+
 </body>
