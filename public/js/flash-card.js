@@ -1,13 +1,14 @@
 $(document).ready(function () {
-
+    // var replace_str = $('body').html().replace(/\&#8203/g,'');
+    // $('body').html(replace_str);
     let topics;
     let topicArray = [];
     topics = localStorage.getItem('vTopicSelected');
-    console.log("Topics : on load : " + topics);
+    // console.log("Topics : on load : " + topics);
     topicArray = topics.split(",");
 
     var level = localStorage.getItem('skillLvl');
-    console.log('Topics : ' + topics);
+    // console.log('Topics : ' + topics);
 
 
     // var questions = [];
@@ -38,7 +39,7 @@ $(document).ready(function () {
                         topicId.push('3');
                         break;
                 }
-                console.log("After HTML Topic Id : " + topicId);
+                // console.log("After HTML Topic Id : " + topicId);
             }
             if (item === 'CSS') {
                 switch (level) {
@@ -52,7 +53,7 @@ $(document).ready(function () {
                         topicId.push('6');
                         break;
                 }
-                console.log("After CSS Topic Id : " + topicId);
+                // console.log("After CSS Topic Id : " + topicId);
             }
             if (item === 'JS') {
                 switch (level) {
@@ -66,12 +67,12 @@ $(document).ready(function () {
                         topicId.push('9');
                         break;
                 }
-                console.log("After JS Topic Id : " + topicId);
+                // console.log("After JS Topic Id : " + topicId);
             }
            
         })
        
-        console.log("Topic id : " + topicId);
+        // console.log("Topic id : " + topicId);
         $.get("/api/questions/"+topicId , function (data) {
 
             for (var i = 0; i < data.length; i++) {
@@ -99,8 +100,8 @@ $(document).ready(function () {
         $(".carousel-inner").empty();
         // console.log(questions);
         // console.log(answers);
-        console.log(flashcards);
-        console.log(flashcards.length);
+        // console.log(flashcards);
+        // console.log(flashcards.length);
         // console.log(questions.length);
         for (var i = 0; i < flashcards.length; i++) {
             // console.log(questions[i]);
@@ -142,16 +143,16 @@ $(document).ready(function () {
 
     $('.nextBtn').on('click', function () {
         //   alert('next clicked');
-        console.log(questions);
-        console.log(answers);
-        for (var i = 1; i < questions.length; i++) {
-            $('#question').html(questions[i]);
-            $('#answers').text(answers[i]);
-        }
+        // console.log(questions);
+        // console.log(answers);
+        // for (var i = 1; i < questions.length; i++) {
+        //     $('#question').html(questions[i]);
+        //     $('#answers').text(answers[i]);
+        // }
     });
 
     $('.previous').on('click', function () {
-        alert('Previous clicked');
+        // alert('Previous clicked');
     });
 
 
@@ -163,7 +164,7 @@ $(document).ready(function () {
             flashcards[i] = flashcards[j];
             flashcards[j] = temp;
         }
-        console.log(flashcards);
+        // console.log(flashcards);
         generateHtml();
     });
 
@@ -201,9 +202,9 @@ var delayButtonAlert;
 
 //  Timeouts in JavaScript
 //  Set our window alert to run one second after the function's called.
-var windowTimeout = setTimeout(function() {
-  alert("You will be given 10 minutes to study the topics you selected.");
-}, 00);
+// var windowTimeout = setTimeout(function() {
+//   alert("You will be given 10 minutes to study the topics you selected.");
+// }, 00);
 
 //  Start on click.
 $("#start").on("click", function() {
@@ -228,7 +229,7 @@ window.onload = function() {
   
   // prevents the clock from being sped up unnecessarily
   var clockRunning = false;
-  var time = 900;
+  var time = 600;
   var lap = 1;
   
 
@@ -255,7 +256,7 @@ window.onload = function() {
     // DONE: Get the current time, pass that into the timeConverter function,
     //       and save the result in a variable.
     var converted = timeConverter(time);
-    console.log(converted);
+    // console.log(converted);
   
     // DONE: Use the variable we just created to show the converted time in the "display" div.
     $("#display").text(converted);
@@ -272,9 +273,9 @@ window.onload = function() {
     if (minutes === 0) {
       minutes = "00";
     }
-    // if (time == 0) {
-    //     window.location.href = "drag-drop.html";
-    //   }
+    if (time == 0) {
+        window.location.href = "drag-drop.html";
+      }
     else if (minutes < 10) {
       minutes = "0" + minutes;
     }

@@ -35,13 +35,17 @@
         <img src="https://media.giphy.com/media/klh557jG1YQFi/giphy.gif" alt="">
    
     <div id="loader" class="loading">
-
-        <!-- <div class="loading-logo"><img src="../public/images/JS.png" class="logo"></div> -->
     </div>
+
     <!-- main area front area-->
     <div class="content">
         <div class="contentSection">
-                <h2 class="contentTitle">Knode<span>Your</span>Code</h2>
+
+              
+
+            <h2 class="contentTitle"><span id="node">Knode</span><span id="your">Your</span><span id="code">Code</span>
+            </h2>
+
             <br><br><br><br><br><br><br>
             <span>
                 <p class="contentText">Free online coding resource</p>
@@ -57,9 +61,7 @@
         </div>
     </div>
     <br>
-    <!-- <div>
-                <a href="#main-bottom" class="btn btn-aqua btn-lg active" role="button" id="startBtn" aria-pressed="true">Get Started</a>
-        </div> -->
+
     <div class="container-fluid" id="main-bottom">
         <div class="row">
             <div class="col-md-6" id="flashCardPick">
@@ -69,9 +71,13 @@
                     Flash Cards!
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="one" autocomplete="off" href="/flash-card-selection.html">level 1</a>
-                    <a class="dropdown-item" id="two" href="/flash-card-selection.html">level 2</a>
-                    <a class="dropdown-item" id="three" href="/flash-card-selection.html">level 3</a>
+
+
+                    <a class="dropdown-item" id="instructions" href="">Please choose the level of difficulty: </a>
+                    <a class="dropdown-item" id="one" href="/flash-card-selection.html">Level 1</a>
+                    <a class="dropdown-item" id="two" href="/flash-card-selection.html">Level 2</a>
+                    <a class="dropdown-item" id="three" href="/flash-card-selection.html">Level 3</a>
+
                 </div>
             </div>
 
@@ -81,57 +87,16 @@
                     Drag & Drop Trivia!
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="triviaOne" href="/drag-drop.html">level 1</a>
-                    <a class="dropdown-item" id="triviaTwo" href="/drag-drop.html">level 2</a>
-                    <a class="dropdown-item" id="triviaThree" href="/drag-drop.html">level 3</a>
+                    <a class="dropdown-item" id="instructions" href="">Please choose the level of difficulty: </a>
+                    <a class="dropdown-item" id="triviaOne" href="/drag-drop.html">Level 1</a>
+                    <a class="dropdown-item" id="triviaTwo" href="/drag-drop.html">Level 2</a>
+                    <a class="dropdown-item" id="triviaThree" href="/drag-drop.html">Level 3</a>
                 </div>
 
             </div>
 
         </div>
 
-
-
-        <!-- main area front area
-    <div class="container-fluid" id="main-bottom">
-        <div class="row">
-            <div class="col-md-6" id="flashCardPick">
-
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Flash Cards!
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="one" href="/flash-card-selection.html">level 1</a>
-                    <a class="dropdown-item" id="two" href="/flash-card-selection.html">level 2</a>
-                    <a class="dropdown-item" id="three" href="/flash-card-selection.html">level 3</a>
-                </div>
-            </div>
-
-            <div class="col-md-6" id="flashCardPick">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Drag & Drop Trivia!
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="triviaOne" href="/drag-drop.html">level 1</a>
-                    <a class="dropdown-item" id="triviaTwo" href="/drag-drop.html">level 2</a>
-                    <a class="dropdown-item" id="triviaThree" href="/drag-drop.html">level 3</a>
-                </div>
-
-            </div>-->
-        <!--<div class="col-md-6" id="dragDropPick">
-                <a href="drag-drop.html">
-                    <button type="button" class="btn btn-aqua btn-lg" id="ddBtn">
-                        <h2>Drag & Drop Trivia!</h2>
-                    </button>
-                </a>
-         <div id="dragDropText">
-            <p>Quiz yourself and work your way up to </p>
-            <p>way up to an expert coder!</p>
-        </div>
-        
-    -->
     </div>
 
 
@@ -140,13 +105,13 @@
     <!-- Bootstrap JS links: -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-        </script>
+    </script>
 
     <!-- JQuery Link -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -160,7 +125,6 @@
             loader.classList.add('loaded');
             document.body.classList.add('imgloaded');
         });
-
     </script>
 
 

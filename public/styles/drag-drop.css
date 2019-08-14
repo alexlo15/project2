@@ -2,8 +2,10 @@
 
 /* body */
 #quiz{
-  background: url(../images/page\ background.jpg);
+  background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
   font-family: 'Libre Baskerville', serif;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -15,6 +17,20 @@
   display: none;
 }
 
+/* name div */
+#nameDiv{
+  background-color: rgba(8, 52, 95, 0.85);
+  border: 10px double rgba(78, 185, 217, 0.85);
+  width: 80%;
+  padding: 10%;
+  margin: 10%;
+}
+
+.nameSubmit{
+  margin-top: 2%;
+  border: 5px double rgba(78, 185, 217, 0.85);
+}
+
 /* main initial divs */
 #question-top{
   font-family: 'Libre Baskerville', serif;
@@ -22,8 +38,8 @@
  
 }
 #questionCard{
-  background-colo6: lightslategray;
-  height: 70px;
+  background-color: lightslategray;
+  height: 100px;
   
 }
 #question-text{
@@ -94,11 +110,26 @@ margin: 15px;
 .ui-widget-content{
   width: 20%;
 }
+*/
 
+#wrong, #correct{
+}
+display: inline;
+}
+
+#correct{
+  padding-right: 13%;
+}
+
+
+}
 #score{
   background-color: lightblue;
+  /* margin-right: 10px;
+  width: 20%; */
 
-} */
+  border: navy solid 5px;
+} 
 
 .ui-draggable-dragging .card{
   /* background: red; */

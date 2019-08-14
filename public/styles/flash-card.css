@@ -1,8 +1,12 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FLASHCARD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
+html,body{
+  margin:0;
+  padding:0;
+}
 #flashcard{
-  background: url(../images/page\ background.jpg);
+  background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
   font-family: 'Libre Baskerville', serif;
   
 
@@ -12,6 +16,8 @@
 /* main initial divs */
 #main{
   margin-top: 30px;
+  font-family: 'Libre Baskerville', serif;
+
 }
 
 button.home{
@@ -33,7 +39,7 @@ border: none;
 }
 
 #display{
-  /* font-family: 'Libre Baskerville', serif; */
+  font-family: 'Libre Baskerville', serif;
   font-size: 28px;
   color: white;
 
@@ -65,8 +71,14 @@ background-color: transparent;
 .flip-box {
   background-color: transparent;
   width: 760px;
+
   height: 350px;
-  margin-left: 10%;
+  
+
+ 
+  /* margin-left: 10%; */
+  margin:auto auto;
+
   /* border: .4px dashed lightslategray; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -76,6 +88,7 @@ background-color: transparent;
   position: relative;
   width: 100%;
   height: 100%;
+  line-height: 150px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -89,6 +102,7 @@ background-color: transparent;
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
   position: absolute;
+  padding:5px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
@@ -119,9 +133,14 @@ background-color: transparent;
 }
 .item {
   font-size: 2em;
- 
+
+
 }
-#buttons{
-  margin-bottom: 50px;
-  margin-right: 200px;
+
+.carousel-control{
+  width: 0;
 }
+#myCarousel{
+  width:100%;
+}
+

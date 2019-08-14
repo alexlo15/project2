@@ -23,18 +23,16 @@
 
     <!-- nav bar -->
     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" id="logoTitle" href="/">
-            Knode the Code
-        </a>
-
-        <div id="score">
-            <div>Correct:
-                <div id="correct">
-                </div>
+        <div class="row">
+            <div class="col-md-3">
+                <a class="navbar-brand" id="logoTitle" href="/">
+                    Knode the Code
+                </a>
             </div>
-            <div>Wrong:
-                <div id="wrong">
-                </div>
+
+            <div id="score" class="col-md-9">
+                <strong>Correct:</strong><div id="correct"></div>
+                <strong>Wrong:</strong><div id="wrong"></div>
             </div>
         </div>
 
@@ -43,7 +41,8 @@
     <div class="container-fluid" id="nameDiv">
         <p class="instructions">Please input your name and hit continue to start the quiz</p>
         <input class="form-control" id="nameInput" placeholder="Name">
-        <button type="submit" class="btn btn-primary mb-2 nameSubmit">Submit</button>
+        <button type="submit" class="btn btn-outline-light nameSubmit">Submit</button>
+        <!-- <button type="submit" class="btn btn-primary mb-2 nameSubmit">Submit</button> -->
     </div>
 
     <!-- question area-->
@@ -56,26 +55,26 @@
             </div>
         </div>
 
-        <div class="row final-topics-row text-center" >
-                <!-- id="droppable" -->
-                <div class="col-md-6 droppable" id="final-topics" >
-                    <!-- can erase the <br> later -->
-                   
-                    <h2>Drop Answers here</h2>
-                   
-                </div>
-                
+        <div class="row final-topics-row text-center">
+            <!-- id="droppable" -->
+            <div class="col-md-6 droppable" id="final-topics">
+                <!-- can erase the <br> later -->
+
+                <h2>Drop Answers here</h2>
 
             </div>
 
+
         </div>
+
+    </div>
 
 
     </div>
 
     <!-- answer area-->
     <div class="container-fluid" id="choices">
-        <div class="row text-center" >
+        <div class="row text-center">
             <div class="col-md-4" id="draggable1">
                 <div class="card" id="choice1">
                     <div class="card-body" class="ui-widget-content" id="choice1Text">
@@ -110,7 +109,7 @@
     <!-- results area -->
     <div class="container-fluid" id="resultDiv">
         <p class="scoreMessage">You finished the test! Here is how you did:</p>
-        <div id = "scoreList">
+        <div id="scoreList">
             <!-- this will appened all the information from the database -->
         </div>
     </div>
