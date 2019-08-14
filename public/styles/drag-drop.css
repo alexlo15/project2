@@ -18,13 +18,28 @@
 }
 #resultDiv{
   width: 60%;
+  height:550px;
     margin: auto auto;
     margin-top: 20px;
     border: 2px solid #000;
     padding: 5%;
     background: rgba(12,34,56,.9);
 }
-
+#leftScoreDiv{
+  float: left;
+  width:30%;
+}
+#rightScoreDiv{
+  float:right;
+  width: 60%;
+  font-size: 0.8em;
+}
+#rightScoreDiv div{
+  margin-bottom: 5px;
+}
+/* .spaceGenerator{
+  margin-bottom: 5px;
+} */
 /* name div */
 #nameDiv{
   background-color: rgba(8, 52, 95, 0.85);
