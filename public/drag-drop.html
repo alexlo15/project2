@@ -28,10 +28,10 @@
         <a class="navbar-brand" id="logoTitle" href="/">
             <img src="./images/_Logo.png"> </a>
 
-            <div id="score" class="col-md-3">
-                Correct: <div id="correct">0</div>
-                Wrong: <div id="wrong">0</div>
-            </div>
+        <div id="score" class="col-md-3">
+            Correct: <div id="correct">0</div>
+            Wrong: <div id="wrong">0</div>
+        </div>
         </div>
 
     </nav>
@@ -104,9 +104,25 @@
 
     <!-- results area -->
     <div class="container-fluid" id="resultDiv">
-        <p class="scoreMessage">You finished the test! Here is how you did:</p>
+        <p class="scoreMessage">You finished the test! Check below to see if you made the top 10.</p>
+        <div id="leftScore"></div>
         <div id="scoreList">
-            <!-- this will appened all the information from the database -->
+            <h3>All Time Top 10 Scores</h3>
+            <div class="table-responsive">
+                <table class="table-bordered table-hover table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Place</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Score</th>
+                        </tr>
+
+                    </thead>
+                    <tbody class=tableBody>
+                         <!-- this will appened all the information from the database -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

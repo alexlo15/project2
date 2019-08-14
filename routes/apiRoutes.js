@@ -71,7 +71,8 @@ module.exports = function (app) {
     db.Score.findAll({
       limit: 10,
       order:[
-        ['score', 'DESC']
+        ['score', 'DESC'],
+        ['userName', 'ASC']
       ]
     }).then(function(dbScores) {
       res.json(dbScores);

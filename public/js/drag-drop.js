@@ -1,4 +1,3 @@
-
 // import { randomBytes } from "crypto";
 
 
@@ -12,7 +11,7 @@ $(document).ready(function () {
     var flashcards = [];
 
     // Hide name area after user inputs their name & shows questions
-    $(".nameSubmit").on("click", function(){
+    $(".nameSubmit").on("click", function () {
         userName = $("#nameInput").val().trim();
         console.log(userName);
         $("#nameDiv").hide();
@@ -185,7 +184,7 @@ $(document).ready(function () {
             };
         })();
 
-       
+
 
     }
 
@@ -198,12 +197,12 @@ $(document).ready(function () {
 
         if (localStorage.getItem("theirChoice").trim() == right[questionCount - 1]) {
 
-            correct+=1;
+            correct += 1;
             console.log("correct: " + correct);
             $("#correct").text(correct);
-            
+
         } else {
-            wrong+=1;
+            wrong += 1;
             console.log("wrong: " + wrong);
             $("#wrong").text(wrong);
         }
@@ -214,9 +213,18 @@ $(document).ready(function () {
         DragChoices();
         // handleRevert($(this));
         // Positioning();
-        $("#draggable1").css({ 'left': '0', 'top': '0' });
-        $("#draggable2").css({ 'left': '0', 'top': '0' });
-        $("#draggable3").css({ 'left': '0', 'top': '0' });
+        $("#draggable1").css({
+            'left': '0',
+            'top': '0'
+        });
+        $("#draggable2").css({
+            'left': '0',
+            'top': '0'
+        });
+        $("#draggable3").css({
+            'left': '0',
+            'top': '0'
+        });
         $('#final-topics').html('');
 
 
@@ -247,49 +255,68 @@ $(document).ready(function () {
 
     })
 
-    function postScore(){
+    function postScore() {
 
         let newScore = {
             name: userName,
             score: correct //this will change with a variable later
         }
 
-        let leftScoreDiv = $('<div>');
-        leftScoreDiv.attr('id','leftScoreDiv');
+        // let leftScoreDiv = $('<div>');
+        // leftScoreDiv.attr('id', 'leftScoreDiv');
         let scoreRow = $("<div>");
         let scoreSpan = $("<span>")
-        scoreRow.text(`User Name : ${newScore.name}`)
-        scoreSpan.text(`Your Score : ${newScore.score}`);
-        leftScoreDiv.append(scoreRow,scoreSpan)
-        $("#scoreList").append(leftScoreDiv);
-        
+        scoreRow.text(`User Name: ${newScore.name}`)
+        scoreSpan.text(`Your Score: ${newScore.score}`);
+        // leftScoreDiv.append(scoreRow, scoreSpan)
+        $("#leftScore").prepend(scoreRow, scoreSpan);
 
-        $.post("api/scores", newScore, function(data){
+
+        $.post("api/scores", newScore, function (data) {
             console.log(data);
 
             getAllScores();
         })
     }
 
-    function getAllScores(){
-        $.get("api/scores", function(data){
+    function getAllScores() {
+        $.get("api/scores", function (data) {
             console.log(data);
 
-            let rightScoreDiv = $('<div>')
-            rightScoreDiv.attr('id','rightScoreDiv')
-            for (let i = 0; i < data.length; i++){
-               
-                
-                let scoreRow = $("<div>");
-                let scoreSpan = $("<span>")
-                scoreSpan.attr('class','spaceGenerator')
-                scoreRow.text(`User Name : ${data[i].userName}   `)
-                scoreSpan.text(`  Your Score : ${data[i].score}`);
-                scoreRow.append(scoreSpan);
-                rightScoreDiv.append(scoreRow)
-                $("#scoreList").append(rightScoreDiv);
+            for (let i = 0; i < data.length; i++) {
+
+                let scoreRow = $("<tr>");
+                let scorePlace = $("<th>");
+                let scoreName = $("<td>");
+                let scoreNum = $("<td>");
+
+                scorePlace.attr("scope", "row");
+
+                scorePlace.text(i + 1);
+                scoreName.text(data[i].userName);
+                scoreNum.text(data[i].score);
+
+                scoreRow.append(scorePlace, scoreName, scoreNum);
+                $(".tableBody").append(scoreRow);
+
             }
         })
     }
+
+    var $el = $(".table-responsive");
+
+    function anim() {
+        var st = $el.scrollTop();
+        var sb = $el.prop("scrollHeight") - $el.innerHeight();
+        $el.animate({
+            scrollTop: st < sb / 2 ? sb : 0
+        }, 8000, anim);
+    }
+
+    function stop() {
+        $el.stop();
+    }
+    anim();
+    // $el.hover(stop, anim);
 
 });

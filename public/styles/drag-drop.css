@@ -11,36 +11,72 @@
 
 .instructions,
 .scoreMessage,
-#scoreList {
+#scoreList, #leftScore{
   color: white;
+}
+
+#scoreList{
+  text-align: center;
 }
 
 #resultDiv,
 #question-top,
-#choices, .final-topics-row{
+#choices,
+.final-topics-row {
   display: none;
 }
-#resultDiv{
+
+#resultDiv {
   width: 60%;
-  height:550px;
-    margin: auto auto;
-    margin-top: 20px;
-    border: 2px solid #000;
-    padding: 5%;
-    background: rgba(12,34,56,.9);
+  height: 600px;
+  margin: auto auto;
+  margin-top: 15px;
+  border: 10px double rgba(78, 185, 217, 0.85);
+  padding: 5%;
+  background: rgba(12, 34, 56, .9);
 }
-#leftScoreDiv{
+
+.table-responsive {
+  height: 350px;
+  width: 100%;
+  overflow-y: auto;
+  /* border: 2px solid #444; */
+  background: #343a40;
+}
+
+/* table {
+  width: 100%;
+} */
+/* thead{
+  position: fixed;
+  background: #343a40;
+}
+
+th{
+  border: none;
+  padding: 15%;
+} */
+
+td {
+  padding: 24px;
+  /* background: #eee; */
+}
+
+#leftScoreDiv {
   float: left;
-  width:30%;
+  width: 30%;
 }
-#rightScoreDiv{
-  float:right;
+
+#rightScoreDiv {
+  float: right;
   width: 60%;
   font-size: 0.8em;
 }
-#rightScoreDiv div{
+
+#rightScoreDiv div {
   margin-bottom: 5px;
 }
+
 /* .spaceGenerator{
   margin-bottom: 5px;
 } */
@@ -84,8 +120,6 @@
   padding-left: 10%;
   height: 80px;
   margin-top: 2%
-
-
 }
 
 #final-topics {
@@ -113,7 +147,7 @@
 #choices {
   text-align: center;
   font-family: 'Libre Baskerville', serif;
-  
+
 
 
 
@@ -159,8 +193,9 @@ img {
 }
 
 
-#wrong, #correct{
-display: inline;
+#wrong,
+#correct {
+  display: inline;
 }
 
 #correct {
