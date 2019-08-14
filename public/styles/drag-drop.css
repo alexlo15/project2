@@ -1,7 +1,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#quiz{
+#quiz {
   background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
   font-family: 'Libre Baskerville', serif;
   background-repeat: no-repeat;
@@ -9,16 +9,20 @@
 
 }
 
-.instructions, .scoreMessage, #scoreList{
+.instructions,
+.scoreMessage,
+#scoreList {
   color: white;
 }
 
-#resultDiv, #question-top, #choices{
+#resultDiv,
+#question-top,
+#choices {
   display: none;
 }
 
 /* name div */
-#nameDiv{
+#nameDiv {
   background-color: rgba(8, 52, 95, 0.85);
   border: 10px double rgba(78, 185, 217, 0.85);
   width: 80%;
@@ -26,34 +30,37 @@
   margin: 10%;
 }
 
-.nameSubmit{
+.nameSubmit {
   margin-top: 2%;
   border: 5px double rgba(78, 185, 217, 0.85);
 }
 
 /* main initial divs */
-#question-top{
+#question-top {
   font-family: 'Libre Baskerville', serif;
 
- 
+
 }
-#questionCard{
+
+#questionCard {
   background-color: lightslategray;
   height: 100px;
-  
+
 }
-#question-text{
+
+#question-text {
   margin: 3%;
-  color:black;
+  color: black;
   text-align: center;
   font-family: 'Libre Baskerville', serif;
   font-size: 30px;
   padding-left: 10%;
   height: 80px;
-  
-  
+
+
 }
-#final-topics{
+
+#final-topics {
   color: linen;
   text-align: center;
   /* position: absolute; */
@@ -69,71 +76,79 @@
 }
 
 
-#answer-input{
+#answer-input {
   border: 1px solid black;
   background: lightgrey;
 
 }
 
-#choices{
+#choices {
   text-align: center;
   font-family: 'Libre Baskerville', serif;
-  
-  
-  
+
+
+
 }
+
 /* #choice1,#choice2,#choice3{
   width: 60%;
 } */
-#choice1{
-border: 1px solid black;
-background-color: rgb(133, 182, 247);
-}
-
-#choice2{
+#choice1 {
   border: 1px solid black;
   background-color: rgb(133, 182, 247);
 }
 
-#choice3{
+#choice2 {
   border: 1px solid black;
   background-color: rgb(133, 182, 247);
 }
 
-#submitBtn{
-margin: 15px;
+#choice3 {
+  border: 1px solid black;
+  background-color: rgb(133, 182, 247);
 }
-#navbar{
+
+#submitBtn {
+  margin: 15px;
+}
+
+#navbar {
   font-family: 'Libre Baskerville', serif;
 }
+
 /* 
 .ui-widget-content{
   width: 20%;
 }
 */
-img{
+img {
   width: 75px;
   height: 75px;
 }
 
-#wrong, #correct{
+#wrong,
+#correct {
   display: inline;
 }
 
-#correct{
-  padding-right: 13%;
+#correct {
+  padding-right: 30%;
 }
 
-#score{
-  background-color: lightblue;
+#score {
+  /* background-color: lightblue; */
+  background-color: rgba(8, 52, 95, 0.555);
+  border: 5px double rgba(78, 185, 217, 0.555);
+  color: white;
+  padding: 1%;
   /* margin-right: 10px;
   width: 20%; */
 
-  border: navy solid 5px;
-} 
+  /* border: navy solid 5px; */
+}
 
-.ui-draggable-dragging .card{
+.ui-draggable-dragging .card {
   /* background: red; */
   width: 50%;
-  padding:0;
+  padding: 0;
 }
