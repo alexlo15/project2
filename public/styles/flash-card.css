@@ -71,7 +71,8 @@ background-color: transparent;
   background-color: transparent;
   width: 760px;
   height: 250px;
-  margin-left: 10%;
+  /* margin-left: 10%; */
+  margin:auto auto;
   /* border: .4px dashed lightslategray; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -81,6 +82,7 @@ background-color: transparent;
   position: relative;
   width: 100%;
   height: 100%;
+  line-height: 150px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -94,6 +96,7 @@ background-color: transparent;
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
   position: absolute;
+  padding:5px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
