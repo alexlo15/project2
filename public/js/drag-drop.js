@@ -240,8 +240,6 @@ $(document).ready(function () {
 
             questionCount++;
 
-            // window.location.reload(questionCount--)
-
         } else {
 
             postScore();
@@ -259,16 +257,13 @@ $(document).ready(function () {
 
         let newScore = {
             name: userName,
-            score: correct //this will change with a variable later
+            score: correct
         }
 
-        // let leftScoreDiv = $('<div>');
-        // leftScoreDiv.attr('id', 'leftScoreDiv');
         let scoreRow = $("<div>");
         let scoreSpan = $("<span>")
         scoreRow.text(`User Name: ${newScore.name}`)
         scoreSpan.text(`Your Score: ${newScore.score}`);
-        // leftScoreDiv.append(scoreRow, scoreSpan)
         $("#leftScore").prepend(scoreRow, scoreSpan);
 
 
@@ -317,6 +312,5 @@ $(document).ready(function () {
         $el.stop();
     }
     anim();
-    // $el.hover(stop, anim);
 
 });

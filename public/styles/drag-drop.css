@@ -40,26 +40,11 @@
   height: 350px;
   width: 100%;
   overflow-y: auto;
-  /* border: 2px solid #444; */
   background: #343a40;
 }
-
-/* table {
-  width: 100%;
-} */
-/* thead{
-  position: fixed;
-  background: #343a40;
-}
-
-th{
-  border: none;
-  padding: 15%;
-} */
 
 td {
   padding: 24px;
-  /* background: #eee; */
 }
 
 #leftScoreDiv {
@@ -77,10 +62,6 @@ td {
   margin-bottom: 5px;
 }
 
-/* .spaceGenerator{
-  margin-bottom: 5px;
-} */
-/* name div */
 #nameDiv {
   background-color: rgba(8, 52, 95, 0.85);
   border: 10px double rgba(78, 185, 217, 0.85);
@@ -125,8 +106,6 @@ td {
 #final-topics {
   color: linen;
   text-align: center;
-  /* position: absolute; */
-  /* top:30%; */
   border: 1px solid black;
   background-color: lightslategray;
   opacity: .80;
@@ -153,9 +132,6 @@ td {
 
 }
 
-/* #choice1,#choice2,#choice3{
-  width: 60%;
-} */
 #choice1 {
   background-color: rgba(8, 52, 95, 0.85);
   border: 10px double rgba(78, 185, 217, 0.85);
@@ -182,11 +158,6 @@ td {
   font-family: 'Libre Baskerville', serif;
 }
 
-/* 
-.ui-widget-content{
-  width: 20%;
-}
-*/
 img {
   width: 75px;
   height: 75px;
@@ -204,20 +175,14 @@ img {
 
 
 #score {
-  /* background-color: lightblue; */
   background-color: rgba(8, 52, 95, 0.555);
   border: 5px double rgba(78, 185, 217, 0.555);
   color: white;
   padding: 1%;
-
-  /* margin-right: 10px;
-  width: 20%; */
-
-  /* border: navy solid 5px; */
 }
 
 .ui-draggable-dragging .card {
-  /* background: red; */
+
   width: 50%;
   padding: 0;
 }

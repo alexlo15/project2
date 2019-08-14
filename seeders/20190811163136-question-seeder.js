@@ -69,7 +69,7 @@ module.exports = {
           topicId: 2
         },
         {
-          question: `Web pages starts with which ofthe following tag?`,
+          question: `Web pages starts with which of the following tag?`,
           choice1: `<HTML>`,
           choice2: `<Body>`,
           choice3: `<Title>`,
