@@ -139,6 +139,7 @@ background-color: transparent;
 
 .carousel-control{
   width: 0;
+  color: rgb(253, 211, 172);
 }
 #myCarousel{
   width:100%;

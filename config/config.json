@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "snow7436",
+    "password": "password123",
     "database": "KNOTCODE",
     "host": "localhost",
     "dialect": "mysql",
