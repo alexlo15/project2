@@ -47,10 +47,10 @@ $(document).ready(function () {
 
         console.log(flashcards);
         console.log(right);
-        // $('#questionH2').text(flashcards[questionCount].question);
-        // $('#choice1Text').text(flashcards[questionCount].choices[0]);
-        // $('#choice2Text').text(flashcards[questionCount].choices[1]);
-        // $('#choice3Text').text(flashcards[questionCount].choices[2]);
+        $('#questionH2').text(flashcards[questionCount].question);
+        $('#choice1Text').text(flashcards[questionCount].choices[0]);
+        $('#choice2Text').text(flashcards[questionCount].choices[1]);
+        $('#choice3Text').text(flashcards[questionCount].choices[2]);
         DragChoices();
 
         questionCount++;
