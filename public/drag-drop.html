@@ -28,12 +28,14 @@
     <nav class="navbar navbar-dark">
         <a class="navbar-brand" id="logoTitle" href="/">
             <img src="./images/_Logo.png"> </a>
-    
+      
+        <div class="row">
 
-            <div id="score" class="col-md-3">
-                Correct:<div id="correct"></div>
-                <strong></strong>Wrong:<div id="wrong"></div>
+            <div id="score" class="col-md-9">
+                <strong>Correct:</strong><div id="correct"></div>
+                <strong>Wrong:</strong><div id="wrong"></div>
             </div>
+        </div>
 
     </nav>
 
@@ -53,13 +55,13 @@
                 </div>
             </div>
         </div>
-
+    </div>    
         <div class="row final-topics-row text-center">
             <!-- id="droppable" -->
             <div class="col-md-6 droppable" id="final-topics">
                 <!-- can erase the <br> later -->
 
-                <h2>Drop Answers here</h2>
+                <h2>Drop Correct Answer here</h2>
 
             </div>
 
@@ -97,9 +99,7 @@
             </div>
         </div>
         <div>
-            <a href="#">
-                <button type="button" class="btn btn-primary btn-lg" id="submitBtn">Next Question</button>
-            </a>
+                <button type="button" class="btn btn-primary btn-lg">Submit</button>
 
         </div>
 

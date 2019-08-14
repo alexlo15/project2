@@ -45,6 +45,9 @@
 #questionCard {
   background-color: lightslategray;
   height: 100px;
+  background-color: rgba(8, 52, 95, 0.85);
+  border: 10px double rgba(78, 185, 217, 0.85);
+  color: white;
 
 }
 
@@ -56,6 +59,7 @@
   font-size: 30px;
   padding-left: 10%;
   height: 80px;
+  margin-top: 2%
 
 
 }
@@ -85,6 +89,7 @@
 #choices {
   text-align: center;
   font-family: 'Libre Baskerville', serif;
+  
 
 
 
@@ -94,18 +99,21 @@
   width: 60%;
 } */
 #choice1 {
-  border: 1px solid black;
-  background-color: rgb(133, 182, 247);
+  background-color: rgba(8, 52, 95, 0.85);
+  border: 10px double rgba(78, 185, 217, 0.85);
+  color: white;
 }
 
 #choice2 {
-  border: 1px solid black;
-  background-color: rgb(133, 182, 247);
+  background-color: rgba(8, 52, 95, 0.85);
+  border: 10px double rgba(78, 185, 217, 0.85);
+  color: white;
 }
 
 #choice3 {
-  border: 1px solid black;
-  background-color: rgb(133, 182, 247);
+  background-color: rgba(8, 52, 95, 0.85);
+  border: 10px double rgba(78, 185, 217, 0.85);
+  color: white;
 }
 
 #submitBtn {
