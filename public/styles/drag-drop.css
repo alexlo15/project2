@@ -16,14 +16,23 @@
 #resultDiv, #question-top, #choices{
   display: none;
 }
+#resultDiv{
+  width: 60%;
+    margin: auto auto;
+    margin-top: 20px;
+    border: 2px solid #000;
+    padding: 5%;
+    background: rgba(12,34,56,.9);
+}
 
 /* name div */
 #nameDiv{
   background-color: rgba(8, 52, 95, 0.85);
   border: 10px double rgba(78, 185, 217, 0.85);
-  width: 80%;
+  width: 60%;
   padding: 10%;
-  margin: 10%;
+  margin: auto auto;
+  margin-top: 40px;
 }
 
 .nameSubmit{
@@ -117,7 +126,7 @@ img{
 }
 
 #wrong, #correct{
-}
+
 display: inline;
 }
 
@@ -126,7 +135,7 @@ display: inline;
 }
 
 
-}
+
 #score{
   background-color: lightblue;
   /* margin-right: 10px;
