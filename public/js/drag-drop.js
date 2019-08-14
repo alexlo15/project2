@@ -11,8 +11,20 @@ $(document).ready(function () {
     var level = localStorage.getItem('skillLvl');
     var flashcards = [];
 
+    // Hide name area after user inputs their name & shows questions
+    $(".nameSubmit").on("click", function(){
+        userName = $("#nameInput").val().trim();
+        console.log(userName);
+        $("#nameDiv").hide();
+        $("#question-top").show();
+        $("#choices").show();
+    })
+
+    console.log(level)
+
     $.get("/api/quiz/" + level, function (data) {
 
+        console.log(data);
         for (var i = 0; i < data.length; i++) {
 
             for (var j = 0; j < 5; j++) {
@@ -35,10 +47,10 @@ $(document).ready(function () {
 
         console.log(flashcards);
         console.log(right);
-        $('#questionH2').text(flashcards[questionCount].question);
-        $('#choice1Text').text(flashcards[questionCount].choices[0]);
-        $('#choice2Text').text(flashcards[questionCount].choices[1]);
-        $('#choice3Text').text(flashcards[questionCount].choices[2]);
+        // $('#questionH2').text(flashcards[questionCount].question);
+        // $('#choice1Text').text(flashcards[questionCount].choices[0]);
+        // $('#choice2Text').text(flashcards[questionCount].choices[1]);
+        // $('#choice3Text').text(flashcards[questionCount].choices[2]);
         DragChoices();
 
         questionCount++;
@@ -242,10 +254,41 @@ $(document).ready(function () {
             // window.location.reload(questionCount--)
 
         } else {
-            alert("You finished the test!");
+
+            postScore();
+
+            $("#resultDiv").show();
+            $("#question-top").hide();
+            $("#choices").hide();
 
         }
 
     })
+
+    function postScore(){
+
+        let newScore = {
+            name: userName,
+            score: 100 //this will change with a variable later
+        }
+
+        $.post("api/scores", newScore, function(data){
+            console.log(data);
+
+            getAllScores();
+        })
+    }
+
+    function getAllScores(){
+        $.get("api/scores", function(data){
+            console.log(data);
+
+            for (let i = 0; i < data.length; i++){
+                let scoreRow = $("<div>");
+                scoreRow.text(`${data[i].userName} : ${data[i].score}`);
+                $("#scoreList").append(scoreRow);
+            }
+        })
+    }
 
 });
