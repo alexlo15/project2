@@ -10,6 +10,8 @@
 /* main initial divs */
 #main{
   margin-top: 30px;
+  font-family: 'Libre Baskerville', serif;
+
 }
 
 button.home{
@@ -31,7 +33,7 @@ border: none;
 }
 
 #display{
-  /* font-family: 'Libre Baskerville', serif; */
+  font-family: 'Libre Baskerville', serif;
   font-size: 28px;
   color: white;
 
