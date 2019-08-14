@@ -3,6 +3,7 @@
 /* body */
 #flashcard{
   background: url(../images/page\ background.jpg);
+  font-family: 'Libre Baskerville', serif;
 
 }
 
@@ -105,3 +106,9 @@ background-color: transparent;
   transform: rotateY(180deg);
 }
 
+#logoTitle{
+  padding-right: 65%;
+}
+.nav-item{
+  color: white;
+}
