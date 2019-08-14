@@ -95,6 +95,10 @@ margin: 15px;
   width: 20%;
 }
 */
+img{
+  width: 75px;
+  height: 75px;
+}
 
 #wrong, #correct{
 display: inline-block;

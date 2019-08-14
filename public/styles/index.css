@@ -131,18 +131,17 @@ h3.main-text{
   font-family: 'Libre Baskerville', serif;
   height: 50px;
   width: 90%;
-  background-color: aqua;
   border: 1px solid black;
-  color: black;
+  color:rgb(105, 214, 41) ;
   font-size: 25px;
  
 }
 .dropdown-item{
-width: 500px;
+width: 100%;
  text-align: center;
  color: black;
- background-color: aqua;
- border: 1px solid black;
+  border: 1px solid black;
+  color:rgb(105, 214, 41) ;
  font-size: 25px;
   
 }
