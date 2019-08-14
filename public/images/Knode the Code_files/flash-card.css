@@ -1,14 +1,9 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FLASHCARD~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-html,body{
-  margin:0;
-  padding:0;
-}
 #flashcard{
-  background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
+  background: url(../images/page\ background.jpg);
   font-family: 'Libre Baskerville', serif;
-  
 
 }
 
@@ -16,8 +11,6 @@ html,body{
 /* main initial divs */
 #main{
   margin-top: 30px;
-  font-family: 'Libre Baskerville', serif;
-
 }
 
 button.home{
@@ -39,7 +32,7 @@ border: none;
 }
 
 #display{
-  font-family: 'Libre Baskerville', serif;
+  /* font-family: 'Libre Baskerville', serif; */
   font-size: 28px;
   color: white;
 
@@ -71,14 +64,8 @@ background-color: transparent;
 .flip-box {
   background-color: transparent;
   width: 760px;
-
-  height: 350px;
-  
-
- 
-  /* margin-left: 10%; */
-  margin:auto auto;
-
+  height: 250px;
+  margin-left: 10%;
   /* border: .4px dashed lightslategray; */
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -88,7 +75,6 @@ background-color: transparent;
   position: relative;
   width: 100%;
   height: 100%;
-  line-height: 150px;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
@@ -102,25 +88,21 @@ background-color: transparent;
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
   position: absolute;
-  padding:5px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background: url(/images/71LOpZLRwoL._SX355_.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 /* Style the front side */
 .flip-box-front {
   background-color: #bbb;
-  color: black;
+  color: white;
 }
 
 /* Style the back side */
 .flip-box-back {
   background-color: #bbb;
-  color: black;
+  color: white;
   transform: rotateY(180deg);
 }
 
@@ -133,14 +115,94 @@ background-color: transparent;
 }
 .item {
   font-size: 2em;
-
-
+ 
 }
-
-.carousel-control{
-  width: 0;
+#buttons{
+  margin-bottom: 50px;
+  margin-right: 200px;
 }
-#myCarousel{
-  width:100%;
+.main-hr {
+  width: 30%;
+  border: none;
+  border-top: 1px solid #c3c3c3;
 }
-
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+  width: 120px;
+}
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: red;
+}
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: red;
+  overflow: hidden;
+}
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
