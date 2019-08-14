@@ -281,8 +281,8 @@ $(document).ready(function () {
                 let scoreRow = $("<div>");
                 let scoreSpan = $("<span>")
                 scoreSpan.attr('class','spaceGenerator')
-                scoreRow.text(`User Name : ${data[i].userName}`)
-                scoreSpan.text(`Your Score : ${data[i].score}`);
+                scoreRow.text(`User Name : ${data[i].userName}   `)
+                scoreSpan.text(`  Your Score : ${data[i].score}`);
                 scoreRow.append(scoreSpan);
                 rightScoreDiv.append(scoreRow)
                 $("#scoreList").append(rightScoreDiv);

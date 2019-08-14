@@ -68,7 +68,12 @@ module.exports = function (app) {
   });
 
   app.get("/api/scores", function(req, res) {
-    db.Score.findAll({}).then(function(dbScores) {
+    db.Score.findAll({
+      limit: 10,
+      order:[
+        ['score', 'DESC']
+      ]
+    }).then(function(dbScores) {
       res.json(dbScores);
     });
   });
