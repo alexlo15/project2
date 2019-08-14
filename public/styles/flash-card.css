@@ -10,8 +10,14 @@ body {
 #flashcard {
   background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
   font-family: 'Libre Baskerville', serif;
-  
+  background-repeat: no-repeat;
+  background-size: cover;
 
+}
+
+#mainlogo{
+  width: 75px;
+  height: 75px;
 }
 
 
@@ -22,19 +28,7 @@ body {
 
 }
 
-button.home {
-  margin-top: 10%;
-  margin-left: 25%;
-  background-color: #5b6b78;
-  border: none;
-}
 
-.shuffle {
-  margin-top: 10%;
-  margin-left: 15%;
-  background-color: #5b6b78;
-  border: none;
-}
 
 #buttons {
   text-align: center;
@@ -55,9 +49,12 @@ button.home {
 
 .fas {
   /* these are the arrows from font awesome */
-  color: white;
+  color: rgba(10, 243, 10, 0.815);
 }
 
+#logoTitle{
+  padding-right: 70%;
+}
 
 h2.timer {
   color: white;
@@ -129,22 +126,11 @@ h2.timer {
 }
 
 
-#logoTitle {
-  padding-right: 65%;
-}
 
-.nav-item {
-  color: white;
-}
-
-.item {
-  font-size: 2em;
-
-
-}
 
 .carousel-control {
   width: 0;
+  color: rgb(253, 211, 172);
 }
 #myCarousel{
   width:100%;
