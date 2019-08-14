@@ -1,7 +1,7 @@
 # [Knode Your Code](https://ruproject2.herokuapp.com/)
 RU-SOM-FSF-FT-06-2019-U-C | Group Project #2
 
-[Project Proposal Writeup](https://docs.google.com/document/d/1j_li9f7Tetkw_iHMy5VSHT4AaXnyQ2tzosolplEmr4U/edit) | [Project Mark Up Documentation](https://docs.google.com/document/d/1k095il8f_2_KuDT8Sd4TqgFpIw20aCA4Lg42_DU2r2g/edit#heading=h.5225lej68lkh) | [Project PowerPoint Presentation(https://docs.google.com/presentation/d/1TaMn2Eo7f8CRAeK_ikbxo5hP9ksX9oJc_ZW__vz4lok/edit#slide=id.g5eb3b58909_3_1441) | [See the Code on Github](https://github.com/alexlo15/Project2) |
+[Project Proposal Writeup](https://docs.google.com/document/d/1j_li9f7Tetkw_iHMy5VSHT4AaXnyQ2tzosolplEmr4U/edit) | [Project Mark Up Documentation](https://docs.google.com/document/d/1k095il8f_2_KuDT8Sd4TqgFpIw20aCA4Lg42_DU2r2g/edit#heading=h.5225lej68lkh) | [Project PowerPoint Presentation](https://docs.google.com/presentation/d/1TaMn2Eo7f8CRAeK_ikbxo5hP9ksX9oJc_ZW__vz4lok/edit#slide=id.g5eb3b58909_3_1441) | [See the Code on Github](https://github.com/alexlo15/Project2) |
 
 
 ___
