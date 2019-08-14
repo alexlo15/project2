@@ -2,11 +2,12 @@ $(document).ready(function () {
     // alert('files attached')  ;   
     let draggableId;
     var topicSelected = [];
-
+    localStorage.setItem("vTopicSelected","");
+   
 
     var level = localStorage.getItem("skillLvl");
 
-   
+
 
     // Function for drag and drop
     // ==========================================
@@ -16,18 +17,11 @@ $(document).ready(function () {
             cursor: "move",
             helper: 'clone',
             revert: "invalid",
-            //    revert:true
-        });
-
-        $("#launchPad").droppable({
-            tolerance: "intersect",
-            accept: ".logoCard",
-            activeClass: "ui-state-default",
-            hoverClass: "ui-state-hover",
-            drop: function (event, ui) {
-                $("#launchPad").append($(ui.draggable));
-                $(".logoCard").height(20);
+            drag: function (event, ui) {
+                console.log("in drag");
+                $(this).addClass('ui-draggable-dragging');
             }
+
         });
 
         $(".holder").droppable({
@@ -40,8 +34,6 @@ $(document).ready(function () {
                 draggableId = ui.draggable.attr("data-name");
                 topicSelected.push(draggableId);
                 $(this).append($(ui.draggable));
-
-                // console.log(draggableId);
             }
         });
     }
@@ -54,45 +46,42 @@ $(document).ready(function () {
     // ==============================================
     //Passing the value of topicSelected to another js file flash-card.js using local storage.
     $('.continue').on('click', function () {
-        // alert('topic selected: ' + topicSelected);
-        // alert (typeof(topicSelected));
+        console.log("Cotinue click : " + topicSelected);
         localStorage.setItem("vTopicSelected", topicSelected);
+        // if(localStorage.getItem('vTopicSelected')===null){
+        //     alert('Stop');
+        // }
         switch (level) {
-            case "1":
-                {
-                    generateCssDiv("1");
-                    generateHtmlDiv("1");
-                    generateJsDiv("1");
-                }
-                break;
-    
-            case "2":
-                {
-                    generateCssDiv("2");
-                    generateHtmlDiv("2");
-                    generateJsDiv("2");
-                }
-                break;
-            case "3":
-                {
-                    generateCssDiv("3");
-                    generateHtmlDiv("3");
-                    generateJsDiv("3");
-                }
-                break;
-    
+            case "1": {
+                generateCssDiv("1");
+                generateHtmlDiv("1");
+                generateJsDiv("1");
+            }
+            break;
+
+            case "2": {
+                generateCssDiv("2");
+                generateHtmlDiv("2");
+                generateJsDiv("2");
+            }
+            break;
+            case "3": {
+                generateCssDiv("3");
+                generateHtmlDiv("3");
+                generateJsDiv("3");
+            }
+            break;
         };
-        // This data will be sent to next page
+
     });
 
 
     // Click of Clear button
     // ==================================================
     // 1. This will get all the item in holder box and call different functions depends on the value of topic.
-    // 2. The functions inside case will genereate the dynamic html,image and send back to it's position as original img and div gets  
+    // 2. The functions inside case will genereate the dynamic image and send back to it's position as original img and div gets  
     //    moved when we dragged it from its position
-    // 3. dragAndDrop() is called on each function to attach drag and drop event back to each element
-    // 4. At the end clear out the holder div and empty the topicSelected array
+    // 3. At the end clear out the holder div and empty the topicSelected array
 
     $('.clearBtn').on('click', function () {
 
@@ -112,55 +101,48 @@ $(document).ready(function () {
         }
 
         function generateHtmlDiv(skill) {
-            //    alert('inside function');
-            let div = $('<div>');
+           
             let img = $('<img>');
-            div.attr('class', 'col-md-4 logoCard');
-            div.attr('id', 'HTML-text');
-            div.attr("id", skill);
-            div.attr('data-name', 'HTML');
+          
             img.attr('id', 'html');
+            img.attr('data-name', 'HTML');
             img.attr('src', './images/html-2.png');
             img.attr('alt', 'HTML');
-            div.append(img);
-            $('#launchPad').append(div);
-            dragAndDrop();
+           
+            $('#HTML-text').append(img);
+           
         }
 
         function generateCssDiv(skill) {
-            // alert('inside function');
-            let div = $('<div>');
+           
             let img = $('<img>');
-            div.attr('class', 'col-md-4 logoCard');
-            div.attr('id', 'Css-text');
-            div.attr("id", skill);
-            div.attr('data-name', 'CSS');
-            img.attr('id', 'html');
+            
+            img.attr('id', 'css');
+            img.attr('data-name', 'CSS');
             img.attr('src', './images/css.png');
             img.attr('alt', 'CSS');
-            div.append(img);
-            $('#launchPad').append(div);
-            dragAndDrop();
+            
+            $('#CSS-text').append(img);
+           
         }
 
         function generateJsDiv(skill) {
-            // alert('inside function');
-            let div = $('<div>');
+           
             let img = $('<img>');
-            div.attr('class', 'col-md-4 logoCard');
-            div.attr('id', 'JS-text');
-            div.attr("id", skill);
-            div.attr('data-name', 'JS');
-            img.attr('id', 'html');
+            
+            img.attr('id', 'JS');
+            img.attr('data-name', 'JS');
             img.attr('src', './images/JS.png');
             img.attr('alt', 'JS');
-            div.append(img);
-            $('#launchPad').append(div);
-            dragAndDrop();
+           
+            $('#JS-text').append(img);
+            
         }
 
         $('.holder').text('');
         topicSelected = [];
-
+        localStorage.removeItem('vTopicSelected');
+        // dragAndDrop();
+        location.reload();
     });
 });

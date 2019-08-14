@@ -12,7 +12,7 @@
  
 }
 #questionCard{
-  background-color: lightslategray;
+  background-colo6: lightslategray;
   height: 70px;
   
 }
@@ -56,7 +56,9 @@
   
   
 }
-
+/* #choice1,#choice2,#choice3{
+  width: 60%;
+} */
 #choice1{
 border: 1px solid black;
 background-color: rgb(133, 182, 247);
@@ -78,7 +80,13 @@ margin: 15px;
 #navbar{
   font-family: 'Libre Baskerville', serif;
 }
-
+/* 
 .ui-widget-content{
   width: 20%;
+} */
+
+.ui-draggable-dragging .card{
+  /* background: red; */
+  width: 50%;
+  padding:0;
 }

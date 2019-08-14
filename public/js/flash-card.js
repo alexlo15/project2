@@ -3,6 +3,7 @@ $(document).ready(function () {
     let topics;
     let topicArray = [];
     topics = localStorage.getItem('vTopicSelected');
+    console.log("Topics : on load : " + topics);
     topicArray = topics.split(",");
 
     var level = localStorage.getItem('skillLvl');

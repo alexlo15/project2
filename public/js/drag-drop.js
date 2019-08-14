@@ -4,15 +4,10 @@
 
 $(document).ready(function () {
 
-    // let topics;
-    // let topicArray = [];
-    // topics = localStorage.getItem('vTopicSelected');
-    // topicArray = topics.split(",");
     let questionCount = 0;
 
     var level = localStorage.getItem('skillLvl');
     var flashcards = [];
-    // alert("file attached drag and drop");
 
     $.get("/api/quiz/" + level, function (data) {
 
@@ -28,13 +23,9 @@ $(document).ready(function () {
                         data[i].Questions[j].choice2,
                         data[i].Questions[j].choice3
                     ]
-
                 }
-
                 flashcards.push(flashcard);
             }
-
-
         }
 
         randomize();
@@ -53,9 +44,6 @@ $(document).ready(function () {
     function randomize() {
         for (let i = flashcards.length - 1; i > 0; i--) {
 
-          
-
-
             for (let k = 2; k > 0; k--){
                 let l = Math.floor(Math.random() * (k + 1));
                 let temp2 = flashcards[i].choices[k];
@@ -68,60 +56,65 @@ $(document).ready(function () {
             flashcards[i] = flashcards[j];
             flashcards[j] = temp;
         }
-
-
     }
 
 
     // ===============================================
     // Function for drag and drop
     // ==========================================
+    // This variable holds the value of dropped choice.
     let draggableChoice;
 
     function DragChoices() {
         var pastDraggable = "";
         $("#draggable1").draggable({
             cursor: "move",
-            appendTo: "body",
-            // revert: handleRevert,
-            // revert:true,
+            revert: "invalid",
             start: function () {
                 Positioning.initialize($(this));
             },
         });
         $("#draggable2").draggable({
             cursor: "move",
-            appendTo: "body",
-            // revert:true,
+            revert: "invalid",
             start: function () {
                 Positioning.initialize($(this));
             },
         });
         $("#draggable3").draggable({
             cursor: "move",
-            appendTo: "body",
-            // revert:true,
+            revert: "invalid",
             start: function () {
                 Positioning.initialize($(this));
             },
         });
-        $("#droppable").droppable({
+        $(".droppable").droppable({
             //Event to accept a draggable when dropped on the droppable
             drop: function (event, ui) {
-                // $(this).addClass("ui-state-highlight").find("p").html("Dropped!");
 
                 //Get the current draggable object
                 var currentDraggable = $(ui.draggable).attr('id');
-
+                
                 //If there is an object prior to the current one
                 if (pastDraggable != "") {
                     //Place past object into its original coordinate
                     $("#" + pastDraggable).animate($("#" + pastDraggable).data().originalLocation, "slow");
+                    $(ui.draggable).position({
+                        my: "center",
+                        at: "center",
+                        of: ".droppable"
+                      });
                 }
 
                 //Store the current draggable object
                 pastDraggable = currentDraggable;
+
+               ;
+
+                //Store the value of dropped item in the variable.
                 draggableChoice = $(ui.draggable).text();
+
+              
                 console.log("Dragged item : " + draggableChoice);
             },
             //Event to accept a draggable when dragged outside the droppable

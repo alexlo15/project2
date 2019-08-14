@@ -92,3 +92,6 @@ background-color: transparent;
   transform: rotateY(180deg);
 }
 
+.item {
+  font-size: 2em;
+}
