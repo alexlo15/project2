@@ -7,6 +7,16 @@
  height: auto;
     
 }
+
+#node, #code{
+  color: rgba(13, 62, 126, 0.856);
+  text-shadow: 1px 1px white;
+}
+
+#your{
+  color: white;
+  text-shadow: 1px 1px rgba(13, 62, 126, 0.856);
+}
 img {
   /* Set rules to fill background */
   min-height: 100%;

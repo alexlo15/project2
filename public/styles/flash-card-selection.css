@@ -4,6 +4,7 @@
 #fc-selection{
   background-attachment: fixed;
   background: url(../images/page\ background.jpg);
+  font-family: 'Libre Baskerville', serif;
 }
 
 /* contains all movable divs */

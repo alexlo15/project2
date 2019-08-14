@@ -3,12 +3,22 @@
 /* body */
 #quiz{
   background: url(../images/page\ background.jpg);
+  font-family: 'Libre Baskerville', serif;
 
+}
+
+.instructions, .scoreMessage, #scoreList{
+  color: white;
+}
+
+#resultDiv, #question-top, #choices{
+  display: none;
 }
 
 /* main initial divs */
 #question-top{
   font-family: 'Libre Baskerville', serif;
+
  
 }
 #questionCard{

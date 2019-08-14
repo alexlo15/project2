@@ -3,6 +3,7 @@
 /* body */
 #flashcard{
   background: url(../images/page\ background.jpg);
+  font-family: 'Libre Baskerville', serif;
 
 }
 
@@ -10,6 +11,8 @@
 /* main initial divs */
 #main{
   margin-top: 30px;
+  font-family: 'Libre Baskerville', serif;
+
 }
 
 button.home{
@@ -31,7 +34,7 @@ border: none;
 }
 
 #display{
-  /* font-family: 'Libre Baskerville', serif; */
+  font-family: 'Libre Baskerville', serif;
   font-size: 28px;
   color: white;
 
@@ -105,6 +108,14 @@ background-color: transparent;
   transform: rotateY(180deg);
 }
 
+
+#logoTitle{
+  padding-right: 65%;
+}
+.nav-item{
+  color: white;
+
 .item {
   font-size: 2em;
+
 }
