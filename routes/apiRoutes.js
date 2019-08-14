@@ -55,10 +55,22 @@ module.exports = function (app) {
     });
   });
 
-  // Create a new example
-  // app.post("/api/examples", function(req, res) {
-  //   db.Example.create(req.body).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
+
+
+  // Create a new score on the list
+  app.post("/api/scores", function(req, res) {
+    db.Score.create({
+      userName: req.body.name,
+      score: req.body.score
+    }).then(function(dbScores) {
+      res.json(dbScores);
+    });
+  });
+
+  app.get("/api/scores", function(req, res) {
+    db.Score.findAll({}).then(function(dbScores) {
+      res.json(dbScores);
+    });
+  });
+
 }
