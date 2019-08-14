@@ -135,7 +135,7 @@ h3.main-text{
   height: 50px;
   width: 90%;
   background-color: rgb(196, 210, 218);
-  border: 1px solid black;
+  border: 5px double rgb(13, 97, 152);
   color: black;
   font-size: 25px;
  
@@ -151,7 +151,7 @@ text-align: center;
 font-family: 'Libre Baskerville', serif;
  color: black;
  background-color: rgb(196, 210, 218);
- border: 1px solid black;
+ border: 5px double rgb(13, 97, 152);
  font-size: 25px;
   
 }
