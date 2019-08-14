@@ -184,14 +184,7 @@ $(document).ready(function () {
             };
         })();
 
-        // function handleRevert(object){
-        //     alert('Revert called');
-        //     object.data("originalLocation").originalPosition = {
-        //         top: 0,
-        //         left: 0
-        //     };
-        // }
-        // handleRevert();
+       
 
     }
 
@@ -256,7 +249,7 @@ $(document).ready(function () {
 
         let newScore = {
             name: userName,
-            score: 100 //this will change with a variable later
+            score: correct //this will change with a variable later
         }
 
         $.post("api/scores", newScore, function(data){
@@ -272,8 +265,10 @@ $(document).ready(function () {
 
             for (let i = 0; i < data.length; i++){
                 let scoreRow = $("<div>");
-                scoreRow.text(`${data[i].userName} : ${data[i].score}`);
-                $("#scoreList").append(scoreRow);
+                let scoreSpan = $("<span>")
+                scoreRow.text(`User Name : ${data[i].userName}`)
+                scoreSpan.text(`Your Score : ${data[i].score}`);
+                $("#scoreList").append(scoreRow,scoreSpan);
             }
         })
     }
