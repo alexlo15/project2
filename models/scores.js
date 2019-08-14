@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Score = sequelize.define("Score", {
+    var Question = sequelize.define("Question", {
         userName: {
             type: DataTypes.TEXT,
             allowNull: false,
@@ -7,10 +7,11 @@ module.exports = function (sequelize, DataTypes) {
         score: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        }
     },{
         timestamps: false,
         freezeTableName: true,
     });
 
-    return Score;
+    return Question;
 };
