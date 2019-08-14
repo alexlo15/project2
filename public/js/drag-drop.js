@@ -184,14 +184,7 @@ $(document).ready(function () {
             };
         })();
 
-        // function handleRevert(object){
-        //     alert('Revert called');
-        //     object.data("originalLocation").originalPosition = {
-        //         top: 0,
-        //         left: 0
-        //     };
-        // }
-        // handleRevert();
+       
 
     }
 
@@ -256,8 +249,18 @@ $(document).ready(function () {
 
         let newScore = {
             name: userName,
-            score: 100 //this will change with a variable later
+            score: correct //this will change with a variable later
         }
+
+        let leftScoreDiv = $('<div>');
+        leftScoreDiv.attr('id','leftScoreDiv');
+        let scoreRow = $("<div>");
+        let scoreSpan = $("<span>")
+        scoreRow.text(`User Name : ${newScore.name}`)
+        scoreSpan.text(`Your Score : ${newScore.score}`);
+        leftScoreDiv.append(scoreRow,scoreSpan)
+        $("#scoreList").append(leftScoreDiv);
+        
 
         $.post("api/scores", newScore, function(data){
             console.log(data);
@@ -270,10 +273,19 @@ $(document).ready(function () {
         $.get("api/scores", function(data){
             console.log(data);
 
+            let rightScoreDiv = $('<div>')
+            rightScoreDiv.attr('id','rightScoreDiv')
             for (let i = 0; i < data.length; i++){
+               
+                
                 let scoreRow = $("<div>");
-                scoreRow.text(`${data[i].userName} : ${data[i].score}`);
-                $("#scoreList").append(scoreRow);
+                let scoreSpan = $("<span>")
+                scoreSpan.attr('class','spaceGenerator')
+                scoreRow.text(`User Name : ${data[i].userName}`)
+                scoreSpan.text(`Your Score : ${data[i].score}`);
+                scoreRow.append(scoreSpan);
+                rightScoreDiv.append(scoreRow)
+                $("#scoreList").append(rightScoreDiv);
             }
         })
     }
