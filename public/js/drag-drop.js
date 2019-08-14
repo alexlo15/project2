@@ -4,6 +4,8 @@
 
 $(document).ready(function () {
 
+
+
     // let topics;
     // let topicArray = [];
     // topics = localStorage.getItem('vTopicSelected');
@@ -16,8 +18,20 @@ $(document).ready(function () {
     var flashcards = [];
     // alert("file attached drag and drop");
 
+    // Hide name area after user inputs their name & shows questions
+    $(".nameSubmit").on("click", function(){
+        userName = $("#nameInput").val().trim();
+        console.log(userName);
+        $("#nameDiv").hide();
+        $("#question-top").show();
+        $("#choices").show();
+    })
+
+    console.log(level)
+
     $.get("/api/quiz/" + level, function (data) {
 
+        console.log(data);
         for (var i = 0; i < data.length; i++) {
 
             for (var j = 0; j < 5; j++) {
@@ -43,10 +57,10 @@ $(document).ready(function () {
 
         console.log(flashcards);
         console.log(right);
-        $('#questionH2').text(flashcards[questionCount].question);
-        $('#choice1Text').text(flashcards[questionCount].choices[0]);
-        $('#choice2Text').text(flashcards[questionCount].choices[1]);
-        $('#choice3Text').text(flashcards[questionCount].choices[2]);
+        // $('#questionH2').text(flashcards[questionCount].question);
+        // $('#choice1Text').text(flashcards[questionCount].choices[0]);
+        // $('#choice2Text').text(flashcards[questionCount].choices[1]);
+        // $('#choice3Text').text(flashcards[questionCount].choices[2]);
         DragChoices();
 
         questionCount++;
@@ -206,7 +220,7 @@ $(document).ready(function () {
         $("#draggable3").css({ 'left': '0', 'top': '0' });
         $('#final-topics').html('');
 
-        tallyHo();
+        // tallyHo();
 
 
         if (questionCount < flashcards.length) {
@@ -225,9 +239,22 @@ $(document).ready(function () {
 
         } else {
             alert("You finished the test!");
+            $("#question-top").hide();
+            $("#choices").hide();
+
+            postScore();
+            getAllScores();
 
         }
 
     })
+
+    function postScore(){
+
+    }
+
+    function getAllScores(){
+        
+    }
 
 });

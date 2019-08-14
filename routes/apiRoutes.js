@@ -57,11 +57,11 @@ module.exports = function (app) {
 
 
   // Create a new example
-  // app.post("/api/examples", function(req, res) {
-  //   db.Example.create(req.body).then(function(dbExample) {
-  //     res.json(dbExample);
-  //   });
-  // });
+  app.post("/api/questions", function(req, res) {
+    db.Question.create(req.body).then(function(dbExample) {
+      res.json(dbExample);
+    });
+  });
 
   // // Create a new example
   // app.get("/api/:topics",[req.params.id] ,function(req, res) {

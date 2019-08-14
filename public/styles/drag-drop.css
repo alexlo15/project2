@@ -6,9 +6,15 @@
 
 }
 
+.instructions{
+  color: white;
+}
+
 /* main initial divs */
 #question-top{
   font-family: 'Libre Baskerville', serif;
+  display: none;
+
  
 }
 #questionCard{
@@ -52,6 +58,7 @@
 #choices{
   text-align: center;
   font-family: 'Libre Baskerville', serif;
+  display: none;
   
   
   
