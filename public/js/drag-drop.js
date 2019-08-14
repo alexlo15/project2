@@ -13,18 +13,17 @@ $(document).ready(function () {
     // Hide name area after user inputs their name & shows questions
     $(".nameSubmit").on("click", function () {
         userName = $("#nameInput").val().trim();
-        console.log(userName);
+
         $("#nameDiv").hide();
         $("#question-top").show();
         $(".final-topics-row").show();
         $("#choices").show();
     })
 
-    console.log(level)
 
     $.get("/api/quiz/" + level, function (data) {
 
-        console.log(data);
+
         for (var i = 0; i < data.length; i++) {
 
             for (var j = 0; j < 5; j++) {
@@ -44,9 +43,6 @@ $(document).ready(function () {
 
         randomize();
 
-
-        console.log(flashcards);
-        console.log(right);
         $('#questionH2').text(flashcards[questionCount].question);
         $('#choice1Text').text(flashcards[questionCount].choices[0]);
         $('#choice2Text').text(flashcards[questionCount].choices[1]);
@@ -142,13 +138,9 @@ $(document).ready(function () {
                 //Store the current draggable object
                 pastDraggable = currentDraggable;
 
-                ;
-
                 //Store the value of dropped item in the variable.
                 draggableChoice = $(ui.draggable).text();
-                // console.log("Dragged item : " + draggableChoice);
                 localStorage.setItem("theirChoice", draggableChoice);
-                console.log(localStorage.getItem("theirChoice"));
 
 
             },
@@ -198,21 +190,16 @@ $(document).ready(function () {
         if (localStorage.getItem("theirChoice").trim() == right[questionCount - 1]) {
 
             correct += 1;
-            console.log("correct: " + correct);
             $("#correct").text(correct);
 
         } else {
             wrong += 1;
-            console.log("wrong: " + wrong);
             $("#wrong").text(wrong);
         }
 
-        // tallyHo();
-
 
         DragChoices();
-        // handleRevert($(this));
-        // Positioning();
+
         $("#draggable1").css({
             'left': '0',
             'top': '0'
@@ -268,7 +255,7 @@ $(document).ready(function () {
 
 
         $.post("api/scores", newScore, function (data) {
-            console.log(data);
+
 
             getAllScores();
         })
@@ -276,7 +263,7 @@ $(document).ready(function () {
 
     function getAllScores() {
         $.get("api/scores", function (data) {
-            console.log(data);
+
 
             for (let i = 0; i < data.length; i++) {
 
