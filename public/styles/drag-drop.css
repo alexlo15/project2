@@ -20,14 +20,23 @@
 #choices {
   display: none;
 }
+#resultDiv{
+  width: 60%;
+    margin: auto auto;
+    margin-top: 20px;
+    border: 2px solid #000;
+    padding: 5%;
+    background: rgba(12,34,56,.9);
+}
 
 /* name div */
 #nameDiv {
   background-color: rgba(8, 52, 95, 0.85);
   border: 10px double rgba(78, 185, 217, 0.85);
-  width: 80%;
+  width: 60%;
   padding: 10%;
-  margin: 10%;
+  margin: auto auto;
+  margin-top: 40px;
 }
 
 .nameSubmit {
@@ -126,14 +135,15 @@ img {
   height: 75px;
 }
 
-#wrong,
-#correct {
-  display: inline;
+
+#wrong, #correct{
+display: inline;
 }
 
 #correct {
   padding-right: 30%;
 }
+
 
 #score {
   /* background-color: lightblue; */
@@ -141,6 +151,7 @@ img {
   border: 5px double rgba(78, 185, 217, 0.555);
   color: white;
   padding: 1%;
+
   /* margin-right: 10px;
   width: 20%; */
 
