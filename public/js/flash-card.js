@@ -170,53 +170,8 @@ $(document).ready(function () {
 
 });
 
-
-// document.getElementById('timer').innerHTML =
-//   10 + ":" + 01;
-
-// startTimer();
-
-// function startTimer() {
-//     var presentTime = document.getElementById('timer').innerHTML;
-//     var timeArray = presentTime.split(/[:]+/);
-//     var m = timeArray[0];
-//     var s = checkSecond((timeArray[1] - 1));
-//     if (s == 59) {
-//         m = m - 1
-//     }
-//     //if(m<0){alert('timer completed')}
-
-//     document.getElementById('timer').innerHTML =
-//         m + ":" + s;
-//     setTimeout(startTimer, 1000);
-// }
-
-// function checkSecond(sec) {
-//   if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-//   if (sec < 0) {sec = "59"};
-//   return sec;
-// }
-
 //  Variable that will hold the button alert's timeout when it is clicked.
 var delayButtonAlert;
-
-//  Timeouts in JavaScript
-//  Set our window alert to run one second after the function's called.
-// var windowTimeout = setTimeout(function() {
-//   alert("You will be given 10 minutes to study the topics you selected.");
-// }, 00);
-
-//  Start on click.
-$("#start").on("click", function() {
-  //  Set the button alert's timeout to run three seconds after the function's called.
-  delayButtonAlert = setTimeout(function() {
-    alert("Your 10 minute study session has been completed let's head over to the Quiz section.");
-    // 600000 = 10mins
-  }, 600000);
-
-  
-});
-
 
 // This code will run as soon as the page loads
 window.onload = function() {
@@ -229,7 +184,7 @@ window.onload = function() {
   
   // prevents the clock from being sped up unnecessarily
   var clockRunning = false;
-  var time = 600;
+  var time = 60;
   var lap = 1;
   
 
@@ -250,15 +205,14 @@ window.onload = function() {
 
   function count() {
   
-    // DONE: increment time by 1, remember we cant use "this" here.
+    // decrease time by 1,
     time--;
   
-    // DONE: Get the current time, pass that into the timeConverter function,
-    //       and save the result in a variable.
+    // grabs current time, pass that into the timeConverter function,
+    // and save the result into variable converted.
     var converted = timeConverter(time);
-    // console.log(converted);
   
-    // DONE: Use the variable we just created to show the converted time in the "display" div.
+    //Use the variable we just created to show the converted time in the "display" div.
     $("#display").text(converted);
   }
   function timeConverter(t) {
@@ -271,7 +225,7 @@ window.onload = function() {
     }
   
     if (minutes === 0) {
-      minutes = "00";
+      minutes = "0";
     }
     if (time == 0) {
         window.location.href = "drag-drop.html";
