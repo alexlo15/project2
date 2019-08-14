@@ -28,10 +28,13 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar-brand" id="logoTitle" href="/">
             <img src="./images/_Logo.png"> </a>
+      
+        <div class="row">
 
-        <div id="score">
-            <strong>Correct:</strong>&nbsp;<div id="correct"></div>&nbsp;&nbsp;&nbsp;
-            <strong>Wrong:</strong>&nbsp;<div id="wrong"></div>
+            <div id="score" class="col-md-9">
+                <strong>Correct:</strong><div id="correct"></div>
+                <strong>Wrong:</strong><div id="wrong"></div>
+            </div>
         </div>
 
     </nav>
@@ -39,7 +42,8 @@
     <div class="container-fluid" id="nameDiv">
         <p class="instructions">Please input your name and hit continue to start the quiz</p>
         <input class="form-control" id="nameInput" placeholder="Name">
-        <button type="submit" class="btn btn-primary mb-2 nameSubmit">Submit</button>
+        <button type="submit" class="btn btn-outline-light nameSubmit">Submit</button>
+        <!-- <button type="submit" class="btn btn-primary mb-2 nameSubmit">Submit</button> -->
     </div>
 
     <!-- question area-->
