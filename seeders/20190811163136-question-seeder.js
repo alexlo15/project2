@@ -27,7 +27,7 @@ module.exports = {
           topicId: 1
         },
         {
-          question: `What is the correct HTML for creating a hyperlink?,<a href="xyz">XYZ</a>`,
+          question: `What is the correct HTML for creating a hyperlink?`,
           choice1: `<a href="xyz">XYZ</a>`,
           choice2: `<a src="xyz">XYZ</a>`,
           choice3: `<a url="xyz">XYZ</a>`,
@@ -128,7 +128,7 @@ module.exports = {
           question: `Where in an HTML document is the correct place to refer to an external style sheet?`,
           choice1: `in the <head> section`,
           choice2: `in the <body> section`,
-          choice3: `at the end of the docu`,
+          choice3: `at the end of the document`,
           topicId: 4
         },
         {
