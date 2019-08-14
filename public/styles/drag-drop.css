@@ -12,7 +12,7 @@
  
 }
 #questionCard{
-  background-colo6: lightslategray;
+  background-color: lightslategray;
   height: 70px;
   
 }
@@ -84,11 +84,18 @@ margin: 15px;
 .ui-widget-content{
   width: 20%;
 }
+*/
 
+#wrong, #correct{
+display: inline-block;
+
+}
 #score{
   background-color: lightblue;
-
-} */
+  margin-right: 10px;
+  width: 20%;
+  border: navy solid 5px;
+} 
 
 .ui-draggable-dragging .card{
   /* background: red; */

@@ -45,30 +45,8 @@ $(document).ready(function () {
     });
 
 
-    // alex's shitty function to count right/wrong
-    function tallyHo() {
 
-        if (questionCount < flashcards.length) {
-            console.log(localStorage.getItem("theirChoice").trim());
-            console.log(right[questionCount - 1]);
-            console.log(localStorage.getItem("theirChoice").trim() == right[questionCount - 1]);
-
-            if (localStorage.getItem("theirChoice").trim() == right[questionCount - 1]) {
-
-                correct++;
-                console.log("correct: " + correct);
-
-            } else {
-                wrong++;
-                console.log("wrong: " + wrong);
-
-            }
-        }
-
-    };
-
-
-
+    // function for creating an array of only right answers
     function getRight() {
 
         for (var i = 0; i < flashcards.length; i++) {
@@ -81,7 +59,7 @@ $(document).ready(function () {
     function randomize() {
         for (let i = flashcards.length - 1; i > 0; i--) {
 
-            for (let k = 2; k > 0; k--){
+            for (let k = 2; k > 0; k--) {
 
                 let l = Math.floor(Math.random() * (k + 1));
                 let temp2 = flashcards[i].choices[k];
@@ -137,7 +115,7 @@ $(document).ready(function () {
 
                 //Get the current draggable object
                 var currentDraggable = $(ui.draggable).attr('id');
-                
+
                 //If there is an object prior to the current one
                 if (pastDraggable != "") {
                     //Place past object into its original coordinate
@@ -146,20 +124,19 @@ $(document).ready(function () {
                         my: "center",
                         at: "center",
                         of: ".droppable"
-                      });
+                    });
                 }
 
                 //Store the current draggable object
                 pastDraggable = currentDraggable;
 
-               ;
+                ;
 
                 //Store the value of dropped item in the variable.
                 draggableChoice = $(ui.draggable).text();
                 // console.log("Dragged item : " + draggableChoice);
                 localStorage.setItem("theirChoice", draggableChoice);
                 console.log(localStorage.getItem("theirChoice"));
-                tallyHo();
 
 
             },
@@ -213,10 +190,20 @@ $(document).ready(function () {
 
     $('#submitBtn').on('click', function () {
 
+        if (localStorage.getItem("theirChoice").trim() == right[questionCount - 1]) {
+
+            correct+=1;
+            console.log("correct: " + correct);
+            $("#correct").text(correct);
+            
+        } else {
+            wrong+=1;
+            console.log("wrong: " + wrong);
+            $("#wrong").text(wrong);
+        }
 
         // tallyHo();
-        $("#correct").push(correct);
-        $("#wrong").push(wrong);
+
 
         DragChoices();
         // handleRevert($(this));
