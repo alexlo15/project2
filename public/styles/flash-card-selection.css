@@ -61,7 +61,7 @@
 /* bottom div user can drag things into */
 .final-topics-row {
   /* position: relative; */
-  display: none;
+  /* display: none; */
 }
 #final-topics{
   color: rgba(250, 240, 230, 0.5);
