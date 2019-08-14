@@ -9,14 +9,15 @@
 }
 
 #node, #code{
-  color: rgba(13, 62, 126, 0.856);
+  color: rgb(140, 179, 211);
   text-shadow: 1px 1px white;
 }
 
 #your{
-  color: white;
+  color: rgb(196, 210, 218);
   text-shadow: 1px 1px rgba(13, 62, 126, 0.856);
 }
+
 img {
   /* Set rules to fill background */
   min-height: 100%;
@@ -81,6 +82,8 @@ h3.main-text{
   margin: 5%;
   border: 1px solid black;
 }
+
+
 #startBtn{
 
   align-self: center;
@@ -131,18 +134,24 @@ h3.main-text{
   font-family: 'Libre Baskerville', serif;
   height: 50px;
   width: 90%;
-  background-color: aqua;
-  border: 1px solid black;
+  background-color: rgb(196, 210, 218);
+  border: 5px double rgb(13, 97, 152);
   color: black;
   font-size: 25px;
  
 }
+#instructions{
+  color: rgba(0, 0, 0);
+  size: 10px;
+  pointer-events: none;
+}
 .dropdown-item{
 width: 500px;
- text-align: center;
+text-align: center;
+font-family: 'Libre Baskerville', serif;
  color: black;
- background-color: aqua;
- border: 1px solid black;
+ background-color: rgb(196, 210, 218);
+ border: 5px double rgb(13, 97, 152);
  font-size: 25px;
   
 }
