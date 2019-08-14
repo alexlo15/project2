@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
 
   // Stores the user's choice in level for the flashcard area

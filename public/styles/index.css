@@ -8,6 +8,15 @@
     
 }
 
+a:link{
+  text-decoration: none;
+}
+
+#secondline{
+  color: whitesmoke;
+  font-size: 30px;
+}
+
 #node, #code{
   color: rgb(140, 179, 211);
   text-shadow: 1px 1px white;
