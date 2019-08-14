@@ -137,6 +137,7 @@ h3.main-text{
   background-color: rgb(196, 210, 218);
   border: 5px double rgb(13, 97, 152);
   color: black;
+
   font-size: 25px;
  
 }
@@ -145,7 +146,9 @@ h3.main-text{
   size: 10px;
   pointer-events: none;
 }
+
 .dropdown-item{
+
 width: 500px;
 text-align: center;
 font-family: 'Libre Baskerville', serif;
