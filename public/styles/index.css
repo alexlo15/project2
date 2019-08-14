@@ -1,27 +1,157 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~INDEX~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 /* body */
-#index{ 
-  background-image: url(../images/main.jpg);
-
+#main-page{ 
+ 
+  width: 100%;
+ height: auto;
+    
 }
 
+#node, #code{
+  color: rgba(13, 62, 126, 0.856);
+  text-shadow: 1px 1px white;
+}
+
+#your{
+  color: white;
+  text-shadow: 1px 1px rgba(13, 62, 126, 0.856);
+}
+img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+     
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+     
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+ }
+ @media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+ }
 #main-text{
   text-align: center;
+  padding-top: 100px;
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+
 }
+
+
+#ptext{
+  font-size: 100px;
+  text-shadow: 2px 2px 4px #000000;
+
+}
+
+h3.main-text{
+  text-shadow: 2px 2px 4px #000000;
+}
+
 
 
 /* bottom div with games */
 #main-bottom{
   text-align: center;
+  margin-bottom: 500px 
+  
 }
 
 #flashCardPick{
-  border: 1px solid black;
+ background:url(/public/images/light-opacity-programming-code-abstract-technology-background-software-1024x756.jpg);
+  
 }
 
 #dragDropPick{
-  border: 1px solid black;
+  
 }
 
 
+/* test div */
+.test{
+  margin: 5%;
+  border: 1px solid black;
+}
+#startBtn{
+
+  align-self: center;
+  margin-top: 50px;
+  margin-bottom: 500px;
+  background-color: aqua;
+  border: 1px solid black;
+  color:black;
+  margin-left: 37%;
+  width: 250px;
+  z-index: 2;
+
+  
+ 
+}
+
+.glitch{
+  overflow: hidden;
+}
+#ddBtn{
+  height: 50px;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  background-color: aqua;
+  border: 1px solid black;;
+  color: black;
+}
+#fcBtn{
+  height: 50px;
+  width: 90%;
+  font-family: 'Libre Baskerville', serif;
+  background-color: rgb(50, 156, 156);
+  border: 1px solid black;
+  color: black;
+}
+
+#flashCardText{
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 25px;
+  color: black;
+}
+#dragDropText{
+  font-family: 'Libre Baskerville', serif;
+  margin-top: 25px;
+  color: black;
+  }
+#dropdownMenuButton{
+  font-family: 'Libre Baskerville', serif;
+  height: 50px;
+  width: 90%;
+  background-color: aqua;
+  border: 1px solid black;
+  color: black;
+  font-size: 25px;
+ 
+}
+.dropdown-item{
+width: 500px;
+ text-align: center;
+ color: black;
+ background-color: aqua;
+ border: 1px solid black;
+ font-size: 25px;
+  
+}
+.dropdown-menu{
+  background:url(/public/images/dropdownbg.png)
+}
+#main-bottom{
+  margin-top: 10px;
+}
+.nav-wrapper{
+background-color: #000000
+}

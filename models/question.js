@@ -1,4 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
+
+    // Defines the table of Question for the database
     var Question = sequelize.define("Question", {
         question: {
             type: DataTypes.TEXT,
@@ -15,16 +17,14 @@ module.exports = function (sequelize, DataTypes) {
         choice3: {
             type: DataTypes.TEXT,
             allowNull: false,
-        },
-        skillLevel: {
-            type: DataTypes.TEXT,
-            allowNull: false
         }
+    },{
+        timestamps: false,
+        freezeTableName: true,
     });
 
     Question.associate = function (models) {
-        // We're saying that a Post should belong to an Author
-        // A Post can't be created without an Author due to the foreign key constraint
+        // Creates the foreign key from topics in questions
         Question.belongsTo(models.Topic, {
             foreignKey: {
                 allowNull: false

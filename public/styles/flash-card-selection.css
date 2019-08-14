@@ -4,6 +4,7 @@
 #fc-selection{
   background-attachment: fixed;
   background: url(../images/page\ background.jpg);
+  font-family: 'Libre Baskerville', serif;
 }
 
 /* contains all movable divs */
@@ -14,16 +15,18 @@
 #html, #JS{
   width: 120px;
   height: 110px;
-  margin-left: 35%;
-  margin-right: 2%;
-  margin-top: 1.5%;
+  /* margin-left: 35%;
+  margin-right: 2%; */
+  margin-top: 15px;
+  
 }
 
 #css{
-  width: 150px;
-  height: 120px;
-  margin-left: 30%;
-  margin-right: 2%;
+  width: 130px;
+  /* height: 120px; */
+  height: 130px;
+  /* margin-left: 30%;
+  margin-right: 2%; */
 }
 
 #HTML-text{
@@ -37,11 +40,26 @@
 #JS-text{
   /* border: 1px solid black; */
 }
-
+#launchPad{
+  min-height: 150px;
+  color: #fff;
+}
+.logoCard{
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0;
+  margin-left: 0;
+  color:#fff;
+}
 /* bottom div user can drag things into */
+.final-topics-row{
+  /* position: relative; */
+}
 #final-topics{
   color: linen;
   text-align: center;
+  /* position: absolute; */
+  /* top:30%; */
   border: 1px solid black;
   background-color: lightslategray;
   opacity: .80;
@@ -52,4 +70,26 @@
 
 button.continue{
 
+}
+
+/* This class will be added dynamically when any topic is dragged */
+.ui-draggable-dragging{
+  width: 80px;
+  height: 80px;
+  margin:10px;
+}
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }
