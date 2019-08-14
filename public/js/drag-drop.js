@@ -17,6 +17,7 @@ $(document).ready(function () {
         console.log(userName);
         $("#nameDiv").hide();
         $("#question-top").show();
+        $(".final-topics-row").show();
         $("#choices").show();
     })
 
@@ -240,6 +241,7 @@ $(document).ready(function () {
             $("#resultDiv").show();
             $("#question-top").hide();
             $("#choices").hide();
+            $(".final-topics-row").hide();
 
         }
 

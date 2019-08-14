@@ -17,7 +17,7 @@
 
 #resultDiv,
 #question-top,
-#choices {
+#choices, .final-topics-row{
   display: none;
 }
 #resultDiv{
