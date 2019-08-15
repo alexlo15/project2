@@ -9,6 +9,12 @@
 
 }
 
+img{
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
+}
+
+.
 .instructions,
 .scoreMessage,
 #scoreList, #leftScore{
@@ -88,6 +94,8 @@ td {
   padding: 10%;
   margin: auto auto;
   margin-top: 40px;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
 }
 
 .nameSubmit {
@@ -108,6 +116,7 @@ td {
   background-color: rgba(8, 52, 95, 0.85);
   border: 10px double rgba(78, 185, 217, 0.85);
   color: white;
+
 
 }
 
@@ -135,6 +144,7 @@ td {
   height: 240px;
   margin-bottom: 3%;
   font-family: 'Libre Baskerville', serif;
+  
 }
 
 
@@ -176,6 +186,8 @@ td {
 
 #submitBtn {
   margin: 15px;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
 }
 
 #navbar {
@@ -187,10 +199,7 @@ td {
   width: 20%;
 }
 */
-img {
-  width: 75px;
-  height: 75px;
-}
+
 
 
 #wrong,
@@ -209,6 +218,7 @@ img {
   border: 5px double rgba(78, 185, 217, 0.555);
   color: white;
   padding: 1%;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
 
   /* margin-right: 10px;
   width: 20%; */
@@ -220,4 +230,6 @@ img {
   /* background: red; */
   width: 50%;
   padding: 0;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
 }

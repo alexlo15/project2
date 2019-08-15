@@ -15,11 +15,6 @@ body {
 
 }
 
-#mainlogo{
-  width: 75px;
-  height: 75px;
-}
-
 
 /* main initial divs */
 #main {
@@ -34,7 +29,16 @@ body {
 
 #buttons {
   text-align: center;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
 }
+
+.shadow{
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
+}
+
+
 
 #display {
   font-family: 'Libre Baskerville', serif;
@@ -64,6 +68,13 @@ font-size: 2em;
 #logoTitle{
   padding-right: 70%;
 }
+
+#mainlogo{
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
+
+}
+
 
 h2.timer {
   color: white;
