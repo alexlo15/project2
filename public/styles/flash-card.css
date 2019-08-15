@@ -15,11 +15,6 @@ body {
 
 }
 
-#mainlogo{
-  width: 75px;
-  height: 75px;
-}
-
 
 /* main initial divs */
 #main {
@@ -34,7 +29,16 @@ body {
 
 #buttons {
   text-align: center;
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
 }
+
+.shadow{
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
+}
+
+
 
 #display {
   font-family: 'Libre Baskerville', serif;
@@ -65,6 +69,13 @@ font-size: 2em;
   padding-right: 70%;
 }
 
+#mainlogo{
+  box-shadow: 10px 10px 5px rgb(22, 22, 22);
+
+
+}
+
+
 h2.timer {
   color: white;
   margin-top: 30%;
@@ -73,6 +84,10 @@ h2.timer {
 
 .carousel-control {
   background-color: transparent;
+}
+
+.glyphicon{
+  color:#f0f0f8;
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
