@@ -257,11 +257,11 @@ $(document).ready(function () {
         $.post("api/scores", newScore, function (data) {
 
 
-            getAllScores();
+            getAllScores(newScore);
         })
     }
 
-    function getAllScores() {
+    function getAllScores(newScore) {
         $.get("api/scores", function (data) {
 
 
@@ -273,6 +273,11 @@ $(document).ready(function () {
                 let scoreNum = $("<td>");
 
                 scorePlace.attr("scope", "row");
+
+                console.log(data[i].userName === newScore.name && data[i].score === newScore.score)
+                if(data[i].userName === newScore.name && data[i].score === newScore.score){
+                    scoreRow.addClass("bg-info");
+                }
 
                 scorePlace.text(i + 1);
                 scoreName.text(data[i].userName);
