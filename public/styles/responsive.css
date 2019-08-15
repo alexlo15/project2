@@ -1,0 +1,195 @@
+@media only screen and (max-width: 1024px){
+    html,body{
+        background-color: #074268;
+        background: url(../images/programming-code-abstract-technology-background-software-1024x756.jpg);
+        background-position: center;
+        background-repeat: repeat;
+    }
+    #logoTitle {
+        padding-right: 60%;
+    }
+
+        .navbar-brand{
+            padding:0;
+        }
+    /* Topic Drag Page */
+    /* =============================================== */
+    
+    .clearBtn{
+        margin-right: 40px;
+    }
+     /* Trivia Page */
+    /* ====================== */
+    #correct {
+        padding-right: 20%;
+    }
+   
+    
+    }
+
+
+
+@media only screen and (max-width: 770px){
+
+    body{
+        background-color:red;
+    }
+    #logoTitle {
+        padding-right: 40%;
+    }
+    #mainlogo{
+        width: 65px;
+        height: 65px;
+    }
+    .navbar-brand{
+        padding:0;
+    }
+    .notecard .col-md-8{
+        max-width:80%;
+        margin:auto auto;
+    }
+    .carousel-control .glyphicon-chevron-left{
+        margin-left: -40px;
+        color:#fff;
+    }
+    .carousel-control .glyphicon-chevron-right{
+        margin-right: -40px;
+        color:#fff;
+    }
+    .flip-box {
+        width: 100%;
+    }
+     /* Topic Drag Page */
+    /* =============================================== */
+    
+    .clearBtn{
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    /* Index Page styling */
+    /* ==================================== */
+    .dropdown-item {
+        width: 80%;
+        /* margin: auto auto; */
+        font-size: 1.5em;
+        padding-right: 0;
+        padding-left: 0;
+
+        
+    }
+    a#instructions.dropdown-item {
+        padding-right: 0;
+        padding-left: 0;
+        word-break: break-all;
+        overflow: auto;
+    }
+    /* Styling for Flash card page */
+    /* ============================================ */
+    .flip-box{
+        height: 500px;
+        margin-bottom: 10px;
+    }
+    #logoTitle {
+        padding-right: 0;
+    }
+    #mainlogo{
+        width: 60px;
+        height: 60px;
+    }
+    /* .navbar-brand{
+        padding:0;
+    } */
+    #logoTitle {
+        padding-right: 10px;
+    }
+    #myCarousel{
+        font-size: 1.7em;
+    }
+    /* Topic Drag Page */
+    /* =============================================== */
+    #html, #JS {
+        width:100px;
+        height: 80px;
+    }
+    #css {
+        width: 95px;
+        height: 69px;
+    }
+    #final-topics{
+       margin:auto auto;
+        height: 200px;
+        width: 98%;
+        margin-bottom: 10px;
+    }
+    .final-topics-row{
+        margin:0;
+    }
+    /* Trivia Page */
+    /* ====================== */
+    #score{
+        width: 50%;
+    }
+    #logoTitle img{
+        width:50px;
+        height: 50px;
+    }
+    #nameDiv{
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    .nameSubmit{
+        margin-top: 10px;
+    }
+    /* Drag and drop choices */
+    /* ========================== */
+    #questionCard{
+        width:100%;
+    }
+    #questionH2{
+        font-size: 0.8em;
+    }
+    /* .droppable{
+        margin-top: 20px;
+    } */
+    #question-text{
+        margin:auto auto;
+        margin-bottom: 25px;
+        width:80%;
+        padding:0;
+        font-size: 1.2em;
+    }
+    
+    #choices .card{
+        width: 80%;
+        margin: auto auto;
+    }
+   
+}
+@media only screen and (max-width: 380px){
+   
+    #mainlogo {
+        width: 40px;
+        height: 40px;
+    }
+    #display {
+        font-size: 20px;
+    }
+    .nav-link {
+        padding:0;
+    }
+    .flip-box{
+        height: 480px;
+    }
+    /* Topic Drag Page */
+    /* =============================================== */
+    #html, #JS {
+        width:80px;
+        height: 60px;
+    }
+    #css {
+        width: 85px;
+        height: 59px;
+    }
+}
